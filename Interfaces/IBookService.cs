@@ -6,7 +6,7 @@ using project.Models;
 namespace project.Interfaces;
 
 
-public interface IBookService
+public interface IUserService
 {
    
     List<Book> Get();

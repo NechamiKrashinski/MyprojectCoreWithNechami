@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hse4thjum24aoEqDnYU9Jer87CJjlBQobJ3eqpSGriQ=",
+  "Hash": "tzX/r+lJux9gVvU1lwHpeb7soxtwML5D+pJQ6O4NoVI=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -10,322 +10,68 @@
     {
       "Name": "project\\wwwroot",
       "Source": "project",
-      "ContentRoot": "D:\\Core\\projectCore\\wwwroot\\",
+      "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Core\\projectCore\\wwwroot\\css\\site.css",
+      "Identity": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\projectCore\\wwwroot\\",
+      "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "RelativePath": "css/site.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "htmliw61sj",
-      "Integrity": "xdgBfELuzpNbaZwsgqf/T8ysWeNSvktu7eSePLzn+g4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Core\\projectCore\\wwwroot\\index.html",
+      "Identity": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\index.html",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\projectCore\\wwwroot\\",
+      "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "index#[.{fingerprint}]?.html",
+      "RelativePath": "index.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vp5puez6v9",
-      "Integrity": "zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Core\\projectCore\\wwwroot\\js\\site.js",
+      "Identity": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\projectCore\\wwwroot\\",
+      "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "RelativePath": "js/site.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3zcdgphl16",
-      "Integrity": "ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "css/site.css",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2029"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xdgBfELuzpNbaZwsgqf/T8ysWeNSvktu7eSePLzn+g4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:23:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xdgBfELuzpNbaZwsgqf/T8ysWeNSvktu7eSePLzn+g4="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.htmliw61sj.css",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2029"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xdgBfELuzpNbaZwsgqf/T8ysWeNSvktu7eSePLzn+g4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:23:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "htmliw61sj"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xdgBfELuzpNbaZwsgqf/T8ysWeNSvktu7eSePLzn+g4="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1572"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:18:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM="
-        }
-      ]
-    },
-    {
-      "Route": "index.vp5puez6v9.html",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1572"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:18:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vp5puez6v9"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.3zcdgphl16.js",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4142"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:13:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3zcdgphl16"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "D:\\Core\\projectCore\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4142"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 22:13:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
-        }
-      ]
     }
   ]
 }

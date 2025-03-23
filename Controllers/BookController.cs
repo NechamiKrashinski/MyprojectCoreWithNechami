@@ -46,7 +46,7 @@ public class BookController : ControllerBase
         
         if(bookService.Update(id,book))
             return NoContent();
-
+        
         return BadRequest();
     }
 

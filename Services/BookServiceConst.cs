@@ -69,6 +69,6 @@ public static class BookUtilities
 {
     public static void AddBookConst(this IServiceCollection services)
     {
-        services.AddSingleton<IBookService,BookServiceConst>();
+        services.AddSingleton<IBookService,BookServiceJson>();
     }
 }

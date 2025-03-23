@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\Core\\projectCore\\wwwroot\\css\\site.css",
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Core\\projectCore\\wwwroot\\index.html",
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Core\\projectCore\\wwwroot\\js\\site.js",
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
@@ -23,10 +23,6 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project.props",
       "PackagePath": "buildTransitive\\project.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props",
