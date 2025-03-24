@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "PackagePath": "staticwebassets\\book.html"
+    },
+    {
       "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -9,8 +13,20 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\books.js",
+      "PackagePath": "staticwebassets\\js\\books.js"
+    },
+    {
       "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\users.js",
+      "PackagePath": "staticwebassets\\js\\users.js"
+    },
+    {
+      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "PackagePath": "staticwebassets\\user.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project.props",

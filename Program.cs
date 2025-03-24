@@ -8,7 +8,7 @@ builder.Services.AddSwaggerGen();
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddBookConst();
+builder.Services.AddSservic();
 
 var app = builder.Build();
 

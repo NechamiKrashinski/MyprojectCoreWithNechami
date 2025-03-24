@@ -5,9 +5,9 @@ namespace project.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class BookController : GenericController<Book>
+public class UserController : GenericController<User>
 {
-    public BookController(IService<Book> service) : base(service)
+    public UserController(IService<User> service) : base(service)
     {
     }
 }

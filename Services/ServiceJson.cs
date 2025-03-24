@@ -16,32 +16,35 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
     protected static string fileName;
     private string filePath;
 
-    public ServiceJson(IHostEnvironment env,string fName)
-    {   
-        fileName=fName;
+    public ServiceJson(IHostEnvironment env, string fName)
+    {
+        fileName = fName;
         filePath = Path.Combine(env.ContentRootPath, "data", fileName);
         if (!File.Exists(filePath))
         {
+            System.Console.WriteLine("--------------------------------------------------");
             MyList = new List<T>(); // או טיפול אחר במקרה שהקובץ לא קיים
             return;
-        
+
         }
 
         using (var jsonFile = File.OpenText(filePath))
         {
-           
-                MyList = JsonSerializer.Deserialize<List<T>>(jsonFile.ReadToEnd(),
-             new JsonSerializerOptions
-             {
-                 PropertyNameCaseInsensitive = true
-             })?? new List<T>();;
-            
+            System.Console.WriteLine("////////////////////////////////////////////////");
+
+            MyList = JsonSerializer.Deserialize<List<T>>(jsonFile.ReadToEnd(),
+                    new JsonSerializerOptions
+                {
+                  PropertyNameCaseInsensitive = true
+                }) ?? new List<T>(); ;
+            System.Console.WriteLine(MyList.ToString()+"-------------------------------------------------------------------");
 
         }
     }
 
     protected void saveToFile()
     {
+        System.Console.WriteLine("in save to file----------------------------" + filePath);
         File.WriteAllText(filePath, JsonSerializer.Serialize(MyList));
     }
 
@@ -79,3 +82,11 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
 }
 
 
+public static class ServiceUtilities
+{
+    public static void AddSservic(this IServiceCollection services)
+    {
+        services.AddSingleton<IService<Book>, BookServiceJson>();
+        services.AddSingleton<IService<User>, UserServiceJson>();
+    }
+}

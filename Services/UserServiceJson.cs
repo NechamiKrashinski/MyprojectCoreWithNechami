@@ -11,14 +11,40 @@ public class UserServiceJson : ServiceJson<User>
     }
     public override int Insert(User newUser)
     {
-        if (newUser == null || string.IsNullOrWhiteSpace(newUser.Name) ||
-               string.IsNullOrWhiteSpace(newUser.Address) || newUser.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
+        System.Console.WriteLine("inset 11111" + newUser);
+        if (newUser == null)
+        {
+            Console.WriteLine("Error: newUser is null.");
             return -1;
+        }
 
-        int maxId = MyList.Any() ? MyList.Max(u => u.Id) : 0; // Ensure there are users
+        if (string.IsNullOrWhiteSpace(newUser.Name))
+        {
+            Console.WriteLine("Error: Name is required.");
+            return -1;
+        }
+
+        if (string.IsNullOrWhiteSpace(newUser.Address))
+        {
+            Console.WriteLine("Error: Address is required.");
+            return -1;
+        }
+
+        if (newUser.BirthDate.ToDateTime(TimeOnly.MinValue) >= DateTime.Now)
+        {
+            Console.WriteLine("Error: BirthDate must be in the past.");
+            return -1;
+        }
+        System.Console.WriteLine("inset 222222");
+
+        int maxId = MyList.Any() ? MyList.Max(u => u.Id) : 0;
+        System.Console.WriteLine("inset 3333");
+
         newUser.Id = maxId + 1;
         MyList.Add(newUser);
         saveToFile();
+        System.Console.WriteLine("inset 4444");
+
         return newUser.Id;
     }
 

@@ -65,10 +65,3 @@ public class BookServiceConst : IService<Book>
 
 }
 
-public static class BookUtilities
-{
-    public static void AddBookConst(this IServiceCollection services)
-    {
-        services.AddSingleton<IService<Book>,BookServiceJson>();
-    }
-}

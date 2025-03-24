@@ -14,5 +14,8 @@ public class User:IGeneric
 
     public DateOnly BirthDate { get; set; }
 
-
+      public override string ToString()
+    {
+        return $"Id: {Id}, Name: {Name}, Address: {Address}, BirthDate: {BirthDate}";
+    }
 }
