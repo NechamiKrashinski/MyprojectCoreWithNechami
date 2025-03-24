@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tzX/r+lJux9gVvU1lwHpeb7soxtwML5D+pJQ6O4NoVI=",
+  "Hash": "E/KJVJc3iTS3z9t9sSTm30GeL01OlC0/HxIjdQDQqg4=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -22,15 +22,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "gmfw4a5et6",
+      "Integrity": "GNMPVkfLHrJr0LHaetmtFUv5GqFa7ulAt0eG1g8FsJw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -41,15 +43,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "index.html",
+      "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vp5puez6v9",
+      "Integrity": "zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -60,18 +64,268 @@
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3zcdgphl16",
+      "Integrity": "ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNMPVkfLHrJr0LHaetmtFUv5GqFa7ulAt0eG1g8FsJw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNMPVkfLHrJr0LHaetmtFUv5GqFa7ulAt0eG1g8FsJw="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.gmfw4a5et6.css",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GNMPVkfLHrJr0LHaetmtFUv5GqFa7ulAt0eG1g8FsJw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gmfw4a5et6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GNMPVkfLHrJr0LHaetmtFUv5GqFa7ulAt0eG1g8FsJw="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM="
+        }
+      ]
+    },
+    {
+      "Route": "index.vp5puez6v9.html",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1572"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vp5puez6v9"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZDwmmeX5ga6zYho05Qvz5nf1U8FbeWdLKgyd00YpcM="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.3zcdgphl16.js",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3zcdgphl16"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
     }
   ]
 }

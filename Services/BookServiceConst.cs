@@ -5,7 +5,7 @@ using project.Models;
 
 namespace project.Services;
 
-public class BookServiceConst : IBookService
+public class BookServiceConst : IService<Book>
 {
     private static List<Book> listBooks=new List<Book>();
 
@@ -69,6 +69,6 @@ public static class BookUtilities
 {
     public static void AddBookConst(this IServiceCollection services)
     {
-        services.AddSingleton<IBookService,BookServiceJson>();
+        services.AddSingleton<IService<Book>,BookServiceJson>();
     }
 }

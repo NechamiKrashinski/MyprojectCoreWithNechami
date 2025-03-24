@@ -8,8 +8,8 @@ namespace project.Controllers;
 public class BookController : ControllerBase
 {
 
-    private IBookService bookService;
-    public BookController(IBookService bookService){
+    private IService<Book> bookService;
+    public BookController(IService<Book> bookService){
         this.bookService=bookService;
     }
     [HttpGet]

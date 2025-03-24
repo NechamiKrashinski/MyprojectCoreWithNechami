@@ -1,37 +1,50 @@
+using project.Models;
+
 namespace project.Services;
 
-public class UserServiceJson : ServiceJson{
+public class UserServiceJson : ServiceJson<User>
+{
 
-     
+    public UserServiceJson(IHostEnvironment env) : base(env, "user.json")
+    {
 
-public UserServiceJson(){
-    ServiceJson.fileName="user.json";
-    base();
-}
-    public  abstract Insert(User newUser){
-          if(newUser == null ||  String.IsNullOrWhiteSpace(newUser.Name)||  String.IsNullOrWhiteSpace(newUser.address) || newUser.BirthDate > DateTime.now() )
-            return-1;
-       
-         int MaxId = ListUsers.Max(b=> b.Id);
-         newUser.Id = MaxId+1;
-         ListUsers.Add(newUser);
-         saveToFile();
-         return newUser.Id;
+    }
+    public override int Insert(User newUser)
+    {
+        if (newUser == null || string.IsNullOrWhiteSpace(newUser.Name) ||
+               string.IsNullOrWhiteSpace(newUser.Address) || newUser.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
+            return -1;
+
+        int maxId = MyList.Any() ? MyList.Max(u => u.Id) : 0; // Ensure there are users
+        newUser.Id = maxId + 1;
+        MyList.Add(newUser);
+        saveToFile();
+        return newUser.Id;
     }
 
-    public abstract bool Update(int id ,T user){
-         if(user == null || user.Id!=id|| string.IsNullOrWhiteSpace(user.Name)|| string.IsNullOrWhiteSpace(user.address) || || newUser.BirthDate > DateTime.now())
+
+
+    public override bool Update(int id, User user)
+    {
+
+        if (user == null || user.Id != id ||
+               string.IsNullOrWhiteSpace(user.Name) ||
+               string.IsNullOrWhiteSpace(user.Address) ||
+              user.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
             return false;
 
-        var currentUser= ListUsers.FirstOrDefault(b=> b.Id==id);
-        if(currentUser == null)
+        var currentUser = MyList.FirstOrDefault(u => u.Id == id);
+        if (currentUser == null)
             return false;
-        
+
         currentUser.Name = user.Name;
-        currentUser.address = user.address;
-        currentUser.BirthDate=user.BirthDate;
+        currentUser.Address = user.Address;
+        currentUser.BirthDate = user.BirthDate;
         saveToFile();
         return true;
+
     }
-   
+
+
+
 }

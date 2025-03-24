@@ -1,8 +1,10 @@
 
+using project.Interfaces;
+
 namespace project.Models;
 
 
-public class Book
+public class Book:IGeneric
 {
     public int Id { get; set; }
 

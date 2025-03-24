@@ -219,3 +219,7 @@ Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0
 Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.genruntimeconfig.cache
 Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\ref\project.dll
 Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\data\book.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\data\user.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.staticwebassets.endpoints.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
