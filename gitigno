@@ -1,0 +1,49 @@
+/dist/
+/build/
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+*.bak
+/node_modules/
+/bin/
+/obj/
+*.exe
+*.dll
+*.so
+*.bin
+*.o
+*.class
+*.jar
+*.apk
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.sln
+*.user
+*.suo
+
+# Rider files
+.idea/
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+*.snupkg
+
+# Logs
+*.log
+
+# User secrets
+secrets.json
+
+# Visual Studio Code
+.vscode/
