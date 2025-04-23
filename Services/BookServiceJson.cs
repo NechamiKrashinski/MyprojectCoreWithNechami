@@ -15,7 +15,7 @@ public class BookServiceJson : ServiceJson<Book>
 {
 
 
-    public BookServiceJson(IHostEnvironment env) : base(env, "book.json")
+    public BookServiceJson(IHostEnvironment env) : base(env)
     {
     }
 

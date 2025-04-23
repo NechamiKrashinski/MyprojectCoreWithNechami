@@ -1,31 +1,35 @@
 {
   "Files": [
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\book.html",
       "PackagePath": "staticwebassets\\book.html"
     },
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\books.js",
-      "PackagePath": "staticwebassets\\js\\books.js"
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Books.js",
+      "PackagePath": "staticwebassets\\js\\Books.js"
     },
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Users.js",
+      "PackagePath": "staticwebassets\\js\\Users.js"
+    },
+    {
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\js\\users.js",
-      "PackagePath": "staticwebassets\\js\\users.js"
-    },
-    {
-      "Id": "Z:\\B\\קרשינסקי נחמי\\Core\\pc\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "Id": "E:\\Core\\MyprojectCoreWithNechami\\wwwroot\\user.html",
       "PackagePath": "staticwebassets\\user.html"
     },
     {
@@ -39,10 +43,6 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project.props",
       "PackagePath": "buildTransitive\\project.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props",

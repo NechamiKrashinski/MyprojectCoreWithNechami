@@ -21,7 +21,7 @@ public class BookServiceConst : IService<Book>
         return listBooks;
     }
 
-     public  Book Get(int id){
+     public Book Get(int id){
         var book= listBooks.FirstOrDefault(b=> b.Id==id);
         return book;
     }
