@@ -33,13 +33,17 @@ public class GenericController<T> : ControllerBase where T : IGeneric
     [HttpPost]
     public ActionResult Post(T newItem)
     {
+        System.Console.WriteLine("------------////***************************");
         var newId = service.Insert(newItem);
+        System.Console.WriteLine("------------////***************************");
 
         if (newId == -1)
         {
+            System.Console.WriteLine("------------////***************************");
 
             return BadRequest();
         }
+        System.Console.WriteLine("------------////***************************");
 
         return CreatedAtAction(nameof(Post), new { Id = newId });
     }

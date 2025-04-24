@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 using System.Collections.Generic;
-using System.Security.Claims;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -11,32 +10,27 @@ public class UserController : ControllerBase
 {
     private readonly IService<User> service;
 
-
     public UserController(IService<User> service)
     {
         this.service = service;
     }
 
-[HttpGet]
-[Authorize(Policy = "User")]
-public ActionResult<User> Get()
-{
-    var currentUserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-    if (string.IsNullOrEmpty(currentUserId))
+    [HttpGet]
+    [Authorize(policy: "User")]
+    public ActionResult<IEnumerable<User>> Get()
     {
-        return Unauthorized();
+         var userType = HttpContext.User.FindFirst("type")?.Value;
+            if(userType == "Admin")
+            {
+                return service.Get();
+            }
+            else if(userType == "User")
+            {
+                var id = int.Parse(HttpContext.User.FindFirst("id")?.Value);
+            }
+
+        return service.Get();
     }
-
-    var user = service.Get(int.Parse(currentUserId)); 
-
-    if (user == null)
-    {
-        return NotFound();
-    }
-
-    return user;
-}
 
     [HttpGet("{id}")]
     public ActionResult<User> Get(int id)

@@ -1,50 +1,25 @@
- 
-/dist/
-/build/
-Thumbs.db
-.DS_Store
-.idea/
-.vscode/
-*.log
-*.tmp
-*.bak
-/node_modules/
-/bin/
-/obj/
-*.exe
-*.dll
-*.so
-*.bin
-*.o
-*.class
-*.jar
-*.apk
+# Ignore build output directories
+bin/
+obj/
 
-# Build results
-[Dd]ebug/
-[Rr]elease/
-[Bb]in/
-[Oo]bj/
-
-# Visual Studio files
-.vs/
-*.sln
+# Ignore user-specific files
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
 
-# Rider files
+# Ignore IDE-specific files
+.vscode/
 .idea/
 
-# NuGet Packages
+# Ignore NuGet packages
 *.nupkg
-**/packages/*
 *.snupkg
+packages/
 
-# Logs
+# Ignore logs and temporary files
 *.log
+*.tmp
 
-# User secrets
-secrets.json
-
-# Visual Studio Code
-.vscode/
+# Ignore Visual Studio working files
+.vs/
