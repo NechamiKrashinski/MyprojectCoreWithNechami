@@ -5,7 +5,7 @@ namespace project.Services;
 public class UserServiceJson : ServiceJson<User>
 {
 
-    public UserServiceJson(IHostEnvironment env) : base(env, "user.json")
+    public UserServiceJson(IHostEnvironment env) : base(env)
     {
 
     }
