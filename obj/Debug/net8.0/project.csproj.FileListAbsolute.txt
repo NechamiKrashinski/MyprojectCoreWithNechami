@@ -1,0 +1,225 @@
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.sourcelink.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\appsettings.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\project.exe
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\project.deps.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\project.runtimeconfig.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\project.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\project.pdb
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.csproj.Up2Date
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\refint\project.dll
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.pdb
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+C:\Users\user1\Desktop\נחמי תיכנות\יד\core\Core\project\obj\Debug\net8.0\ref\project.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\appsettings.Development.json
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\appsettings.json
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\project.exe
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\project.deps.json
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\project.runtimeconfig.json
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\project.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\project.pdb
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\Microsoft.OpenApi.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Z:\B\קרשינסקי נחמי\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.sourcelink.json
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets.build.json
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets.development.json
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\staticwebassets.pack.json
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.dll
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\refint\project.dll
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.pdb
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\ref\project.dll
+Z:\B\קרשינסקי נחמי\Core\project\obj\Debug\net8.0\project.csproj.CopyComplete
+D:\Core\project\bin\Debug\net8.0\appsettings.json
+D:\Core\project\bin\Debug\net8.0\appsettings.Development.json
+D:\Core\project\bin\Debug\net8.0\project.exe
+D:\Core\project\bin\Debug\net8.0\project.deps.json
+D:\Core\project\bin\Debug\net8.0\project.runtimeconfig.json
+D:\Core\project\bin\Debug\net8.0\project.dll
+D:\Core\project\bin\Debug\net8.0\project.pdb
+D:\Core\project\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Core\project\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Core\project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Core\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+D:\Core\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Core\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+D:\Core\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+D:\Core\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+D:\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+D:\Core\project\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+D:\Core\project\obj\Debug\net8.0\project.sourcelink.json
+D:\Core\project\obj\Debug\net8.0\staticwebassets.build.json
+D:\Core\project\obj\Debug\net8.0\staticwebassets.development.json
+D:\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+D:\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+D:\Core\project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+D:\Core\project\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Core\project\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+D:\Core\project\obj\Debug\net8.0\project.csproj.Up2Date
+D:\Core\project\obj\Debug\net8.0\project.dll
+D:\Core\project\obj\Debug\net8.0\refint\project.dll
+D:\Core\project\obj\Debug\net8.0\project.pdb
+D:\Core\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+D:\Core\project\obj\Debug\net8.0\ref\project.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\appsettings.Development.json
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\appsettings.json
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.staticwebassets.endpoints.json
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.exe
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.deps.json
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.runtimeconfig.json
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\project.pdb
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Core\‏‏project - עותק\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.AssemblyInfo.cs
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.sourcelink.json
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets.build.json
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets.development.json
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.csproj.Up2Date
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.dll
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\refint\project.dll
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.pdb
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\project.genruntimeconfig.cache
+D:\Core\‏‏project - עותק\obj\Debug\net8.0\ref\project.dll
+D:\Core\projectCore\bin\Debug\net8.0\appsettings.Development.json
+D:\Core\projectCore\bin\Debug\net8.0\appsettings.json
+D:\Core\projectCore\bin\Debug\net8.0\project.staticwebassets.runtime.json
+D:\Core\projectCore\bin\Debug\net8.0\project.staticwebassets.endpoints.json
+D:\Core\projectCore\bin\Debug\net8.0\project.exe
+D:\Core\projectCore\bin\Debug\net8.0\project.deps.json
+D:\Core\projectCore\bin\Debug\net8.0\project.runtimeconfig.json
+D:\Core\projectCore\bin\Debug\net8.0\project.dll
+D:\Core\projectCore\bin\Debug\net8.0\project.pdb
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Core\projectCore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Core\projectCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Core\projectCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Core\projectCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Core\projectCore\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+D:\Core\projectCore\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Core\projectCore\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+D:\Core\projectCore\obj\Debug\net8.0\project.AssemblyInfo.cs
+D:\Core\projectCore\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+D:\Core\projectCore\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+D:\Core\projectCore\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+D:\Core\projectCore\obj\Debug\net8.0\project.sourcelink.json
+D:\Core\projectCore\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets.build.json
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets.development.json
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+D:\Core\projectCore\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Core\projectCore\obj\Debug\net8.0\project.csproj.Up2Date
+D:\Core\projectCore\obj\Debug\net8.0\project.dll
+D:\Core\projectCore\obj\Debug\net8.0\refint\project.dll
+D:\Core\projectCore\obj\Debug\net8.0\project.pdb
+D:\Core\projectCore\obj\Debug\net8.0\project.genruntimeconfig.cache
+D:\Core\projectCore\obj\Debug\net8.0\ref\project.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\appsettings.Development.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\appsettings.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.staticwebassets.runtime.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.exe
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.deps.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.runtimeconfig.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.pdb
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Microsoft.OpenApi.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.AssemblyInfo.cs
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cs
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.MvcApplicationPartsAssemblyInfo.cache
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.sourcelink.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets.build.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets.development.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.build.project.props
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.project.props
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.project.props
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets.pack.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\scopedcss\bundle\project.styles.css
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.csproj.Up2Date
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\refint\project.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.pdb
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\project.genruntimeconfig.cache
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\ref\project.dll
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\data\book.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\data\user.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\bin\Debug\net8.0\project.staticwebassets.endpoints.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+Z:\B\קרשינסקי נחמי\Core\pc\MyprojectCoreWithNechami\obj\Debug\net8.0\staticwebassets\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
