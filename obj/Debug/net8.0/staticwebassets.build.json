@@ -1,0 +1,846 @@
+{
+  "Version": 1,
+  "Hash": "IEimBH5RG5tg5U22CUCRcigA80fmlVENpkB/JWdNcsE=",
+  "Source": "project",
+  "BasePath": "_content/project",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "project\\wwwroot",
+      "Source": "project",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "book#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tichyp7dp9",
+      "Integrity": "W5CioHWTTe39UnaeHuBCNkBApU6qxAeN8T587nz+03Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\book.html"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\home.css",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "css/home#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p5f0spyfzw",
+      "Integrity": "vcwgK2VXkstzDCLlX/WziG4VQt89YSWbqx3Am6127Qs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cswkharniu",
+      "Integrity": "BJTqbk6tKMWvIjKswOk+I8MkpM8R7o/JTB7CZzJAbZ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kzvq3bggy3",
+      "Integrity": "cBMYFDLr+lN2EJ6ynn3jL5HqQ3muOtzYuk+LSJCmPtQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Books.js",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "js/Books#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3zcdgphl16",
+      "Integrity": "ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Books.js"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3zcdgphl16",
+      "Integrity": "ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Users.js",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "js/Users#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "19aazneym3",
+      "Integrity": "m45pYwuwRcLSROW0D+0Jl0WCMS1wqHND0puLKrx80nU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Users.js"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "user#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w22ftc8nft",
+      "Integrity": "uBpbz+S+gx/SKsxPypevtH4JdroweIJLNBrHgSAe2VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "book.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W5CioHWTTe39UnaeHuBCNkBApU6qxAeN8T587nz+03Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W5CioHWTTe39UnaeHuBCNkBApU6qxAeN8T587nz+03Q="
+        }
+      ]
+    },
+    {
+      "Route": "book.tichyp7dp9.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W5CioHWTTe39UnaeHuBCNkBApU6qxAeN8T587nz+03Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tichyp7dp9"
+        },
+        {
+          "Name": "label",
+          "Value": "book.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W5CioHWTTe39UnaeHuBCNkBApU6qxAeN8T587nz+03Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vcwgK2VXkstzDCLlX/WziG4VQt89YSWbqx3Am6127Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vcwgK2VXkstzDCLlX/WziG4VQt89YSWbqx3Am6127Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.p5f0spyfzw.css",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vcwgK2VXkstzDCLlX/WziG4VQt89YSWbqx3Am6127Qs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p5f0spyfzw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vcwgK2VXkstzDCLlX/WziG4VQt89YSWbqx3Am6127Qs="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BJTqbk6tKMWvIjKswOk+I8MkpM8R7o/JTB7CZzJAbZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BJTqbk6tKMWvIjKswOk+I8MkpM8R7o/JTB7CZzJAbZ8="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.cswkharniu.css",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BJTqbk6tKMWvIjKswOk+I8MkpM8R7o/JTB7CZzJAbZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cswkharniu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BJTqbk6tKMWvIjKswOk+I8MkpM8R7o/JTB7CZzJAbZ8="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "414"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cBMYFDLr+lN2EJ6ynn3jL5HqQ3muOtzYuk+LSJCmPtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cBMYFDLr+lN2EJ6ynn3jL5HqQ3muOtzYuk+LSJCmPtQ="
+        }
+      ]
+    },
+    {
+      "Route": "index.kzvq3bggy3.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "414"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cBMYFDLr+lN2EJ6ynn3jL5HqQ3muOtzYuk+LSJCmPtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kzvq3bggy3"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cBMYFDLr+lN2EJ6ynn3jL5HqQ3muOtzYuk+LSJCmPtQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/Books.3zcdgphl16.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Books.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3zcdgphl16"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Books.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Books.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Books.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.3zcdgphl16.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3zcdgphl16"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4142"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:14:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ERmuyupZKYrmy0NuxVmWB5xhHYe2Uq4h8+ADd7YtTs4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Users.19aazneym3.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Users.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m45pYwuwRcLSROW0D+0Jl0WCMS1wqHND0puLKrx80nU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "19aazneym3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Users.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m45pYwuwRcLSROW0D+0Jl0WCMS1wqHND0puLKrx80nU="
+        }
+      ]
+    },
+    {
+      "Route": "js/Users.js",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Users.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m45pYwuwRcLSROW0D+0Jl0WCMS1wqHND0puLKrx80nU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m45pYwuwRcLSROW0D+0Jl0WCMS1wqHND0puLKrx80nU="
+        }
+      ]
+    },
+    {
+      "Route": "user.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1503"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uBpbz+S+gx/SKsxPypevtH4JdroweIJLNBrHgSAe2VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uBpbz+S+gx/SKsxPypevtH4JdroweIJLNBrHgSAe2VI="
+        }
+      ]
+    },
+    {
+      "Route": "user.w22ftc8nft.html",
+      "AssetFile": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1503"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uBpbz+S+gx/SKsxPypevtH4JdroweIJLNBrHgSAe2VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:14:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w22ftc8nft"
+        },
+        {
+          "Name": "label",
+          "Value": "user.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uBpbz+S+gx/SKsxPypevtH4JdroweIJLNBrHgSAe2VI="
+        }
+      ]
+    }
+  ]
+}

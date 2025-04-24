@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\book.html",
+      "PackagePath": "staticwebassets\\book.html"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Books.js",
+      "PackagePath": "staticwebassets\\js\\Books.js"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\Users.js",
+      "PackagePath": "staticwebassets\\js\\Users.js"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\user1\\Desktop\\נחמי תיכנות\\יד\\core\\Core\\MyprojectCoreWithNechami\\wwwroot\\user.html",
+      "PackagePath": "staticwebassets\\user.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project.props",
+      "PackagePath": "build\\project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.project.props",
+      "PackagePath": "buildMultiTargeting\\project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project.props",
+      "PackagePath": "buildTransitive\\project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
