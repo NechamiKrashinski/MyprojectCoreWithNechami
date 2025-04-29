@@ -87,6 +87,6 @@ public static class ServiceUtilities
     public static void AddSservic(this IServiceCollection services)
     {
         services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<User>, UserServiceJson>();
+        services.AddSingleton<IService<Auther>, UserServiceJson>();
     }
 }

@@ -1,7 +1,7 @@
 namespace project.Models;
 
 
-public class User:IGeneric
+public class Auther:IGeneric
 {
     public int Id { get; set; }
 

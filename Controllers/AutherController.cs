@@ -8,28 +8,28 @@ using System.Collections.Generic;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-    private readonly IService<User> service;
-    private readonly string userType;
+    private readonly IService<Auther> service;
+    private readonly string autherType;
 
-    public UserController(IService<User> service)
+    public UserController(IService<Auther> service)
     {
         this.service = service;
-        userType = HttpContext.User.FindFirst("type")?.Value;
+        autherType = HttpContext.User.FindFirst("type")?.Value;
     }
 
     [HttpGet]
-    [Authorize(policy: "User")]
-    public ActionResult<IEnumerable<User>> Get()
+    [Authorize(policy: "Auther")]
+    public ActionResult<IEnumerable<Auther>> Get()
     {
 
-        if (userType == "Admin")
+        if (autherType == "Admin")
         {
             return service.Get();
         }
-        else if (userType == "User")
+        else if (autherType == "Auther")
         {
             var id = int.Parse(HttpContext.User.FindFirst("id")?.Value);
-            return new List<User> { service.Get(id) };
+            return new List<Auther> { service.Get(id) };
         }
 
         return BadRequest("Unauthorized access");
@@ -37,17 +37,17 @@ public class UserController : ControllerBase
 
     [HttpGet("{id}")]
     [Authorize(policy: "Admin")]
-    public ActionResult<User> Get(int id)
+    public ActionResult<Auther> Get(int id)
     {
-        var user = service.Get(id);
-        if (user == null)
-            throw new ApplicationException("User not found");
-        return user;
+        var auther = service.Get(id);
+        if (auther == null)
+            throw new ApplicationException("Auther not found");
+        return auther;
     }
 
     [HttpPost]
     [Authorize(policy: "Admin")]
-    public ActionResult Post(User newUser)
+    public ActionResult Post(Auther newUser)
     {
         var newId = service.Insert(newUser);
 
@@ -60,12 +60,12 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(policy: "User")]
-    public ActionResult Put(int id, User user)
+    [Authorize(policy: "Auther")]
+    public ActionResult Put(int id, Auther auther)
     {
-        if (userType == "Admin")
+        if (autherType == "Admin")
         {
-            if (service.Update(id, user))
+            if (service.Update(id, auther))
                 return NoContent();
 
             return BadRequest();
@@ -76,7 +76,7 @@ public class UserController : ControllerBase
             int.TryParse(idToken, out int typeId);
             if (id == typeId)
             {
-                if (service.Update(id, user))
+                if (service.Update(id, auther))
                     return NoContent();
 
                 return BadRequest();

@@ -1,5 +1,5 @@
 public enum Role
 {
     Admin,
-    User
+    Auther
 }

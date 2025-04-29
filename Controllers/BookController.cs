@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize(policy:"User")]
+[Authorize(policy:"Auther")]
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;

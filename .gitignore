@@ -2,10 +2,10 @@
 bin/
 obj/
 
-# Ignore user-specific files
-*.user
+# Ignore auther-specific files
+*.auther
 *.suo
-*.userosscache
+*.autherosscache
 *.sln.docstates
 
 # Ignore IDE-specific files

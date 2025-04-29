@@ -24,8 +24,8 @@ public static class AuthServiceExtensions
                 {
                     cfg.AddPolicy("Admin",
                     policy => policy.RequireClaim("type", "Admin"));
-                    cfg.AddPolicy("User",
-                    policy => policy.RequireClaim("type", "User", "Admin"));
+                    cfg.AddPolicy("Auther",
+                    policy => policy.RequireClaim("type", "Auther", "Admin"));
 
                 });
         return services;
