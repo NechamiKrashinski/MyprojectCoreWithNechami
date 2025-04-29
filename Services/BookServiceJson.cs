@@ -15,8 +15,11 @@ public class BookServiceJson : ServiceJson<Book>
 {
 
 
-    public BookServiceJson(IHostEnvironment env) : base(env)
+    private readonly IService<User> userService;
+
+    public BookServiceJson(IHostEnvironment env, IService<User> userService) : base(env)
     {
+        this.userService = userService;
     }
 
     public override int Insert(Book newBook)
@@ -24,11 +27,19 @@ public class BookServiceJson : ServiceJson<Book>
         if (newBook == null || string.IsNullOrWhiteSpace(newBook.Name) || newBook.Price <= 0)
             return -1;
 
-        int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
-        newBook.Id = maxId + 1;
-        MyList.Add(newBook);
-        saveToFile();
-        return newBook.Id;
+        if (userService.Get()?.Find(u => u.Name == newBook.Auther) != null)
+        {
+            int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
+            newBook.Id = maxId + 1;
+            MyList.Add(newBook);
+            saveToFile();
+            return newBook.Id;
+        }
+        else
+        {
+            return -1; // Author not found
+        }
+
     }
 
     public override bool Update(int id, Book book)

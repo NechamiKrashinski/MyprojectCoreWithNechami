@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 using System.Collections.Generic;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
+[Authorize(policy:"User")]
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;

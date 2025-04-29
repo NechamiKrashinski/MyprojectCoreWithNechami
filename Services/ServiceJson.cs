@@ -18,7 +18,7 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
 
     public ServiceJson(IHostEnvironment env)
     {
-        fileName = typeof(T).Name + ".json";
+        fileName = typeof(T).Name.ToLower() + ".json";
         filePath = Path.Combine(env.ContentRootPath, "data", fileName);
         if (!File.Exists(filePath))
         {
