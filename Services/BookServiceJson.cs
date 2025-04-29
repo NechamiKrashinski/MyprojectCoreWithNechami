@@ -1,23 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-
 using project.Interfaces;
 using project.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System;
-using System.Text.Json;
+
 namespace project.Services;
-
-
 
 public class BookServiceJson : ServiceJson<Book>
 {
-
-
     private readonly IService<Auther> autherService;
 
-    public BookServiceJson(IHostEnvironment env, IService<Auther> autherService) : base(env)
+    public BookServiceJson(IHostEnvironment env, IService<Auther> autherService)
+        : base(env)
     {
         this.autherService = autherService;
     }
@@ -39,12 +36,16 @@ public class BookServiceJson : ServiceJson<Book>
         {
             return -1; // Author not found
         }
-
     }
 
     public override bool Update(int id, Book book)
     {
-        if (book == null || book.Id != id || string.IsNullOrWhiteSpace(book.Name) || book.Price <= 0)
+        if (
+            book == null
+            || book.Id != id
+            || string.IsNullOrWhiteSpace(book.Name)
+            || book.Price <= 0
+        )
             return false;
 
         var currentBook = MyList.FirstOrDefault(b => b.Id == id);

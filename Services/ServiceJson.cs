@@ -1,60 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-
 using project.Interfaces;
 using project.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System;
-using System.Text.Json;
 
 namespace project.Services;
 
-public abstract class ServiceJson<T> : IService<T> where T : IGeneric
+public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
+    where T : IGeneric
 {
-    protected List<T> MyList { get; }
-    protected static string fileName;
-    private string filePath;
-
     public ServiceJson(IHostEnvironment env)
-    {
-        fileName = typeof(T).Name.ToLower() + ".json";
-        filePath = Path.Combine(env.ContentRootPath, "data", fileName);
-        if (!File.Exists(filePath))
-        {
-            System.Console.WriteLine("--------------------------------------------------");
-            MyList = new List<T>(); // או טיפול אחר במקרה שהקובץ לא קיים
-            return;
-
-        }
-
-        using (var jsonFile = File.OpenText(filePath))
-        {
-            System.Console.WriteLine("////////////////////////////////////////////////");
-
-            MyList = JsonSerializer.Deserialize<List<T>>(jsonFile.ReadToEnd(),
-                    new JsonSerializerOptions
-                {
-                  PropertyNameCaseInsensitive = true
-                }) ?? new List<T>(); ;
-            System.Console.WriteLine(MyList.ToString()+"-------------------------------------------------------------------");
-
-        }
-    }
+        : base(env) { }
 
     protected void saveToFile()
     {
-        System.Console.WriteLine("in save to file----------------------------" + filePath);
         File.WriteAllText(filePath, JsonSerializer.Serialize(MyList));
     }
 
-
-
-    public List<T> Get()
-    {
-        return MyList;
-    }
-
+ 
     public T Get(int id)
     {
         var t = MyList.FirstOrDefault(b => b.Id == id);
@@ -64,7 +30,6 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
     public abstract int Insert(T newT);
 
     public abstract bool Update(int id, T book);
-
 
     public bool Delete(int id)
     {
@@ -77,10 +42,7 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
         saveToFile();
         return true;
     }
-
-
 }
-
 
 public static class ServiceUtilities
 {
