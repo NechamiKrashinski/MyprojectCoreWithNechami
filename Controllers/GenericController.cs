@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
-namespace project.Controllers;
 
+namespace project.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class GenericController<T> : ControllerBase where T : IGeneric
+public class GenericController<T> : ControllerBase
+    where T : IGeneric
 {
     private readonly IService<T> service;
 

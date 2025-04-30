@@ -34,7 +34,7 @@ public class BookServiceJson : ServiceJson<Book>
         }
         else
         {
-            return -1; // Author not found
+            return -1;
         }
     }
 

@@ -1,4 +1,3 @@
-
 namespace project.Interfaces;
 
 public interface IAuthentication<T>

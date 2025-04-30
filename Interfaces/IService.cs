@@ -1,6 +1,5 @@
 namespace project.Interfaces;
 
-
 public interface IService<T>
 {
     List<T> Get();
@@ -10,5 +9,4 @@ public interface IService<T>
     int Insert(T newT);
     bool Update(int id, T t);
     bool Delete(int id);
-
 }

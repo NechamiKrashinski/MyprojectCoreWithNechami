@@ -64,6 +64,6 @@ public static class TokenService
                 }
             }
         }
-        return string.Empty; // או ערך ברירת מחדל אחר
+        return string.Empty;
     }
 }
