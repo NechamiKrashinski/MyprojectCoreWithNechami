@@ -20,7 +20,11 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
         File.WriteAllText(filePath, JsonSerializer.Serialize(MyList));
     }
 
- 
+    public override List<T> Get()
+    {
+        return MyList;
+    }
+
     public T Get(int id)
     {
         var t = MyList.FirstOrDefault(b => b.Id == id);
@@ -46,9 +50,13 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
 
 public static class ServiceUtilities
 {
-    public static void AddSservic(this IServiceCollection services)
+    public static void AddService(this IServiceCollection services)
     {
         services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Auther>, UserServiceJson>();
+        services.AddSingleton<IService<Author>, UserServiceJson>();
+        services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
+        services.AddScoped<ILogin<Author>, LoginService<Author>>();
+        services.AddScoped<LoginService<Author>, LoginService<Author>>();
+
     }
 }

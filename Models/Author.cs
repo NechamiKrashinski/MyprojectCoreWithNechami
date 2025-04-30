@@ -1,6 +1,8 @@
+using project.Interfaces;
+
 namespace project.Models;
 
-public class Auther : IGeneric
+public class Author : IGeneric, IRole
 {
     public int Id { get; set; }
 
@@ -10,7 +12,7 @@ public class Auther : IGeneric
 
     public DateOnly BirthDate { get; set; }
 
-    public Role Role { get; set; } = Role.Auther;
+    public Role role { get; set; } = Role.Author;
 
     public override string ToString()
     {

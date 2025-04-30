@@ -2,14 +2,13 @@ using project.Models;
 
 namespace project.Services;
 
-public class UserServiceJson : ServiceJson<Auther>
+public class UserServiceJson : ServiceJson<Author>
 {
 
-    public UserServiceJson(IHostEnvironment env) : base(env)
-    {
-
-    }
-    public override int Insert(Auther newUser)
+    public UserServiceJson(IHostEnvironment env) :
+    base(env)
+    { }
+    public override int Insert(Author newUser)
     {
         System.Console.WriteLine("inset 11111" + newUser);
         if (newUser == null)
@@ -50,22 +49,22 @@ public class UserServiceJson : ServiceJson<Auther>
 
 
 
-    public override bool Update(int id, Auther auther)
+    public override bool Update(int id, Author author)
     {
 
-        if (auther == null || auther.Id != id ||
-               string.IsNullOrWhiteSpace(auther.Name) ||
-               string.IsNullOrWhiteSpace(auther.Address) ||
-              auther.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
+        if (author == null || author.Id != id ||
+               string.IsNullOrWhiteSpace(author.Name) ||
+               string.IsNullOrWhiteSpace(author.Address) ||
+              author.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
             return false;
 
         var currentUser = MyList.FirstOrDefault(u => u.Id == id);
         if (currentUser == null)
             return false;
 
-        currentUser.Name = auther.Name;
-        currentUser.Address = auther.Address;
-        currentUser.BirthDate = auther.BirthDate;
+        currentUser.Name = author.Name;
+        currentUser.Address = author.Address;
+        currentUser.BirthDate = author.BirthDate;
         saveToFile();
         return true;
 

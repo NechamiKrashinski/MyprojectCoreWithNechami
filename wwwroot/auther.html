@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Auther CRUD</title>
+    <title>Author CRUD</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
 
 <body>
-    <h1>Auther CRUD</h1>
-    <h3>Add Auther</h3>
+    <h1>Author CRUD</h1>
+    <h3>Add Author</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
-        <input type="text" id="add-name" placeholder="Auther Name" required>
+        <input type="text" id="add-name" placeholder="Author Name" required>
         <input type="text" id="add-address" placeholder="Address" required>
         <input type="date" id="add-birthdate" placeholder="Birth Date" required>
-        <input type="submit" value="Add Auther">
+        <input type="submit" value="Add Author">
     </form>
 
     <div id="editForm" style="display:none;">
-        <h3>Edit Auther</h3>
+        <h3>Edit Author</h3>
         <form action="javascript:void(0);" onsubmit="updateUser()">
             <input type="hidden" id="edit-id">
             <input type="text" id="edit-name" required>
@@ -37,10 +37,10 @@
             <th></th>
             <th></th>
         </tr>
-        <tbody id="authers"></tbody>
+        <tbody id="authors"></tbody>
     </table>
 
-    <script src="js/authers.js" asp-append-version="true"></script>
+    <script src="js/authors.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getUsers();
     </script>

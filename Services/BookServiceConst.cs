@@ -12,8 +12,8 @@ public class BookServiceConst : IService<Book>
     public BookServiceConst ()
     {
         listBooks = new List<Book>{
-            new Book {Id=1, Name = "איסתרק", Auther = "מיה קינן", Price = 70, Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) },
-            new Book {Id=2, Name = "מהלהלל", Auther = "מיה קינן", Price = 70 , Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) }
+            new Book {Id=1, Name = "איסתרק", Author = "מיה קינן", Price = 70, Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) },
+            new Book {Id=2, Name = "מהלהלל", Author = "מיה קינן", Price = 70 , Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) }
         };
     }
 

@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace project.Services;
 
-public class GetFuncService<T>
+public abstract class GetFuncService<T>
 {
     protected List<T> MyList { get; }
     protected static string fileName;
@@ -28,9 +28,6 @@ public class GetFuncService<T>
         }
     }
 
-       public List<T> Get()
-    {
-        return MyList;
-    }
+    public abstract List<T> Get();
 
 }

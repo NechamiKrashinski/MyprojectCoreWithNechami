@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 
+namespace project.Controllers;
+
 [ApiController]
 [Route("[controller]")]
-[Authorize(policy: "Auther")]
+[Authorize(policy: "Author")]
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;

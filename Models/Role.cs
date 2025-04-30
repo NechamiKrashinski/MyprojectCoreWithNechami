@@ -1,5 +1,7 @@
+namespace project.Models;
+
 public enum Role
 {
     Admin,
-    Auther,
+    Author,
 }
