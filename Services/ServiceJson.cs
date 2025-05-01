@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 
@@ -12,6 +7,24 @@ namespace project.Services;
 public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
     where T : IGeneric
 {
+    protected UserAuth userauth;
+    private string _token;
+
+    public string Token
+    {
+        get => _token;
+        set
+        {
+            Console.WriteLine("Token set to: " + value);
+            _token = value;
+            userauth = TokenService.GetUserAuth(_token);
+            Console.WriteLine("Token set to: " + userauth.ToString());
+            System.Console.WriteLine(
+                userauth.Id + "===" + userauth.role.ToString() + "====" + userauth.role
+            );
+        }
+    }
+
     public ServiceJson(IHostEnvironment env)
         : base(env) { }
 
@@ -22,7 +35,15 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
 
     public override List<T> Get()
     {
-        return MyList;
+        if (userauth.role == Role.Author)
+        {
+            return MyList.Where(a => userauth.Id == a.Id).ToList();
+        }
+        else if (userauth.role == Role.Admin)
+        {
+            return MyList;
+        }
+        return new List<T>();
     }
 
     public T Get(int id)
@@ -54,9 +75,8 @@ public static class ServiceUtilities
     {
         services.AddSingleton<IService<Book>, BookServiceJson>();
         services.AddSingleton<IService<Author>, UserServiceJson>();
-        services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
-        services.AddScoped<ILogin<Author>, LoginService<Author>>();
-        services.AddScoped<LoginService<Author>, LoginService<Author>>();
-
+        services.AddScoped<IAuthentication<UserAuth>, AuthenticationService<UserAuth>>(); // ודא שזה קיים
+        services.AddScoped<LoginService<UserAuth>>(); // הוסף שורה זו
+        services.AddScoped<ILogin<UserAuth>, LoginService<UserAuth>>();
     }
 }

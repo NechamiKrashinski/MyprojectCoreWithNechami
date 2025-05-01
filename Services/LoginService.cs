@@ -4,10 +4,9 @@ using project.Interfaces;
 namespace project.Services;
 
 public class LoginService<T> : ILogin<T>
-    where T : IGeneric, IRole
+    where T : IUser
 {
     private readonly IAuthentication<T> authenticationService;
-
     public LoginService(IAuthentication<T> authentication)
     {
         this.authenticationService = authentication;
@@ -27,8 +26,14 @@ public class LoginService<T> : ILogin<T>
         };
         var token = TokenService.GetToken(claims);
         var tokenString = TokenService.WriteToken(token);
-        TokenService.SaveToken(tokenString);
-
         return tokenString;
     }
+
+    // public void SaveToken(ClaimsPrincipal claims)
+    // {
+    //     userauth.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
+    //     userauth.role = (Role)Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value);
+
+    // }
+
 }

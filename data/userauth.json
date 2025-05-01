@@ -1,0 +1,9 @@
+[
+    {"Id": 1, "Name": "Alice Smith", "Address": "456 Elm St, Springfield, USA", "BirthDate": "1985-03-15", "role": 0},
+    {"Id": 2, "Name": "Bob Johnson", "Address": "789 Oak St, Metropolis, USA", "BirthDate": "1992-07-22", "role": 0},
+    {"Id": 3, "Name": "Charlie Brown", "Address": "101 Pine St, Smalltown, USA", "BirthDate": "1988-12-30", "role": 1},
+    {"Id": 4, "Name": "Diana Prince", "Address": "202 Maple St, Gotham, USA", "BirthDate": "1990-04-10", "role": 1},
+    {"Id": 5, "Name": "Ethan Hunt", "Address": "303 Birch St, Star City, USA", "BirthDate": "1980-11-05", "role": 1},
+    {"Id": 6, "Name": "string", "Address": "string", "BirthDate": "2025-02-24", "role": 1},
+    {"Id": 7, "Name": "1", "Address": "\u05E2\u05D9\u05D3\u05DB", "BirthDate": "2025-02-25", "role": 1}
+]

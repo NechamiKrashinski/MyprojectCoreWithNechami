@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
-using project.Services;
 
 namespace project.Controllers;
 
@@ -11,39 +10,36 @@ namespace project.Controllers;
 public class AuthorController : ControllerBase
 {
     private readonly IService<Author> service;
-    private readonly string authorRole;
-
+    private string? token;
     public AuthorController(IService<Author> service)
     {
         this.service = service;
-        authorRole = HttpContext.User.FindFirst("Role")?.Value;
     }
+
+    private void SetToken()
+    {
+        token = HttpContext.Request.Cookies["AuthToken"]!;
+        if (!string.IsNullOrEmpty(token))
+            service.Token = token;
+    }
+
 
     [HttpGet]
     [Authorize(policy: "Author")]
     public ActionResult<IEnumerable<Author>> Get()
     {
-        if (authorRole == "Admin")
-        {
-            return service.Get();
-        }
-        else if (authorRole == "Author")
-        {
-            var idClaim = HttpContext.User.FindFirst("Id")?.Value;
-            if (idClaim == null)
-            {
-                throw new ApplicationException("User ID not found");
-            }
-            var id = int.Parse(idClaim);
-        }
-
-        return BadRequest("Unauthorized access");
+        SetToken();
+        var list = service.Get();
+        if (list.Count <= 0)
+            return BadRequest("Unauthorized access");
+        return list;
     }
 
     [HttpGet("{id}")]
     [Authorize(policy: "Admin")]
     public ActionResult<Author> Get(int id)
     {
+        SetToken();
         var author = service.Get(id);
         if (author == null)
             throw new ApplicationException("Author not found");
@@ -54,13 +50,10 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult Post(Author newUser)
     {
+        SetToken();
         var newId = service.Insert(newUser);
-
         if (newId == -1)
-        {
             return BadRequest();
-        }
-
         return CreatedAtAction(nameof(Post), new { Id = newId });
     }
 
@@ -68,35 +61,18 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Author")]
     public ActionResult Put(int id, Author author)
     {
-        if (authorRole == "Admin")
-        {
-            if (service.Update(id, author))
-                return NoContent();
+        SetToken();
+        if (service.Update(id, author))
+            return NoContent();
 
-            return BadRequest();
-        }
-        else
-        {
-            var idToken = HttpContext.User.FindFirst("Id")?.Value;
-            int.TryParse(idToken, out int typeId);
-            if (id == typeId)
-            {
-                if (service.Update(id, author))
-                    return NoContent();
-
-                return BadRequest();
-            }
-            else
-            {
-                return BadRequest("Unauthorized access");
-            }
-        }
+        return BadRequest();
     }
 
     [HttpDelete("{id}")]
     [Authorize(policy: "Admin")]
     public ActionResult Delete(int id)
     {
+        SetToken();
         if (service.Delete(id))
             return Ok();
         return NotFound();

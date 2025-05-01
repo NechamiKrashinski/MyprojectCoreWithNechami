@@ -1,0 +1,537 @@
+start: ג' אייר תשפ"ה 16:49:46 /Login.POST
+end: ג' אייר תשפ"ה 16:49:46 /Login.POST took 54 ms
+start: ג' אייר תשפ"ה 16:56:17 /Login.POST
+end: ג' אייר תשפ"ה 16:56:17 /Login.POST took 71 ms
+start: ג' אייר תשפ"ה 16:59:08 /Login.POST
+end: ג' אייר תשפ"ה 16:59:08 /Login.POST took 116 ms
+start: ג' אייר תשפ"ה 17:01:48 /Login.POST
+end: ג' אייר תשפ"ה 17:01:48 /Login.POST took 116 ms
+start: ג' אייר תשפ"ה 17:02:56 /Login.POST
+end: ג' אייר תשפ"ה 17:02:56 /Login.POST took 110 ms
+start: ג' אייר תשפ"ה 17:03:36 /Author.GET
+end: ג' אייר תשפ"ה 17:03:36 /Author.GET took 62 ms
+start: ג' אייר תשפ"ה 17:12:36 /Author.GET
+end: ג' אייר תשפ"ה 17:12:36 /Author.GET took 104 ms
+start: ג' אייר תשפ"ה 17:15:37 /Author.GET
+end: ג' אייר תשפ"ה 17:15:37 /Author.GET took 94 ms
+start: ג' אייר תשפ"ה 17:26:20 /Login.POST
+end: ג' אייר תשפ"ה 17:26:20 /Login.POST took 68 ms
+start: ג' אייר תשפ"ה 17:26:42 /Author.GET
+end: ג' אייר תשפ"ה 17:26:42 /Author.GET took 28 ms
+start: ג' אייר תשפ"ה 17:29:24 /Author.GET
+end: ג' אייר תשפ"ה 17:29:24 /Author.GET took 130 ms
+start: ג' אייר תשפ"ה 17:29:35 /.GET
+end: ג' אייר תשפ"ה 17:29:35 /index.html.GET took 37 ms
+start: ג' אייר תשפ"ה 17:29:35 /author.GET
+end: ג' אייר תשפ"ה 17:29:35 /author.GET took 13 ms
+start: ג' אייר תשפ"ה 17:29:37 /author.GET
+end: ג' אייר תשפ"ה 17:29:37 /author.GET took 0 ms
+start: ג' אייר תשפ"ה 17:29:37 /login.GET
+end: ג' אייר תשפ"ה 17:29:37 /login.GET took 22 ms
+start: ג' אייר תשפ"ה 17:29:37 /css/site.css.GET
+start: ג' אייר תשפ"ה 17:29:37 /css/home.css.GET
+end: ג' אייר תשפ"ה 17:29:37 /css/site.css.GET took 7 ms
+start: ג' אייר תשפ"ה 17:29:37 /js/login.js.GET
+end: ג' אייר תשפ"ה 17:29:37 /css/home.css.GET took 2 ms
+end: ג' אייר תשפ"ה 17:29:37 /js/login.js.GET took 1 ms
+start: ג' אייר תשפ"ה 17:29:37 /author.GET
+end: ג' אייר תשפ"ה 17:29:37 /author.GET took 2 ms
+start: ג' אייר תשפ"ה 17:29:37 /author.GET
+end: ג' אייר תשפ"ה 17:29:37 /author.GET took 0 ms
+start: ג' אייר תשפ"ה 17:29:37 /author.GET
+end: ג' אייר תשפ"ה 17:29:37 /author.GET took 0 ms
+start: ג' אייר תשפ"ה 17:30:11 /.GET
+end: ג' אייר תשפ"ה 17:30:11 /index.html.GET took 65 ms
+start: ג' אייר תשפ"ה 17:30:11 /author.GET
+end: ג' אייר תשפ"ה 17:30:11 /author.GET took 13 ms
+start: ג' אייר תשפ"ה 17:30:26 /.GET
+end: ג' אייר תשפ"ה 17:30:26 /.GET took 1 ms
+start: ג' אייר תשפ"ה 17:30:26 /login.GET
+end: ג' אייר תשפ"ה 17:30:26 /login.GET took 8 ms
+start: ג' אייר תשפ"ה 17:30:26 /css/site.css.GET
+end: ג' אייר תשפ"ה 17:30:26 /css/site.css.GET took 0 ms
+start: ג' אייר תשפ"ה 17:30:26 /login.GET
+end: ג' אייר תשפ"ה 17:30:26 /login.GET took 1 ms
+start: ג' אייר תשפ"ה 17:30:32 /css/home.css.GET
+start: ג' אייר תשפ"ה 17:30:32 /css/site.css.GET
+end: ג' אייר תשפ"ה 17:30:32 /css/site.css.GET took 0 ms
+start: ג' אייר תשפ"ה 17:30:32 /login.GET
+end: ג' אייר תשפ"ה 17:30:32 /login.GET took 0 ms
+start: ג' אייר תשפ"ה 17:30:57 /Login.POST
+end: ג' אייר תשפ"ה 17:30:57 /Login.POST took 95 ms
+start: ג' אייר תשפ"ה 17:31:06 /.GET
+end: ג' אייר תשפ"ה 17:31:06 /index.html.GET took 6 ms
+start: ג' אייר תשפ"ה 17:31:06 /author.GET
+end: ג' אייר תשפ"ה 17:31:06 /author.GET took 7 ms
+start: ג' אייר תשפ"ה 17:31:16 /author.html.GET
+end: ג' אייר תשפ"ה 17:31:16 /author.html.GET took 3 ms
+start: ג' אייר תשפ"ה 17:31:26 /book.html.GET
+end: ג' אייר תשפ"ה 17:31:26 /book.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:31:26 /author.GET
+end: ג' אייר תשפ"ה 17:31:26 /author.GET took 8 ms
+start: ג' אייר תשפ"ה 17:33:50 /.GET
+end: ג' אייר תשפ"ה 17:33:50 /index.html.GET took 62 ms
+start: ג' אייר תשפ"ה 17:33:50 /author.GET
+end: ג' אייר תשפ"ה 17:33:50 /author.GET took 11 ms
+start: ג' אייר תשפ"ה 17:33:52 /author.GET
+end: ג' אייר תשפ"ה 17:33:52 /author.GET took 1 ms
+start: ג' אייר תשפ"ה 17:33:52 /login.GET
+end: ג' אייר תשפ"ה 17:33:52 /login.GET took 18 ms
+start: ג' אייר תשפ"ה 17:33:53 /css/site.css.GET
+end: ג' אייר תשפ"ה 17:33:53 /css/site.css.GET took 4 ms
+start: ג' אייר תשפ"ה 17:33:53 /css/home.css.GET
+start: ג' אייר תשפ"ה 17:33:53 /js/login.js.GET
+end: ג' אייר תשפ"ה 17:33:53 /js/login.js.GET took 1 ms
+end: ג' אייר תשפ"ה 17:33:53 /css/home.css.GET took 1 ms
+start: ג' אייר תשפ"ה 17:33:53 /author.GET
+end: ג' אייר תשפ"ה 17:33:53 /author.GET took 3 ms
+start: ג' אייר תשפ"ה 17:33:53 /author.GET
+end: ג' אייר תשפ"ה 17:33:53 /author.GET took 2 ms
+start: ג' אייר תשפ"ה 17:33:53 /author.GET
+end: ג' אייר תשפ"ה 17:33:53 /author.GET took 0 ms
+start: ג' אייר תשפ"ה 17:34:01 /.GET
+end: ג' אייר תשפ"ה 17:34:01 /index.html.GET took 6 ms
+start: ג' אייר תשפ"ה 17:34:01 /author.GET
+end: ג' אייר תשפ"ה 17:34:01 /author.GET took 1 ms
+start: ג' אייר תשפ"ה 17:35:03 /.GET
+end: ג' אייר תשפ"ה 17:35:03 /index.html.GET took 60 ms
+start: ג' אייר תשפ"ה 17:35:03 /author.html.GET
+end: ג' אייר תשפ"ה 17:35:03 /author.html.GET took 8 ms
+start: ג' אייר תשפ"ה 17:35:17 /author.html.GET
+end: ג' אייר תשפ"ה 17:35:17 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:36:54 /.GET
+end: ג' אייר תשפ"ה 17:36:54 /index.html.GET took 57 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 6 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:54 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:54 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:55 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:55 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:36:56 /author.html.GET
+end: ג' אייר תשפ"ה 17:36:56 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 7 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 3 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 3 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:01 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:01 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:10 /.GET
+end: ג' אייר תשפ"ה 17:37:10 /.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:10 /login.GET
+end: ג' אייר תשפ"ה 17:37:10 /login.GET took 36 ms
+start: ג' אייר תשפ"ה 17:37:10 /css/site.css.GET
+end: ג' אייר תשפ"ה 17:37:10 /css/site.css.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:10 /css/home.css.GET
+start: ג' אייר תשפ"ה 17:37:10 /js/login.js.GET
+end: ג' אייר תשפ"ה 17:37:10 /css/home.css.GET took 0 ms
+end: ג' אייר תשפ"ה 17:37:10 /js/login.js.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:10 /login.GET
+end: ג' אייר תשפ"ה 17:37:10 /login.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:10 /login.GET
+end: ג' אייר תשפ"ה 17:37:10 /login.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:10 /login.GET
+end: ג' אייר תשפ"ה 17:37:10 /login.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:28 /Login.POST
+end: ג' אייר תשפ"ה 17:37:28 /Login.POST took 68 ms
+start: ג' אייר תשפ"ה 17:37:34 /.GET
+end: ג' אייר תשפ"ה 17:37:34 /index.html.GET took 3 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:34 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:34 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:35 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:35 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:36 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:36 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:37:41 /author.html.GET
+end: ג' אייר תשפ"ה 17:37:41 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:38:11 /author.html.GET
+end: ג' אייר תשפ"ה 17:38:11 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:38:36 /Author.GET
+end: ג' אייר תשפ"ה 17:38:36 /Author.GET took 41 ms
+start: ג' אייר תשפ"ה 17:39:09 /Author.POST
+end: ג' אייר תשפ"ה 17:39:09 /Author.POST took 58 ms
+start: ג' אייר תשפ"ה 17:39:22 /Author.GET
+end: ג' אייר תשפ"ה 17:39:22 /Author.GET took 5 ms
+start: ג' אייר תשפ"ה 17:39:42 /Author/3.GET
+end: ג' אייר תשפ"ה 17:39:42 /Author/3.GET took 12 ms
+start: ג' אייר תשפ"ה 17:40:28 /Author/8.PUT
+end: ג' אייר תשפ"ה 17:40:28 /Author/8.PUT took 25 ms
+start: ג' אייר תשפ"ה 17:50:05 /.GET
+end: ג' אייר תשפ"ה 17:50:05 /index.html.GET took 59 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 4 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 5 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:05 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:05 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 3 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 2 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 1 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:06 /author.html.GET
+end: ג' אייר תשפ"ה 17:50:06 /author.html.GET took 0 ms
+start: ג' אייר תשפ"ה 17:50:34 /Author.GET
+end: ג' אייר תשפ"ה 17:50:34 /Author.GET took 39 ms
+start: ג' אייר תשפ"ה 17:51:05 /Book/8.PUT
+end: ג' אייר תשפ"ה 17:51:05 /Book/8.PUT took 36 ms
+start: ג' אייר תשפ"ה 17:56:58 /Author.GET
+end: ג' אייר תשפ"ה 17:56:59 /Author.GET took 107 ms
+start: ג' אייר תשפ"ה 17:57:31 /Author/8.PUT
+end: ג' אייר תשפ"ה 17:57:31 /Author/8.PUT took 66 ms
+start: ג' אייר תשפ"ה 17:58:34 /Author.GET
+end: ג' אייר תשפ"ה 17:58:34 /Author.GET took 4 ms
+start: ג' אייר תשפ"ה 17:58:55 /Author/8.PUT
+end: ג' אייר תשפ"ה 17:58:55 /Author/8.PUT took 4 ms
+start: ג' אייר תשפ"ה 17:58:56 /Author/8.PUT
+end: ג' אייר תשפ"ה 17:58:56 /Author/8.PUT took 4 ms
+start: ג' אייר תשפ"ה 18:01:10 /Author/8.PUT
+end: ג' אייר תשפ"ה 18:01:10 /Author/8.PUT took 2 ms
+start: 01-05-25 18:02:02 /Author/8.PUT
+end: 01-05-25 18:02:02 /Author/8.PUT took 239 ms
+start: 01-05-25 18:03:34 /Author.GET
+end: 01-05-25 18:03:34 /Author.GET took 128 ms
+start: 01-05-25 18:04:04 /Author/8.PUT
+end: 01-05-25 18:04:04 /Author/8.PUT took 74 ms
+start: 01-05-25 18:04:27 /Author/8.PUT
+end: 01-05-25 18:04:27 /Author/8.PUT took 8 ms
+start: 01-05-25 18:04:47 /Book.GET
+end: 01-05-25 18:04:47 /Book.GET took 18 ms
+start: 01-05-25 18:04:53 /Author.GET
+end: 01-05-25 18:04:53 /Author.GET took 3 ms
+start: 01-05-25 18:05:14 /Author/8.PUT
+end: 01-05-25 18:05:14 /Author/8.PUT took 3 ms
+start: 01-05-25 18:07:02 /Author/8.PUT
+end: 01-05-25 18:07:02 /Author/8.PUT took 157 ms
+start: 01-05-25 18:08:04 /Author/8.PUT
+end: 01-05-25 18:08:04 /Author/8.PUT took 177 ms
+start: 01-05-25 18:09:09 /Author.GET
+end: 01-05-25 18:09:09 /Author.GET took 161 ms
+start: 01-05-25 18:09:31 /Author/8.PUT
+end: 01-05-25 18:09:31 /Author/8.PUT took 62 ms
+start: 01-05-25 18:10:10 /Author/8.PUT
+end: 01-05-25 18:10:10 /Author/8.PUT took 118 ms
+start: 01-05-25 18:10:19 /Author.GET
+end: 01-05-25 18:10:19 /Author.GET took 26 ms
+start: 01-05-25 18:10:57 /Author/8.DELETE
+end: 01-05-25 18:10:57 /Author/8.DELETE took 16 ms
+start: 01-05-25 18:11:01 /Author.GET
+end: 01-05-25 18:11:01 /Author.GET took 3 ms
+start: 01-05-25 18:11:02 /Author.GET
+end: 01-05-25 18:11:02 /Author.GET took 2 ms

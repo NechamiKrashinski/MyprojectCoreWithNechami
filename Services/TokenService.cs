@@ -1,8 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
-using System.IO.IsolatedStorage;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using project.Models;
 
 namespace project.Services;
 
@@ -35,35 +35,51 @@ public static class TokenService
     public static string WriteToken(SecurityToken token) =>
         new JwtSecurityTokenHandler().WriteToken(token);
 
-    public static void SaveToken(string token)
+    public static ClaimsPrincipal DecodeToken(string token)
     {
-        using (var storage = IsolatedStorageFile.GetUserStoreForApplication())
+        var tokenHandler = new JwtSecurityTokenHandler();
+
+        try
         {
-            using (
-                var stream = new IsolatedStorageFileStream("token.txt", FileMode.Create, storage)
-            )
-            using (var writer = new StreamWriter(stream))
-            {
-                writer.Write(token);
-            }
+            var principal = tokenHandler.ReadToken(token) as JwtSecurityToken;
+
+            if (principal == null)
+                throw new SecurityTokenException("Invalid token");
+
+            return new ClaimsPrincipal(new ClaimsIdentity(principal.Claims));
+        }
+        catch (Exception ex)
+        {
+            throw new SecurityTokenException("Token decoding failed", ex);
         }
     }
 
-    public static string LoadToken()
+    public static bool IsTokenValid(string token)
     {
-        using (var storage = IsolatedStorageFile.GetUserStoreForApplication())
+        var tokenHandler = new JwtSecurityTokenHandler();
+        try
         {
-            if (storage.FileExists("token.txt"))
-            {
-                using (
-                    var stream = new IsolatedStorageFileStream("token.txt", FileMode.Open, storage)
-                )
-                using (var reader = new StreamReader(stream))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
+            tokenHandler.ValidateToken(
+                token,
+                GetTokenValidationParameters(),
+                out SecurityToken validatedToken
+            );
+            return validatedToken != null;
         }
-        return string.Empty;
+        catch (Exception)
+        {
+            return false;
+        }
+    }
+
+    public static UserAuth GetUserAuth(string token)
+    {
+        var claims = DecodeToken(token);
+
+        UserAuth userauth = new UserAuth();
+        userauth.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
+        userauth.role = (Role)
+            Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value);
+        return userauth;
     }
 }

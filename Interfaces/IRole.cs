@@ -4,5 +4,5 @@ namespace project.Interfaces;
 
 public interface IRole
 {
-    Role role { get; set; }
+    public Role role { get; set; }
 }

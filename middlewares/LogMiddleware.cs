@@ -1,35 +1,54 @@
 using System.Diagnostics;
+using System.IO;
+using System.Threading;
 
-namespace project.middleware;
-
-public class LogMiddleware
+namespace project.middleware
 {
-    private readonly RequestDelegate next;
-
-    //private readonly ILogger logger;
-
-    public LogMiddleware(RequestDelegate next,ILogger<LogMiddleware> logger)
+    public class LogMiddleware
     {
-        this.next=next;
-       // this.logger=logger;
+        private readonly RequestDelegate next;
+        private readonly string logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "data", "log.txt");
+        private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
+
+        public LogMiddleware(RequestDelegate next)
+        {
+            this.next = next;
+        }
+
+        public async Task Invoke(HttpContext context)
+        {
+            var logEntry = $"start: {DateTime.Now} {context.Request.Path}.{context.Request.Method}";
+            await LogToFile(logEntry);
+
+            var sw = new Stopwatch();
+            sw.Start();
+            await next.Invoke(context);
+            logEntry = $"end: {DateTime.Now} {context.Request.Path}.{context.Request.Method} took {sw.ElapsedMilliseconds} ms";
+            await LogToFile(logEntry);
+        }
+
+        private async Task LogToFile(string logEntry)
+        {
+            await semaphore.WaitAsync();
+            try
+            {
+                using (var writer = new StreamWriter(logFilePath, true))
+                {
+                    await writer.WriteLineAsync(logEntry);
+                }
+            }
+            finally
+            {
+                semaphore.Release();
+            }
+        }
     }
-    
 
-
-    public async Task Invoke(HttpContext c)
+    public static partial class MiddlewareExtensions
     {
-        Console.WriteLine($"start: {DateTime.Now} {c.Request.Path}.{c.Request.Method}");
-        var sw = new Stopwatch();
-        sw.Start();
-        await next.Invoke(c);
-        Console.WriteLine($"end: {DateTime.Now} {c.Request.Path}.{c.Request.Method} took{sw.ElapsedMilliseconds}");
-    }
-}
-
-public static partial class MiddlewareExtensions{
-
-    public static IApplicationBuilder UseLogMiddleware(this IApplicationBuilder builder)
-    {
-        return builder.UseMiddleware<LogMiddleware>();
+        public static IApplicationBuilder UseLogMiddleware(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<LogMiddleware>();
+        }
     }
 }

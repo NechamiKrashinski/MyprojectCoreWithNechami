@@ -2,7 +2,7 @@ using project.Interfaces;
 
 namespace project.Models;
 
-public class Author : IGeneric, IRole
+public class Author : IUser
 {
     public int Id { get; set; }
 

@@ -1,6 +1,7 @@
 using Microsoft.OpenApi.Models;
 using project.middleware;
 using project.Services;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -35,9 +36,23 @@ builder.Services.AddSwaggerGen(c =>
     );
 });
 
+// הוספת שירותי CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        "AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        }
+    );
+});
+// הוספת שירותים לקונטיינר.
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddService();
+builder.Services.AddCustomAuthentication(builder.Configuration);
 
 var app = builder.Build();
 
@@ -47,12 +62,27 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseLogMiddleware();
 app.UseErrorMiddleware();
+app.UseAuthMiddleware();
 app.UseDefaultFiles();
-app.UseStaticFiles();
+app.UseStaticFiles(
+    new StaticFileOptions { ServeUnknownFileTypes = true, DefaultContentType = "text/html" }
+);
 app.UseHttpsRedirection();
+app.UseCors("AllowAllOrigins"); // הוספת המידלוויר של CORS
 app.UseAuthorization();
 app.MapControllers();
 
+app.MapGet(
+    "/login",
+    async context =>
+    {
+        context.Response.ContentType = "text/html";
+        await context.Response.SendFileAsync(
+            Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "login.html")
+        );
+    }
+);
 app.Run();
