@@ -3,9 +3,9 @@ using project.Models;
 
 namespace project.Services;
 
-public class UserServiceJson : ServiceJson<Author>
+public class AuthorServiceJson : ServiceJson<Author>
 {
-    public UserServiceJson(IHostEnvironment env)
+    public AuthorServiceJson(IHostEnvironment env)
         : base(env) { }
 
     public override int Insert(Author newUser)
@@ -73,7 +73,6 @@ public class UserServiceJson : ServiceJson<Author>
         //     Console.WriteLine("Author birth date is not valid.");
         //     return false;
         // }
-       
 
         Console.WriteLine("Validation succeeded.");
 

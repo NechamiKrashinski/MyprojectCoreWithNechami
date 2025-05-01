@@ -74,7 +74,7 @@ public static class ServiceUtilities
     public static void AddService(this IServiceCollection services)
     {
         services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Author>, UserServiceJson>();
+        services.AddSingleton<IService<Author>, AuthorServiceJson>();
         services.AddScoped<IAuthentication<UserAuth>, AuthenticationService<UserAuth>>(); // ודא שזה קיים
         services.AddScoped<LoginService<UserAuth>>(); // הוסף שורה זו
         services.AddScoped<ILogin<UserAuth>, LoginService<UserAuth>>();

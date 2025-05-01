@@ -535,3 +535,89 @@ start: 01-05-25 18:11:01 /Author.GET
 end: 01-05-25 18:11:01 /Author.GET took 3 ms
 start: 01-05-25 18:11:02 /Author.GET
 end: 01-05-25 18:11:02 /Author.GET took 2 ms
+start: 01-05-25 19:33:58 /.GET
+end: 01-05-25 19:33:58 /index.html.GET took 93 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 31 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:58 /author.html.GET
+end: 01-05-25 19:33:58 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 4 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 2 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 1 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:33:59 /author.html.GET
+end: 01-05-25 19:33:59 /author.html.GET took 0 ms
+start: 01-05-25 19:34:13 /Author.GET
+end: 01-05-25 19:34:13 /Author.GET took 127 ms
+start: 01-05-25 19:34:37 /Author/7.PUT
+end: 01-05-25 19:34:37 /Author/7.PUT took 47 ms
+start: 01-05-25 19:34:45 /Author.GET
+end: 01-05-25 19:34:45 /Author.GET took 4 ms
