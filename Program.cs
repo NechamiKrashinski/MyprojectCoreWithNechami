@@ -38,10 +38,9 @@ builder.Services.AddSwaggerGen(c =>
 
 // Add services to the container.
 builder.Services.AddControllers();
-<<<<<<< HEAD
+
 builder.Services.AddCustomAuthentication(builder.Configuration);
-=======
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
+
 builder.Services.AddService();
 
 var app = builder.Build();

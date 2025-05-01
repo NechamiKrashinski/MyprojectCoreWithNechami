@@ -9,20 +9,13 @@ using project.Models;
 
 namespace project.Services;
 
-<<<<<<< HEAD
+
 public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : IGeneric
 {
     public ServiceJson(IHostEnvironment env) : base(env)
     {
 
     }
-=======
-public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
-    where T : IGeneric
-{
-    public ServiceJson(IHostEnvironment env)
-        : base(env) { }
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
     // protected void saveToFile()
     // {
@@ -76,10 +69,5 @@ public static class ServiceUtilities
         services.AddSingleton<IService<Author>, UserServiceJson>();
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
-<<<<<<< HEAD
-=======
-        services.AddScoped<LoginService<Author>, LoginService<Author>>();
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
-    }
-}
+    }}

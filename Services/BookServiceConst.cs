@@ -10,33 +10,13 @@ public class BookServiceConst : IService<Book>
 
     public BookServiceConst()
     {
-<<<<<<< HEAD
+
         listBooks = new List<Book>{
             new Book {Id=1, Name = "איסתרק", Author = "מיה קינן", Price = 70, Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) },
             new Book {Id=2, Name = "מהלהלל", Author = "מיה קינן", Price = 70 , Date= DateOnly.FromDateTime(DateTime.Now.AddYears(-2)) }
-=======
-        listBooks = new List<Book>
-        {
-            new Book
-            {
-                Id = 1,
-                Name = "איסתרק",
-                Author = "מיה קינן",
-                Price = 70,
-                Date = DateOnly.FromDateTime(DateTime.Now.AddYears(-2)),
-            },
-            new Book
-            {
-                Id = 2,
-                Name = "מהלהלל",
-                Author = "מיה קינן",
-                Price = 70,
-                Date = DateOnly.FromDateTime(DateTime.Now.AddYears(-2)),
-            },
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
-        };
-    }
 
+
+        };}
     public List<Book> Get()
     {
         return listBooks;
