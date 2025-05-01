@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,12 @@
 </head>
 <body>
     <h1>Login</h1>
-    <h3>התחבר</h3>
-    <form id="loginForm" action="javascript:void(0);" onsubmit="loginUser()">
-        <input type="number" id="login-id" placeholder="הזן את ה-ID שלך" required>
-        <input type="submit" value="התחבר">
+    <form id="loginForm" onsubmit="loginUser(event)">
+        <input type="number" id="login-id" placeholder="User ID" required>
+        <input type="submit" value="Login">
     </form>
+    <div id="message"></div>
 
-    <script src="js/login.js"></script>
+    <script src="js/login.js" asp-append-version="true"></script>
 </body>
 </html>

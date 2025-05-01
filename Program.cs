@@ -63,13 +63,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.UseLogMiddleware();
 app.UseErrorMiddleware();
 app.UseAuthMiddleware();
-app.UseDefaultFiles();
-app.UseStaticFiles(
-    new StaticFileOptions { ServeUnknownFileTypes = true, DefaultContentType = "text/html" }
-);
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // הוספת המידלוויר של CORS
 app.UseAuthorization();
