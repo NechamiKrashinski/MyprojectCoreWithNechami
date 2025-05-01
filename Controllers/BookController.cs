@@ -2,13 +2,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
+
 using System.Collections.Generic;
 using System.Security.Claims;
+
 namespace project.Controllers;
 
 [ApiController]
 [Authorize(Policy = "Admin")]
 [Route("[controller]")]
+
+
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
@@ -65,12 +69,10 @@ public class BookController : ControllerBase
     public ActionResult Post(Book newBook)
     {
         var newId = service.Insert(newBook);
-
         if (newId == -1)
         {
             return BadRequest();
         }
-
         return CreatedAtAction(nameof(Post), new { Id = newId });
     }
 
@@ -79,7 +81,6 @@ public class BookController : ControllerBase
     {
         if (service.Update(id, book))
             return NoContent();
-
         return BadRequest();
     }
 

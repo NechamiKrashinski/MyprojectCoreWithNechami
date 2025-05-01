@@ -14,12 +14,21 @@
 //     const addPriceTextbox = document.getElementById('add-price');
 //     const addDateTextbox = document.getElementById('add-date');
 
+<<<<<<< HEAD
 //     const item = {
 //         name: addNameTextbox.value.trim(),
 //         author: addAuthorTextbox.value.trim(),
 //         price: parseFloat(addPriceTextbox.value),
 //         date: addDateTextbox.value
 //     };
+=======
+    const item = {
+        name: addNameTextbox.value.trim(),
+        author: addAuthorTextbox.value.trim(),
+        price: parseFloat(addPriceTextbox.value),
+        date: addDateTextbox.value
+    };
+>>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
 //     fetch(uri, {
 //         method: 'POST',
@@ -51,6 +60,7 @@
 // function displayEditForm(id) {
 //     const item = books.find(item => item.id === id);
 
+<<<<<<< HEAD
 //     document.getElementById('edit-name').value = item.name;
 //     document.getElementById('edit-author').value = item.author;
 //     document.getElementById('edit-price').value = item.price;
@@ -68,6 +78,25 @@
 //         price: parseFloat(document.getElementById('edit-price').value),
 //         date: document.getElementById('edit-date').value
 //     };
+=======
+    document.getElementById('edit-name').value = item.name;
+    document.getElementById('edit-author').value = item.author;
+    document.getElementById('edit-price').value = item.price;
+    document.getElementById('edit-date').value = item.date;
+    document.getElementById('edit-id').value = item.id;
+    document.getElementById('editForm').style.display = 'block';
+}
+
+function updateItem() {
+    const itemId = document.getElementById('edit-id').value;
+    const item = {
+        id: parseInt(itemId, 10),
+        name: document.getElementById('edit-name').value.trim(),
+        author: document.getElementById('edit-author').value.trim(),
+        price: parseFloat(document.getElementById('edit-price').value),
+        date: document.getElementById('edit-date').value
+    };
+>>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
 //     fetch(`${uri}/${itemId}`, {
 //         method: 'PUT',

@@ -2,10 +2,10 @@
 bin/
 obj/
 
-# Ignore auther-specific files
-*.auther
+# Ignore author-specific files
+*.author
 *.suo
-*.autherosscache
+*.authorosscache
 *.sln.docstates
 
 # Ignore IDE-specific files

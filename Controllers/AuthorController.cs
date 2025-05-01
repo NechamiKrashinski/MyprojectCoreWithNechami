@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 
+
 using project.Services;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -106,11 +107,13 @@ namespace project.Controllers;
 
 
 // }
+
 [ApiController]
 [Route("[controller]")]
 public class AuthorController : ControllerBase
 {
     private readonly IService<Author> service;
+
     private readonly string autherRole;
     private ClaimsPrincipal claimsPrincipal;
     public AuthorController(IService<Author> service)
@@ -120,6 +123,7 @@ public class AuthorController : ControllerBase
         var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
         claimsPrincipal = TokenService.ValidateToken(token);
         autherRole = claimsPrincipal.Claims.FirstOrDefault(c => c.Type == "Role")?.Value;
+
     }
 
     [HttpGet]
@@ -134,6 +138,7 @@ public class AuthorController : ControllerBase
         {
             var id = int.Parse(claimsPrincipal.FindFirst("Id")?.Value);
             return new List<Author> { service.Get(id) };
+
         }
 
         return BadRequest("Unauthorized access");
@@ -143,10 +148,12 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult<Author> Get(int id)
     {
-        var auther = service.Get(id);
-        if (auther == null)
+
+        var author = service.Get(id);
+        if (author == null)
             throw new ApplicationException("Author not found");
-        return auther;
+        return author;
+
     }
 
     [HttpPost]
@@ -165,22 +172,26 @@ public class AuthorController : ControllerBase
 
     [HttpPut("{id}")]
     [Authorize(policy: "Author")]
+
     public ActionResult Put(int id, Author auther)
     {
         if (autherRole == "Admin")
         {
             if (service.Update(id, auther))
+
                 return NoContent();
 
             return BadRequest();
         }
         else
         {
+
             var idToken = claimsPrincipal.FindFirst("Id")?.Value;
             int.TryParse(idToken, out int typeId);
             if (id == typeId)
             {
                 if (service.Update(id, auther))
+
                     return NoContent();
 
                 return BadRequest();
@@ -199,6 +210,8 @@ public class AuthorController : ControllerBase
         if (service.Delete(id))
             return Ok();
 
+
         return NotFound();
     }
 }
+

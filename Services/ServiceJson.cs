@@ -1,21 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-
 using project.Interfaces;
 using project.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System;
-using System.Text.Json;
 
 namespace project.Services;
 
+<<<<<<< HEAD
 public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : IGeneric
 {
     public ServiceJson(IHostEnvironment env) : base(env)
     {
 
     }
+=======
+public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
+    where T : IGeneric
+{
+    public ServiceJson(IHostEnvironment env)
+        : base(env) { }
+>>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
     // protected void saveToFile()
     // {
@@ -24,6 +31,7 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
     // }
     protected void saveToFile()
     {
+
         var options = new JsonSerializerOptions
         {
             WriteIndented = true
@@ -32,6 +40,7 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
         var jsonData = JsonSerializer.Serialize(MyList, options);
         File.WriteAllText(filePath, jsonData);
     }
+
 
 
 
@@ -45,7 +54,6 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
 
     public abstract bool Update(int id, T book);
 
-
     public bool Delete(int id)
     {
         var currentT = MyList.FirstOrDefault(b => b.Id == id);
@@ -57,10 +65,7 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
         saveToFile();
         return true;
     }
-
-
 }
-
 
 public static class ServiceUtilities
 {
@@ -71,6 +76,10 @@ public static class ServiceUtilities
         services.AddSingleton<IService<Author>, UserServiceJson>();
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
+<<<<<<< HEAD
+=======
+        services.AddScoped<LoginService<Author>, LoginService<Author>>();
+>>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
     }
 }

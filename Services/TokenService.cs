@@ -1,14 +1,20 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.IO.IsolatedStorage;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+<<<<<<< HEAD
 using System.IdentityModel.Tokens.Jwt;
 using System.IO.IsolatedStorage;
+=======
+>>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 
 namespace project.Services;
 
 public static class TokenService
 {
     private static SymmetricSecurityKey Key = new SymmetricSecurityKey(
+<<<<<<< HEAD
         Encoding.UTF8.GetBytes("111555zbzhcC5fvyGfeifzxjc58zxvyaxfGGjilllLLMBGJH"));
 
     private static string issuer = "http://localhost:5172";
@@ -23,6 +29,8 @@ public static class TokenService
 
     public static TokenValidationParameters
         GetTokenValidationParameters() =>
+
+
         new TokenValidationParameters
         {
             ValidIssuer = issuer,
@@ -30,10 +38,9 @@ public static class TokenService
             IssuerSigningKey = Key,
             ClockSkew = TimeSpan.FromMinutes(5),
         };
+
     public static string WriteToken(SecurityToken token) =>
         new JwtSecurityTokenHandler().WriteToken(token);
-   
-    
  public static ClaimsPrincipal ValidateToken(string token)
 {
     var tokenHandler = new JwtSecurityTokenHandler();
@@ -51,4 +58,38 @@ public static class TokenService
     }
 } 
 
+}
+
+
+    public static void SaveToken(string token)
+    {
+        using (var storage = IsolatedStorageFile.GetUserStoreForApplication())
+        {
+            using (
+                var stream = new IsolatedStorageFileStream("token.txt", FileMode.Create, storage)
+            )
+            using (var writer = new StreamWriter(stream))
+            {
+                writer.Write(token);
+            }
+        }
+    }
+
+    public static string LoadToken()
+    {
+        using (var storage = IsolatedStorageFile.GetUserStoreForApplication())
+        {
+            if (storage.FileExists("token.txt"))
+            {
+                using (
+                    var stream = new IsolatedStorageFileStream("token.txt", FileMode.Open, storage)
+                )
+                using (var reader = new StreamReader(stream))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
+        return string.Empty;
+    }
 }

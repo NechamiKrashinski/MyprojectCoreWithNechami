@@ -21,18 +21,16 @@ public class ErrorMiddlware
         catch (ApplicationException ex)
         {
             c.Response.StatusCode = 400;
-           // Email(ex.Message);
+            // Email(ex.Message);
             await c.Response.WriteAsync(ex.Message);
         }
         catch (Exception ex)
         {
-          //  Email(ex.Message);
+            //  Email(ex.Message);
             c.Response.StatusCode = 500;
-            await c.Response.WriteAsync("פנה לתמיכה הטכנית"+ex.Message);
+            await c.Response.WriteAsync("פנה לתמיכה הטכנית" + ex.Message);
         }
-
     }
-
 
     public void Email(string error)
     {
@@ -49,21 +47,17 @@ public class ErrorMiddlware
             EnableSsl = true,
             DeliveryMethod = SmtpDeliveryMethod.Network,
             UseDefaultCredentials = false,
-            Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
         };
 
-        using (var message = new MailMessage(fromAddress, toAddress)
-        {
-            Subject = subject,
-            Body = body
-        })
+        using (
+            var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = body }
+        )
         {
             smtp.Send(message);
         }
     }
 }
-
-
 
 public static partial class MiddlewareExtensions
 {
@@ -72,5 +66,3 @@ public static partial class MiddlewareExtensions
         return builder.UseMiddleware<ErrorMiddlware>();
     }
 }
-
-
