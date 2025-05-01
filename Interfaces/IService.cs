@@ -2,7 +2,7 @@ namespace project.Interfaces;
 
 public interface IService<T>
 {
-     string Token { get; set; }
+    // string Token { get; set; }
     List<T> Get();
 
     T Get(int id);
