@@ -2,16 +2,19 @@ using project.Models;
 
 namespace project.Services;
 
-public class UserServiceJson : ServiceJson<Auther>
+public class UserServiceJson : ServiceJson<Author>
 {
 
     public UserServiceJson(IHostEnvironment env) : base(env)
     {
 
     }
-    public override int Insert(Auther newUser)
+    public override List<Author> Get()
     {
-        System.Console.WriteLine("inset 11111" + newUser);
+        return MyList;
+    }
+    public override int Insert(Author newUser)
+    {
         if (newUser == null)
         {
             Console.WriteLine("Error: newUser is null.");
@@ -50,7 +53,7 @@ public class UserServiceJson : ServiceJson<Auther>
 
 
 
-    public override bool Update(int id, Auther auther)
+    public override bool Update(int id, Author auther)
     {
 
         if (auther == null || auther.Id != id ||

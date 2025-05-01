@@ -16,7 +16,7 @@ function addItem() {
 
     const item = {
         name: addNameTextbox.value.trim(),
-        auther: addAuthorTextbox.value.trim(),
+        author: addAuthorTextbox.value.trim(),
         price: parseFloat(addPriceTextbox.value),
         date: addDateTextbox.value
     };
@@ -52,7 +52,7 @@ function displayEditForm(id) {
     const item = books.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-author').value = item.auther;
+    document.getElementById('edit-author').value = item.author;
     document.getElementById('edit-price').value = item.price;
     document.getElementById('edit-date').value = item.date;
     document.getElementById('edit-id').value = item.id;
@@ -64,7 +64,7 @@ function updateItem() {
     const item = {
         id: parseInt(itemId, 10),
         name: document.getElementById('edit-name').value.trim(),
-        auther: document.getElementById('edit-author').value.trim(),
+        author: document.getElementById('edit-author').value.trim(),
         price: parseFloat(document.getElementById('edit-price').value),
         date: document.getElementById('edit-date').value
     };
@@ -103,7 +103,7 @@ function _displayItems(data) {
         let tr = tBody.insertRow();
 
         let td1 = tr.insertCell(0);
-        td1.appendChild(document.createTextNode(item.auther));
+        td1.appendChild(document.createTextNode(item.author));
 
         let td2 = tr.insertCell(1);
         td2.appendChild(document.createTextNode(item.name));

@@ -1,97 +1,97 @@
-const uri = '/book';
-let books = [];
+// const uri = '/book';
+// let books = [];
 
-function getItems() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
-}
+// function getItems() {
+//     fetch(uri)
+//         .then(response => response.json())
+//         .then(data => _displayItems(data))
+//         .catch(error => console.error('Unable to get items.', error));
+// }
 
-function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
-    const addAuthorTextbox = document.getElementById('add-author');
-    const addPriceTextbox = document.getElementById('add-price');
-    const addDateTextbox = document.getElementById('add-date');
+// function addItem() {
+//     const addNameTextbox = document.getElementById('add-name');
+//     const addAuthorTextbox = document.getElementById('add-author');
+//     const addPriceTextbox = document.getElementById('add-price');
+//     const addDateTextbox = document.getElementById('add-date');
 
-    const item = {
-        name: addNameTextbox.value.trim(),
-        auther: addAuthorTextbox.value.trim(),
-        price: parseFloat(addPriceTextbox.value),
-        date: addDateTextbox.value
-    };
+//     const item = {
+//         name: addNameTextbox.value.trim(),
+//         author: addAuthorTextbox.value.trim(),
+//         price: parseFloat(addPriceTextbox.value),
+//         date: addDateTextbox.value
+//     };
 
-    fetch(uri, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(item)
-    })
-    .then(response => response.json())
-    .then(() => {
-        getItems();
-        addNameTextbox.value = '';
-        addAuthorTextbox.value = '';
-        addPriceTextbox.value = '';
-        addDateTextbox.value = '';
-    })
-    .catch(error => console.error('Unable to add item.', error));
-}
+//     fetch(uri, {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(item)
+//     })
+//     .then(response => response.json())
+//     .then(() => {
+//         getItems();
+//         addNameTextbox.value = '';
+//         addAuthorTextbox.value = '';
+//         addPriceTextbox.value = '';
+//         addDateTextbox.value = '';
+//     })
+//     .catch(error => console.error('Unable to add item.', error));
+// }
 
-function deleteItem(id) {
-    fetch(`${uri}/${id}`, {
-        method: 'DELETE'
-    })
-    .then(() => getItems())
-    .catch(error => console.error('Unable to delete item.', error));
-}
+// function deleteItem(id) {
+//     fetch(`${uri}/${id}`, {
+//         method: 'DELETE'
+//     })
+//     .then(() => getItems())
+//     .catch(error => console.error('Unable to delete item.', error));
+// }
 
-function displayEditForm(id) {
-    const item = books.find(item => item.id === id);
+// function displayEditForm(id) {
+//     const item = books.find(item => item.id === id);
 
-    document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-author').value = item.auther;
-    document.getElementById('edit-price').value = item.price;
-    document.getElementById('edit-date').value = item.date;
-    document.getElementById('edit-id').value = item.id;
-    document.getElementById('editForm').style.display = 'block';
-}
+//     document.getElementById('edit-name').value = item.name;
+//     document.getElementById('edit-author').value = item.author;
+//     document.getElementById('edit-price').value = item.price;
+//     document.getElementById('edit-date').value = item.date;
+//     document.getElementById('edit-id').value = item.id;
+//     document.getElementById('editForm').style.display = 'block';
+// }
 
-function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
-    const item = {
-        id: parseInt(itemId, 10),
-        name: document.getElementById('edit-name').value.trim(),
-        auther: document.getElementById('edit-author').value.trim(),
-        price: parseFloat(document.getElementById('edit-price').value),
-        date: document.getElementById('edit-date').value
-    };
+// function updateItem() {
+//     const itemId = document.getElementById('edit-id').value;
+//     const item = {
+//         id: parseInt(itemId, 10),
+//         name: document.getElementById('edit-name').value.trim(),
+//         author: document.getElementById('edit-author').value.trim(),
+//         price: parseFloat(document.getElementById('edit-price').value),
+//         date: document.getElementById('edit-date').value
+//     };
 
-    fetch(`${uri}/${itemId}`, {
-        method: 'PUT',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(item)
-    })
-    .then(() => getItems())
-    .catch(error => console.error('Unable to update item.', error));
+//     fetch(`${uri}/${itemId}`, {
+//         method: 'PUT',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(item)
+//     })
+//     .then(() => getItems())
+//     .catch(error => console.error('Unable to update item.', error));
 
-    closeInput();
-    return false;
-}
+//     closeInput();
+//     return false;
+// }
 
-function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
-}
+// function closeInput() {
+//     document.getElementById('editForm').style.display = 'none';
+// }
 
-function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'book' : 'books';
-    document.getElementById('counter').innerText = `${itemCount} ${name}`;
-}
+// function _displayCount(itemCount) {
+//     const name = (itemCount === 1) ? 'book' : 'books';
+//     document.getElementById('counter').innerText = `${itemCount} ${name}`;
+// }
 
 function _displayItems(data) {
     const tBody = document.getElementById('books');
@@ -103,7 +103,7 @@ function _displayItems(data) {
         let tr = tBody.insertRow();
 
         let td1 = tr.insertCell(0);
-        td1.appendChild(document.createTextNode(item.auther));
+        td1.appendChild(document.createTextNode(item.author));
 
         let td2 = tr.insertCell(1);
         td2.appendChild(document.createTextNode(item.name));
@@ -128,4 +128,99 @@ function _displayItems(data) {
     });
 
     books = data;
+}
+
+const uri = '/book';
+let books = [];
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+fetch(uri, {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${getCookie('token')}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    credentials: 'include'
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+})
+.then(data => _displayItems(data))
+.catch(error => console.error('Unable to get items.', error));
+
+function addItem() {
+    const addNameTextbox = document.getElementById('add-name');
+    const addAuthorTextbox = document.getElementById('add-author');
+    const addPriceTextbox = document.getElementById('add-price');
+    const addDateTextbox = document.getElementById('add-date');
+
+    const item = {
+        name: addNameTextbox.value.trim(),
+        author: addAuthorTextbox.value.trim(),
+        price: parseFloat(addPriceTextbox.value),
+        date: addDateTextbox.value
+    };
+
+    fetch(uri, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${getCookie('token')}`, // שליפת הטוקן מהקוקי
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
+        body: JSON.stringify(item)
+    })
+    .then(response => response.json())
+    .then(() => {
+        getItems();
+        addNameTextbox.value = '';
+        addAuthorTextbox.value = '';
+        addPriceTextbox.value = '';
+        addDateTextbox.value = '';
+    })
+    .catch(error => console.error('Unable to add item.', error));
+}
+
+function deleteItem(id) {
+    fetch(`${uri}/${id}`, {
+        method: 'DELETE',
+        credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
+    })
+    .then(() => getItems())
+    .catch(error => console.error('Unable to delete item.', error));
+}
+
+function updateItem() {
+    const itemId = document.getElementById('edit-id').value;
+    const item = {
+        id: parseInt(itemId, 10),
+        name: document.getElementById('edit-name').value.trim(),
+        author: document.getElementById('edit-author').value.trim(),
+        price: parseFloat(document.getElementById('edit-price').value),
+        date: document.getElementById('edit-date').value
+    };
+
+    fetch(`${uri}/${itemId}`, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
+        body: JSON.stringify(item)
+    })
+    .then(() => getItems())
+    .catch(error => console.error('Unable to update item.', error));
+
+    closeInput();
+    return false;
 }

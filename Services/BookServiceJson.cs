@@ -7,6 +7,7 @@ using System.Linq;
 using System.IO;
 using System;
 using System.Text.Json;
+using project.Models;
 namespace project.Services;
 
 
@@ -15,19 +16,23 @@ public class BookServiceJson : ServiceJson<Book>
 {
 
 
-    private readonly IService<Auther> autherService;
+    private readonly IService<Author> autherService;
 
-    public BookServiceJson(IHostEnvironment env, IService<Auther> autherService) : base(env)
+    public BookServiceJson(IHostEnvironment env, IService<Author> autherService) : base(env)
     {
         this.autherService = autherService;
     }
 
+    public override List<Book> Get()
+    {
+        return MyList;
+    }
     public override int Insert(Book newBook)
     {
         if (newBook == null || string.IsNullOrWhiteSpace(newBook.Name) || newBook.Price <= 0)
             return -1;
 
-        if (autherService.Get()?.Find(u => u.Name == newBook.Auther) != null)
+        if (autherService.Get()?.Find(u => u.Name == newBook.Author) != null)
         {
             int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
             newBook.Id = maxId + 1;

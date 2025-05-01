@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
 using System.Collections.Generic;
+using System.Security.Claims;
+namespace project.Controllers;
 
 [ApiController]
+[Authorize(Policy = "Admin")]
 [Route("[controller]")]
-[Authorize(policy:"Auther")]
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
@@ -15,10 +17,38 @@ public class BookController : ControllerBase
     {
         this.service = service;
     }
+// [HttpGet]
+// public ActionResult<IEnumerable<ClaimDto>> GetClaims()
+// {
+//     if (!HttpContext.User.Identity.IsAuthenticated)
+//     {
+//         return Unauthorized();
+//     }
 
+//     var claims = HttpContext.User.Claims.Select(c => new ClaimDto
+//     {
+//         Type = c.Type,
+//         Value = c.Value
+//     }).ToList();
+
+//     return Ok(claims);
+// }
     [HttpGet]
+
     public ActionResult<IEnumerable<Book>> Get()
     {
+        var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
+        if (role == "Admin")
+        {
+            System.Console.WriteLine("Admin role in BookController");
+            return service.Get();
+        }
+        else if (role == "Author")
+        {
+             System.Console.WriteLine("Auther role in BookController");
+            var id = int.Parse(HttpContext.User.FindFirst("Id")?.Value);
+            return new List<Book> { service.Get(id) };
+        }
         return service.Get();
     }
 
@@ -61,4 +91,12 @@ public class BookController : ControllerBase
 
         return NotFound();
     }
+
+   
+}
+
+public class ClaimDto
+{
+    public string Type { get; set; }
+    public string Value { get; set; }
 }

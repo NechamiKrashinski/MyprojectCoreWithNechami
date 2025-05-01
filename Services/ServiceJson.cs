@@ -10,50 +10,30 @@ using System.Text.Json;
 
 namespace project.Services;
 
-public abstract class ServiceJson<T> : IService<T> where T : IGeneric
+public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : IGeneric
 {
-    protected List<T> MyList { get; }
-    protected static string fileName;
-    private string filePath;
-
-    public ServiceJson(IHostEnvironment env)
+    public ServiceJson(IHostEnvironment env) : base(env)
     {
-        fileName = typeof(T).Name.ToLower() + ".json";
-        filePath = Path.Combine(env.ContentRootPath, "data", fileName);
-        if (!File.Exists(filePath))
-        {
-            System.Console.WriteLine("--------------------------------------------------");
-            MyList = new List<T>(); // או טיפול אחר במקרה שהקובץ לא קיים
-            return;
 
-        }
-
-        using (var jsonFile = File.OpenText(filePath))
-        {
-            System.Console.WriteLine("////////////////////////////////////////////////");
-
-            MyList = JsonSerializer.Deserialize<List<T>>(jsonFile.ReadToEnd(),
-                    new JsonSerializerOptions
-                {
-                  PropertyNameCaseInsensitive = true
-                }) ?? new List<T>(); ;
-            System.Console.WriteLine(MyList.ToString()+"-------------------------------------------------------------------");
-
-        }
     }
 
+    // protected void saveToFile()
+    // {
+    //     System.Console.WriteLine("in save to file----------------------------" + filePath);
+    //     File.WriteAllText(filePath, JsonSerializer.Serialize(MyList));
+    // }
     protected void saveToFile()
     {
-        System.Console.WriteLine("in save to file----------------------------" + filePath);
-        File.WriteAllText(filePath, JsonSerializer.Serialize(MyList));
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true
+        };
+
+        var jsonData = JsonSerializer.Serialize(MyList, options);
+        File.WriteAllText(filePath, jsonData);
     }
 
 
-
-    public List<T> Get()
-    {
-        return MyList;
-    }
 
     public T Get(int id)
     {
@@ -84,9 +64,13 @@ public abstract class ServiceJson<T> : IService<T> where T : IGeneric
 
 public static class ServiceUtilities
 {
-    public static void AddSservic(this IServiceCollection services)
+    public static void AddService(this IServiceCollection services)
     {
+        System.Console.WriteLine("AddService----------------------------");
         services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Auther>, UserServiceJson>();
+        services.AddSingleton<IService<Author>, UserServiceJson>();
+        services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
+        services.AddScoped<ILogin<Author>, LoginService<Author>>();
+
     }
 }
