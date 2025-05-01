@@ -29,6 +29,7 @@ public class LoginService<T> :ILogin<T> where T : IGeneric, IRole
     {
         var claims = new List<Claim>
         {
+            new("Name", CurrentUser.Name),
             new("Id", userId.ToString()),
             new(ClaimTypes.Role, CurrentUser.role.ToString())
         };

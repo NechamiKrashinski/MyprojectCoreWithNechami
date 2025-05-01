@@ -22,12 +22,12 @@ public class BookServiceJson : ServiceJson<Book>
 
 
 
-    private readonly IService<Author> autherService;
+   
 
-    public BookServiceJson(IHostEnvironment env, IService<Author> autherService) : base(env)
-
+    public BookServiceJson(IHostEnvironment env, IService<Author> autherS) : base(env)
     {
-        this.authorService = authorService;
+       
+        authorService = autherS; // Incorrect assignment
     }
 
     public override List<Book> Get()
@@ -36,13 +36,34 @@ public class BookServiceJson : ServiceJson<Book>
     }
     public override int Insert(Book newBook)
     {
-        if (newBook == null || string.IsNullOrWhiteSpace(newBook.Name) || newBook.Price <= 0)
-            return -1;
-
-
-        if (autherService.Get()?.Find(u => u.Name == newBook.Author) != null)
-
+        System.Console.WriteLine(newBook.Name);
+        System.Console.WriteLine(newBook.Price);
+        System.Console.WriteLine(newBook.Author);
+        System.Console.WriteLine(newBook.Date);
+        System.Console.WriteLine(newBook.Id);
+      
+        if (string.IsNullOrWhiteSpace(newBook.Name))
         {
+            System.Console.WriteLine("Error: Name is required.");
+            return -1;
+        }
+    
+        if (string.IsNullOrWhiteSpace(newBook.Author))
+        {
+            System.Console.WriteLine("Error: Author is required.");
+            return -1;
+        }
+       
+        if (newBook.Date.ToDateTime(TimeOnly.MinValue) >= DateTime.Now)
+        {
+            System.Console.WriteLine("Error: Date must be in the past.");
+            return -1;
+        }
+
+        
+        if (authorService.Get().FirstOrDefault(u => u.Name == newBook.Author) != null)
+        {
+            System.Console.WriteLine("Author exists in the list.");
             int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
             newBook.Id = maxId + 1;
             MyList.Add(newBook);
@@ -51,6 +72,7 @@ public class BookServiceJson : ServiceJson<Book>
         }
         else
         {
+            System.Console.WriteLine("Error: Author does not exist in the list.");
             return -1;
         }
     }
@@ -64,13 +86,28 @@ public class BookServiceJson : ServiceJson<Book>
             || book.Price <= 0
         )
             return false;
-
+        System.Console.WriteLine("Update book: " + book.Name);
         var currentBook = MyList.FirstOrDefault(b => b.Id == id);
         if (currentBook == null)
-            return false;
-
+        {
+            System.Console.WriteLine("Error: Book not found.");
+             return false;
+        }
+       
         currentBook.Name = book.Name;
         currentBook.Price = book.Price;
+        //עדכון של השם רק אם הוא קיים ברשימה של הסופרים
+        if( authorService.Get().FirstOrDefault(u => u.Name == book.Author)!= null)
+        {
+             currentBook.Author = book.Author;
+        }
+        else
+        {
+            System.Console.WriteLine("Error: Author does not exist in the list.");
+            return false;
+        }
+        
+        currentBook.Date = book.Date;
         saveToFile();
         return true;
     }

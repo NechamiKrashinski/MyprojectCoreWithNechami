@@ -24,7 +24,7 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
     // }
     protected void saveToFile()
     {
-
+        System.Console.WriteLine("in save to file----------------------------" + filePath);
         var options = new JsonSerializerOptions
         {
             WriteIndented = true
@@ -66,7 +66,7 @@ public static class ServiceUtilities
     {
         System.Console.WriteLine("AddService----------------------------");
         services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Author>, UserServiceJson>();
+        services.AddSingleton<IService<Author>, AuthorServiceJson>();
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
 

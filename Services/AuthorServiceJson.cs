@@ -2,16 +2,17 @@ using project.Models;
 
 namespace project.Services;
 
-public class UserServiceJson : ServiceJson<Author>
+public class AuthorServiceJson : ServiceJson<Author>
 {
 
 
-    public UserServiceJson(IHostEnvironment env) : base(env)
+    public AuthorServiceJson(IHostEnvironment env) : base(env)
     {
 
     }
     public override List<Author> Get()
     {
+       System.Console.WriteLine("mylist is null?"+MyList==null);
         return MyList;
     }
 
