@@ -10,7 +10,7 @@
 <body>
     <h1>Author CRUD</h1>
     <h3>Add Author</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="Author Name" required>
         <input type="text" id="add-address" placeholder="Address" required>
         <input type="date" id="add-birthdate" placeholder="Birth Date" required>
@@ -19,7 +19,7 @@
 
     <div id="editForm" style="display:none;">
         <h3>Edit Author</h3>
-        <form action="javascript:void(0);" onsubmit="updateUser()">
+        <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
             <input type="text" id="edit-name" required>
             <input type="text" id="edit-address" required>
@@ -42,7 +42,7 @@
 
     <script src="js/authors.js" asp-append-version="true"></script>
     <script type="text/javascript">
-        getUsers();
+        getItems();
     </script>
 </body>
 

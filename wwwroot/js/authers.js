@@ -1,20 +1,31 @@
-<<<<<<< HEAD
-const loginUri = '/login';
-
-function loginUser() {
-    const loginIdTextbox = document.getElementById('login-id');
-
-    const loginData = {
-        id: parseInt(loginIdTextbox.value.trim())
-=======
+// import { getCookie } from './utils.js';
 const uri = '/author';
 let authors = [];
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 function getUsers() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayUsers(data))
-        .catch(error => console.error('Unable to get authors.', error));
+    fetch(uri, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Unable to get authors.');
+        }
+        return response.json();
+    })
+    .then(data => _displayUsers(data))
+    .catch(error => console.error('Unable to get authors.', error));
 }
 
 function addUser() {
@@ -26,40 +37,39 @@ function addUser() {
         name: addNameTextbox.value.trim(),
         address: addAddressTextbox.value.trim(),
         birthDate: addBirthdateTextbox.value
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
     };
 
-    fetch(loginUri, {
+    fetch(uri, {
         method: 'POST',
         headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
-        body: JSON.stringify(loginData)
-=======
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(author)
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Login failed');
+            throw new Error('Unable to add author.');
         }
         return response.json();
     })
-<<<<<<< HEAD
-    .then(data => {
-        console.log('Login successful', data);
-        // כאן תוכל לשמור את הטוקן או לעדכן את הממשק בהתאם
+    .then(() => {
+        getUsers(); // עדכון הרשימה לאחר הוספה
     })
-    .catch(error => console.error('Unable to login.', error));
-=======
     .catch(error => console.error('Unable to add author.', error));
 }
 
 function deleteUser(id) {
     fetch(`${uri}/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
     })
     .then(() => getUsers())
     .catch(error => console.error('Unable to delete author.', error));
@@ -87,9 +97,11 @@ function updateUser() {
     fetch(`${uri}/${authorId}`, {
         method: 'PUT',
         headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(author)
     })
     .then(() => getUsers())
@@ -132,5 +144,7 @@ function _displayUsers(data) {
     });
 
     authors = data;
->>>>>>> e5f0c2f45f3159d29c8be38a0b4d2eeb1432a9fa
 }
+
+// קריאה ל-getUsers כדי להציג את הסופרים
+getUsers();

@@ -1,11 +1,27 @@
+import { getCookie } from './utils.js'; // Import the getCookie function
 const uri = '/book';
 let books = [];
 
+
+
 function getItems() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+    fetch(uri, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Unable to get items.');
+        }
+        return response.json();
+    })
+    .then(data => _displayItems(data))
+    .catch(error => console.error('Unable to get items.', error));
 }
 
 function addItem() {
@@ -24,12 +40,19 @@ function addItem() {
     fetch(uri, {
         method: 'POST',
         headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(item)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Unable to add item.');
+        }
+        return response.json();
+    })
     .then(() => {
         getItems();
         addNameTextbox.value = '';
@@ -42,7 +65,13 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
     })
     .then(() => getItems())
     .catch(error => console.error('Unable to delete item.', error));
@@ -72,16 +101,17 @@ function updateItem() {
     fetch(`${uri}/${itemId}`, {
         method: 'PUT',
         headers: {
+            'Authorization': `Bearer ${getCookie('authToken')}`, // שליפת הטוקן מהקוקי
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+        credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(item)
     })
     .then(() => getItems())
     .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
-    return false;
 }
 
 function closeInput() {
@@ -129,3 +159,6 @@ function _displayItems(data) {
 
     books = data;
 }
+
+// קריאה ל-getItems כדי להציג את הספרים
+getItems();

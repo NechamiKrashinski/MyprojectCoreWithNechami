@@ -61,6 +61,7 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult Post(Author newUser)
     {
+        System.Console.WriteLine("AuthorController post method called");
         var newId = service.Insert(newUser);
 
         if (newId == -1)
@@ -76,7 +77,9 @@ public class AuthorController : ControllerBase
 
     public ActionResult Put(int id, Author auther)
     {
+        System.Console.WriteLine("AuthorController put method called");
         var  authorRole = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
+       System.Console.WriteLine(authorRole + " authorRole in AuthorController put");
         if (authorRole == "Admin")
         {
             if (service.Update(id, auther))

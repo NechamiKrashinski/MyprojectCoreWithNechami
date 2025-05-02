@@ -12,7 +12,7 @@ public class AuthorServiceJson : ServiceJson<Author>
     }
     public override List<Author> Get()
     {
-       System.Console.WriteLine("mylist is null?"+MyList==null);
+        System.Console.WriteLine("mylist is null?" + MyList == null);
         return MyList;
     }
 
@@ -68,20 +68,26 @@ public class AuthorServiceJson : ServiceJson<Author>
 
     public override bool Update(int id, Author auther)
     {
-
-        if (auther == null || auther.Id != id ||
+        System.Console.WriteLine(auther.role);
+        System.Console.WriteLine("update function called");
+        System.Console.WriteLine(auther.BirthDate.ToDateTime(TimeOnly.MinValue) > DateTime.Now.Date);
+        if (auther == null || (auther.role != Role.Admin && auther.Id != id) ||
                string.IsNullOrWhiteSpace(auther.Name) ||
                string.IsNullOrWhiteSpace(auther.Address) ||
-              auther.BirthDate.ToDateTime(TimeOnly.MinValue) <= DateTime.Now)
-
+             auther.BirthDate.ToDateTime(TimeOnly.MinValue) > DateTime.Now.Date)
+        {
+            System.Console.WriteLine("אין אפשרות לעדכן נתונים שגויים");
             return false;
+        }
 
+        System.Console.WriteLine("update function called 2");
         var currentUser = MyList.FirstOrDefault(u => u.Id == id);
         if (currentUser == null)
             return false;
 
         currentUser.Name = auther.Name;
         currentUser.Address = auther.Address;
+        currentUser.role = auther.role;
         currentUser.BirthDate = auther.BirthDate;
         saveToFile();
         return true;
