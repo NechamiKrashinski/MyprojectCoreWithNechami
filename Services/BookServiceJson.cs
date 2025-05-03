@@ -34,6 +34,26 @@ public class BookServiceJson : ServiceJson<Book>
     {
         return MyList;
     }
+    public List< Book> GetAuthorsBook(String authorName)
+    {
+        System.Console.WriteLine(authorName + " authorName in book service");
+        List< Book> books = MyList.FindAll(b => b.Author == authorName);
+        if (books != null)
+        {
+            foreach (var book in books)
+            {
+                System.Console.WriteLine(book.Name + " book name in book service");
+            }
+            System.Console.WriteLine("Book found: ");
+            return  books ;
+        }
+        else
+        {
+            System.Console.WriteLine("Error: Book not found.");
+            return null;
+        }
+    }
+    
     public override int Insert(Book newBook)
     {
         System.Console.WriteLine(newBook.Name);

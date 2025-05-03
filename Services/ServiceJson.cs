@@ -37,9 +37,11 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
 
 
 
-    public T Get(int id)
+    public  T Get(int id)
     {
+        System.Console.WriteLine(id + " id in  serviceJson");
         var t = MyList.FirstOrDefault(b => b.Id == id);
+        System.Console.WriteLine(t  + " t in  serviceJson");
         return t;
     }
 
@@ -69,5 +71,6 @@ public static class ServiceUtilities
         services.AddSingleton<IService<Author>, AuthorServiceJson>();
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
+        services.AddScoped<BookServiceJson, BookServiceJson>();
 
     }}

@@ -31,7 +31,6 @@ public class LoginController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<string>> Login([FromBody] LoginRequest loginRequest)
     {
-        System.Console.WriteLine(loginRequest.id + " controller");
         string token = loginService.Login(loginRequest.id);
         if (token == "Invalid credentials")
         {
@@ -48,32 +47,32 @@ public class LoginController : ControllerBase
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTimeOffset.UtcNow.AddDays(30)
             });
-            System.Console.WriteLine(" controller 3");
+           
             var handler = new JwtSecurityTokenHandler();
-            System.Console.WriteLine(" controller 4");
+          
             var jwtToken = handler.ReadJwtToken(token); // token הוא הטוקן שקיבלת
-            System.Console.WriteLine(" controller 5");
+           
             var userRole = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Role).Value;
-            System.Console.WriteLine(userRole + " userRole controller");
+           var userName = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Name).Value;
             var claims = new List<Claim>
         {
+            new Claim(ClaimTypes.Name,userName ) ,
             new Claim("Id", loginRequest.id.ToString()) ,
             new Claim(ClaimTypes.Role, userRole) // הוסף את סוג המשתמש
         };
-            System.Console.WriteLine(claims + " claims controller");
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
             // הכנס את ה-ClaimsPrincipal להקשר של המשתמש
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
-            System.Console.WriteLine("  controller 6");
+          
             var userClaims = HttpContext.User.Claims;
-               System.Console.WriteLine(userClaims+ "  userClaims");
-            foreach (var claim in userClaims)
-            {
-                Console.WriteLine($"{claim.Type}: {claim.Value}");
-            }
-            System.Console.WriteLine("  controller 7");
+            //    System.Console.WriteLine(userClaims+ "  userClaims");
+            // foreach (var claim in userClaims)
+            // {
+            //     Console.WriteLine($"{claim.Type}: {claim.Value}");
+            // }
+            // System.Console.WriteLine("  controller 7");
 
         
 

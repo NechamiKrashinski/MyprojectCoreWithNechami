@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using project.Interfaces;
 using project.Models;
-
+using project.Services;
 using System.Collections.Generic;
 using System.Security.Claims;
 
@@ -16,11 +16,16 @@ namespace project.Controllers;
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
+    private readonly BookServiceJson bookService;
     
-    public BookController(IService<Book> service)
+    public BookController(IService<Book> service, BookServiceJson bookService)
     {
+        System.Console.WriteLine(bookService + " bookService in BookController");
+        this.bookService = bookService;
+        
         this.service = service;
     }
+   
     // [HttpGet]
     // public ActionResult<IEnumerable<ClaimDto>> GetClaims()
     // {
@@ -49,9 +54,10 @@ public class BookController : ControllerBase
         }
         else if (role == "Author")
         {
-            System.Console.WriteLine("Auther role in BookController");
-            var id = int.Parse(HttpContext.User.FindFirst("Id")?.Value);
-            return new List<Book> { service.Get(id) };
+            
+            System.Console.WriteLine("Author role in BookController");
+            string name = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
+            return bookService.GetAuthorsBook(name) ?? new List<Book>();
         }
         return service.Get();
     }
@@ -90,7 +96,7 @@ public class BookController : ControllerBase
     public ActionResult Post(Book newBook)
     {
         System.Console.WriteLine("post in BookController");
-        var authorName = HttpContext.User.FindFirst("Name")?.Value;
+        var authorName = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
         var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
 
         // אם המשתמש הוא מנהל, אפשר ליצור ספר עבור כל סופר
@@ -165,7 +171,7 @@ public class BookController : ControllerBase
     {
         var existingBook = service.Get(id);
         var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
-        var authorName = HttpContext.User.FindFirst("Name")?.Value;
+        var authorName = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
 
         if (role == "Author")
         {

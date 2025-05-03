@@ -1,3 +1,5 @@
+using project.Models;
+
 namespace project.Interfaces;
 
 public interface IService<T>

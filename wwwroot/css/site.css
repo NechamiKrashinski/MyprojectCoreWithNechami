@@ -11,205 +11,13 @@ h1 {
     color: #1abc9c;
 }
 
-h3 {
-    color: #16a085;
-}
-
-form {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 480px;
-    border: 1px solid #bdc3c7;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="submit"] {
-    width: calc(100% - 20px);
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus {
-    border-color: #1abc9c;
-    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
-    outline: none;
-}
-
-input[type="submit"] {
-    background-color: #1abc9c;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #16a085;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th,
-td {
-    padding: 15px;
-    border: 1px solid #ecf0f1;
-    text-align: left;
-}
-
-th {
-    background-color: #1abc9c;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #ecf0f1;
-}
-
-button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #e74c3c;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #c0392b;
-}
-
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #2c3e50;
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    color: #1abc9c;
-}
-
-h3 {
-    color: #16a085;
-}
-
-form {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 480px;
-    border: 1px solid #bdc3c7;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="submit"] {
-    width: calc(100% - 20px);
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus {
-    border-color: #1abc9c;
-    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
-    outline: none;
-}
-
-input[type="submit"] {
-    background-color: #1abc9c;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #16a085;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th,
-td {
-    padding: 15px;
-    border: 1px solid #ecf0f1;
-    text-align: left;
-}
-
-th {
-    background-color: #1abc9c;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #ecf0f1;
-}
-
-button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #e74c3c;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #c0392b;
-}
-
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #2c3e50;
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    color: #1abc9c;
-}
-
 h2 {
     color: #16a085;
     text-align: center;
+}
+
+h3 {
+    color: #16a085;
 }
 
 ul {
@@ -233,3 +41,90 @@ a:hover {
     color: #16a085; /* צבע הקישור כאשר עובר עליו בעכבר */
 }
 
+/* עיצוב לטופס */
+form {
+    background-color: #ffffff; /* צבע רקע של הטופס */
+    border-radius: 12px; /* פינות מעוגלות */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* צל */
+    padding: 25px; /* ריפוד פנימי */
+    margin: 20px auto; /* מרווח חיצוני */
+    max-width: 480px; /* רוחב מקסימלי */
+    border: 1px solid #bdc3c7; /* גבול */
+}
+
+/* עיצוב עבור תיבות קלט */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+input[type="submit"] {
+    width: calc(100% - 20px); /* רוחב 100% פחות רווח */
+    padding: 12px; /* ריפוד פנימי */
+    margin: 10px 0; /* מרווח בין תיבות קלט */
+    border: 1px solid #bdc3c7; /* גבול */
+    border-radius: 6px; /* פינות מעוגלות */
+    transition: border-color 0.3s, box-shadow 0.3s; /* אנימציה */
+}
+
+/* עיצוב כשיש פוקוס על תיבות הקלט */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #1abc9c; /* צבע גבול כשיש פוקוס */
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5); /* צל */
+    outline: none; /* מסיר את הקו סביב */
+}
+
+/* עיצוב כפתור של שליחה */
+input[type="submit"] {
+    background-color: #1abc9c; /* צבע רקע */
+    color: #ffffff; /* צבע טקסט */
+    border: none; /* מסיר גבול */
+    cursor: pointer; /* מצביע על כך שזה לחיץ */
+    font-size: 16px; /* גודל טקסט */
+    border-radius: 6px; /* פינות מעוגלות */
+    transition: background-color 0.3s; /* אנימציה */
+}
+
+/* עיצוב כפתור של שליחה כשמעליו עכבר */
+input[type="submit"]:hover {
+    background-color: #16a085; /* צבע רקע כשמעליו עכבר */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+th {
+    background-color: #1abc9c;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}

@@ -18,25 +18,30 @@ function getUsers() {
         },
         credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Unable to get authors.');
-        }
-        return response.json();
-    })
-    .then(data => _displayUsers(data))
-    .catch(error => console.error('Unable to get authors.', error));
+        .then(response => {
+            if (!response.ok) {
+                console.log("Unable to get authors.")
+                throw new Error('Unable to get authors.');
+            }
+            return response.json();
+        })
+        .then(data => _displayUsers(data))
+        .catch(error => console.error('Unable to get authors.', error));
 }
 
 function addUser() {
     const addNameTextbox = document.getElementById('add-name');
     const addAddressTextbox = document.getElementById('add-address');
     const addBirthdateTextbox = document.getElementById('add-birthdate');
+    const addRoleTextBox = document.getElementById("add-Role")
+    console.log("addUser function callded.");
 
     const author = {
-        name: addNameTextbox.value.trim(),
-        address: addAddressTextbox.value.trim(),
-        birthDate: addBirthdateTextbox.value
+        Id: 0,
+        Name: addNameTextbox.value.trim(),
+        role: addRoleTextBox.value === "Admin" ? 0 : 1,
+        Address: addAddressTextbox.value.trim(),
+        BirthDate: addBirthdateTextbox.value
     };
 
     fetch(uri, {
@@ -49,16 +54,23 @@ function addUser() {
         credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(author)
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Unable to add author.');
-        }
-        return response.json();
-    })
-    .then(() => {
-        getUsers(); // עדכון הרשימה לאחר הוספה
-    })
-    .catch(error => console.error('Unable to add author.', error));
+        .then(response => {
+            if (!response.ok) {
+                console.log(response.status+response.text())
+                console.log("Unable to add author.");
+                
+                throw new Error('Unable to add author.');
+            }
+            return response.json();
+        })
+        .then(() => {
+            getUsers(); // עדכון הרשימה לאחר הוספה
+            addNameTextbox.value = '';
+            addAddressTextbox.value = '';
+            addBirthdateTextbox.value = '';
+            addRoleTextBox.value = "Select User Role"
+        })
+        .catch(error => console.error('Unable to add author.', error));
 }
 
 function deleteUser(id) {
@@ -71,8 +83,8 @@ function deleteUser(id) {
         },
         credentials: 'include' // מאפשר שליחה של קוקיז עם הבקשה
     })
-    .then(() => getUsers())
-    .catch(error => console.error('Unable to delete author.', error));
+        .then(() => getUsers())
+        .catch(error => console.error('Unable to delete author.', error));
 }
 
 function displayEditForm(id) {
@@ -104,8 +116,8 @@ function updateUser() {
         credentials: 'include', // מאפשר שליחה של קוקיז עם הבקשה
         body: JSON.stringify(author)
     })
-    .then(() => getUsers())
-    .catch(error => console.error('Unable to update author.', error));
+        .then(() => getUsers())
+        .catch(error => console.error('Unable to update author.', error));
 
     closeInput();
 }

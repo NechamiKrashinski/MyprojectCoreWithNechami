@@ -15,6 +15,7 @@ public class AuthorServiceJson : ServiceJson<Author>
         System.Console.WriteLine("mylist is null?" + MyList == null);
         return MyList;
     }
+    
 
     public override int Insert(Author newUser)
     {
