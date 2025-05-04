@@ -23,3 +23,17 @@ packages/
 
 # Ignore Visual Studio working files
 .vs/
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore JavaScript build output directories
+dist/
+build/
+
+# Ignore C# specific files
+*.csproj.user
+*.sln.ide
+
+# Ignore axios specific files
+axios/
