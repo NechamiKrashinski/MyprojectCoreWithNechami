@@ -1653,3 +1653,1137 @@ start: 02-05-25 00:09:08 /login.GET
 end: 02-05-25 00:09:08 /login.GET took 0 ms
 start: 02-05-25 00:09:10 /login.POST
 end: 02-05-25 00:09:10 /login.POST took 7 ms
+start: 04-05-25 18:19:03 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:19:03 /css/path/to/your/image.jpg.GET took 152 ms
+start: 04-05-25 18:19:03 /favicon.ico.GET
+end: 04-05-25 18:19:03 /favicon.ico.GET took 2 ms
+start: 04-05-25 18:19:17 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:19:17 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:19:17 /login.GET
+end: 04-05-25 18:19:17 /login.GET took 45 ms
+start: 04-05-25 18:19:31 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:19:31 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:19:31 /login.GET
+end: 04-05-25 18:19:31 /login.GET took 1 ms
+start: 04-05-25 18:20:33 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:20:33 /css/path/to/your/image.jpg.GET took 3 ms
+start: 04-05-25 18:20:33 /login.GET
+end: 04-05-25 18:20:33 /login.GET took 15 ms
+start: 04-05-25 18:20:35 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:20:35 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:20:35 /login.GET
+end: 04-05-25 18:20:35 /login.GET took 4 ms
+start: 04-05-25 18:22:11 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:22:11 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:22:11 /login.GET
+end: 04-05-25 18:22:11 /login.GET took 1 ms
+start: 04-05-25 18:22:11 /favicon.ico.GET
+end: 04-05-25 18:22:11 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:22:11 /login.GET
+end: 04-05-25 18:22:11 /login.GET took 0 ms
+start: 04-05-25 18:22:14 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:22:14 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:22:14 /login.GET
+end: 04-05-25 18:22:14 /login.GET took 0 ms
+start: 04-05-25 18:22:14 /favicon.ico.GET
+end: 04-05-25 18:22:14 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:22:14 /login.GET
+end: 04-05-25 18:22:14 /login.GET took 0 ms
+start: 04-05-25 18:23:29 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:23:29 /css/path/to/your/image.jpg.GET took 4 ms
+start: 04-05-25 18:23:29 /login.GET
+end: 04-05-25 18:23:29 /login.GET took 21 ms
+start: 04-05-25 18:23:30 /favicon.ico.GET
+end: 04-05-25 18:23:30 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:23:30 /login.GET
+end: 04-05-25 18:23:30 /login.GET took 7 ms
+start: 04-05-25 18:23:32 /favicon.ico.GET
+end: 04-05-25 18:23:32 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:23:32 /login.GET
+end: 04-05-25 18:23:32 /login.GET took 2 ms
+start: 04-05-25 18:23:34 /favicon.ico.GET
+end: 04-05-25 18:23:34 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:23:34 /login.GET
+end: 04-05-25 18:23:34 /login.GET took 1 ms
+start: 04-05-25 18:24:39 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:24:39 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:24:39 /login.GET
+end: 04-05-25 18:24:39 /login.GET took 0 ms
+start: 04-05-25 18:24:40 /favicon.ico.GET
+end: 04-05-25 18:24:40 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:24:40 /login.GET
+end: 04-05-25 18:24:40 /login.GET took 1 ms
+start: 04-05-25 18:24:42 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:24:42 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:24:42 /login.GET
+end: 04-05-25 18:24:42 /login.GET took 0 ms
+start: 04-05-25 18:24:42 /favicon.ico.GET
+end: 04-05-25 18:24:42 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:24:42 /login.GET
+end: 04-05-25 18:24:42 /login.GET took 0 ms
+start: 04-05-25 18:25:03 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:25:03 /css/path/to/your/image.jpg.GET took 5 ms
+start: 04-05-25 18:25:03 /login.GET
+end: 04-05-25 18:25:03 /login.GET took 10 ms
+start: 04-05-25 18:25:03 /favicon.ico.GET
+end: 04-05-25 18:25:03 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:25:03 /login.GET
+end: 04-05-25 18:25:03 /login.GET took 1 ms
+start: 04-05-25 18:25:05 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:25:05 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:25:05 /login.GET
+end: 04-05-25 18:25:05 /login.GET took 1 ms
+start: 04-05-25 18:25:05 /favicon.ico.GET
+end: 04-05-25 18:25:05 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:25:05 /login.GET
+end: 04-05-25 18:25:05 /login.GET took 0 ms
+start: 04-05-25 18:25:07 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:25:07 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:25:07 /login.GET
+end: 04-05-25 18:25:07 /login.GET took 0 ms
+start: 04-05-25 18:25:07 /favicon.ico.GET
+end: 04-05-25 18:25:07 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:25:07 /login.GET
+end: 04-05-25 18:25:07 /login.GET took 0 ms
+start: 04-05-25 18:25:40 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:25:40 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:25:40 /login.GET
+end: 04-05-25 18:25:40 /login.GET took 0 ms
+start: 04-05-25 18:25:41 /favicon.ico.GET
+end: 04-05-25 18:25:41 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:25:41 /login.GET
+end: 04-05-25 18:25:41 /login.GET took 13 ms
+start: 04-05-25 18:25:47 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:25:47 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:25:47 /login.GET
+end: 04-05-25 18:25:47 /login.GET took 0 ms
+start: 04-05-25 18:25:48 /favicon.ico.GET
+end: 04-05-25 18:25:48 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:25:48 /login.GET
+end: 04-05-25 18:25:48 /login.GET took 0 ms
+start: 04-05-25 18:26:30 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:26:30 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:26:30 /login.GET
+end: 04-05-25 18:26:30 /login.GET took 0 ms
+start: 04-05-25 18:26:30 /favicon.ico.GET
+end: 04-05-25 18:26:30 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:26:30 /login.GET
+end: 04-05-25 18:26:30 /login.GET took 0 ms
+start: 04-05-25 18:31:03 /css/path/to/your/image.jpg.GET
+end: 04-05-25 18:31:03 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 18:31:03 /login.GET
+end: 04-05-25 18:31:03 /login.GET took 0 ms
+start: 04-05-25 18:31:04 /favicon.ico.GET
+end: 04-05-25 18:31:04 /favicon.ico.GET took 0 ms
+start: 04-05-25 18:31:04 /login.GET
+end: 04-05-25 18:31:04 /login.GET took 1 ms
+start: 04-05-25 18:31:05 /Login.POST
+end: 04-05-25 18:31:05 /Login.POST took 208 ms
+start: 04-05-25 18:31:27 /book.GET
+start: 04-05-25 18:31:27 /favicon.ico.GET
+end: 04-05-25 18:31:27 /favicon.ico.GET took 50 ms
+end: 04-05-25 18:31:27 /book.GET took 73 ms
+start: 04-05-25 18:36:10 /Author.GET
+start: 04-05-25 18:36:10 /favicon.ico.GET
+end: 04-05-25 18:36:10 /favicon.ico.GET took 0 ms
+end: 04-05-25 18:36:10 /Author.GET took 4 ms
+start: 04-05-25 18:37:25 /book.GET
+end: 04-05-25 18:37:25 /book.GET took 3 ms
+start: 04-05-25 18:43:28 /Author.GET
+end: 04-05-25 18:43:28 /Author.GET took 2 ms
+start: 04-05-25 18:45:12 /Author.GET
+end: 04-05-25 18:45:13 /Author.GET took 91 ms
+start: 04-05-25 18:46:33 /Author.GET
+end: 04-05-25 18:46:33 /Author.GET took 88 ms
+start: 04-05-25 18:47:55 /Author.GET
+end: 04-05-25 18:47:55 /Author.GET took 194 ms
+start: 04-05-25 18:48:20 /Author.GET
+end: 04-05-25 18:48:20 /Author.GET took 229 ms
+start: 04-05-25 18:49:20 /Author.GET
+end: 04-05-25 18:49:20 /Author.GET took 158 ms
+start: 04-05-25 19:05:38 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:05:38 /css/path/to/your/image.jpg.GET took 8 ms
+start: 04-05-25 19:05:51 /Login.POST
+end: 04-05-25 19:05:51 /Login.POST took 151 ms
+start: 04-05-25 19:06:00 /Author.GET
+end: 04-05-25 19:06:00 /Author.GET took 15 ms
+start: 04-05-25 19:06:12 /book.GET
+end: 04-05-25 19:06:12 /book.GET took 21 ms
+start: 04-05-25 19:06:15 /book.GET
+end: 04-05-25 19:06:16 /book.GET took 3 ms
+start: 04-05-25 19:07:09 /book.GET
+end: 04-05-25 19:07:09 /book.GET took 103 ms
+start: 04-05-25 19:07:20 /Author.GET
+end: 04-05-25 19:07:20 /Author.GET took 5 ms
+start: 04-05-25 19:07:22 /Author.GET
+end: 04-05-25 19:07:22 /Author.GET took 4 ms
+start: 04-05-25 19:07:30 /Author.GET
+end: 04-05-25 19:07:30 /Author.GET took 1 ms
+start: 04-05-25 19:20:40 /Author.GET
+start: 04-05-25 19:20:40 /favicon.ico.GET
+end: 04-05-25 19:20:40 /favicon.ico.GET took 1 ms
+end: 04-05-25 19:20:40 /Author.GET took 26 ms
+start: 04-05-25 19:20:51 /Author.GET
+end: 04-05-25 19:20:51 /Author.GET took 3 ms
+start: 04-05-25 19:21:18 /Author.GET
+end: 04-05-25 19:21:18 /Author.GET took 102 ms
+start: 04-05-25 19:25:52 /favicon.ico.GET
+end: 04-05-25 19:25:52 /favicon.ico.GET took 80 ms
+start: 04-05-25 19:26:08 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:26:08 /css/path/to/your/image.jpg.GET took 159 ms
+start: 04-05-25 19:26:11 /book.GET
+end: 04-05-25 19:26:11 /book.GET took 14 ms
+start: 04-05-25 19:32:25 /favicon.ico.GET
+end: 04-05-25 19:32:25 /favicon.ico.GET took 130 ms
+start: 04-05-25 19:32:41 /favicon.ico.GET
+end: 04-05-25 19:32:41 /favicon.ico.GET took 0 ms
+start: 04-05-25 19:32:41 /login.GET
+end: 04-05-25 19:32:41 /login.GET took 5 ms
+start: 04-05-25 19:32:41 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:32:41 /css/path/to/your/image.jpg.GET took 2 ms
+start: 04-05-25 19:33:04 /favicon.ico.GET
+end: 04-05-25 19:33:04 /favicon.ico.GET took 3 ms
+start: 04-05-25 19:34:08 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:34:08 /css/path/to/your/image.jpg.GET took 71 ms
+start: 04-05-25 19:36:33 /Author.GET
+end: 04-05-25 19:36:33 /Author.GET took 218 ms
+start: 04-05-25 19:40:38 /Author.GET
+end: 04-05-25 19:40:38 /Author.GET took 151 ms
+start: 04-05-25 19:40:39 /Author.GET
+end: 04-05-25 19:40:40 /Author.GET took 17 ms
+start: 04-05-25 19:41:09 /Author.GET
+end: 04-05-25 19:41:09 /Author.GET took 4 ms
+start: 04-05-25 19:41:48 /Author.GET
+end: 04-05-25 19:41:48 /Author.GET took 2 ms
+start: 04-05-25 19:43:21 /favicon.ico.GET
+start: 04-05-25 19:43:21 /Author.GET
+end: 04-05-25 19:43:21 /favicon.ico.GET took 91 ms
+end: 04-05-25 19:43:21 /Author.GET took 246 ms
+start: 04-05-25 19:47:32 /Author.GET
+end: 04-05-25 19:47:32 /Author.GET took 55 ms
+start: 04-05-25 19:47:53 /Author.GET
+end: 04-05-25 19:47:53 /Author.GET took 55 ms
+start: 04-05-25 19:48:00 /Author.GET
+start: 04-05-25 19:48:00 /favicon.ico.GET
+end: 04-05-25 19:48:00 /Author.GET took 10 ms
+end: 04-05-25 19:48:00 /favicon.ico.GET took 3 ms
+start: 04-05-25 19:48:45 /favicon.ico.GET
+start: 04-05-25 19:48:45 /Author.GET
+end: 04-05-25 19:48:45 /favicon.ico.GET took 39 ms
+end: 04-05-25 19:48:45 /Author.GET took 43 ms
+start: 04-05-25 19:53:43 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:53:43 /css/path/to/your/image.jpg.GET took 3 ms
+start: 04-05-25 19:53:43 /login.GET
+end: 04-05-25 19:53:43 /login.GET took 14 ms
+start: 04-05-25 19:53:43 /favicon.ico.GET
+end: 04-05-25 19:53:43 /favicon.ico.GET took 0 ms
+start: 04-05-25 19:53:43 /login.GET
+end: 04-05-25 19:53:43 /login.GET took 2 ms
+start: 04-05-25 19:53:43 /Author.GET
+end: 04-05-25 19:53:43 /Author.GET took 0 ms
+start: 04-05-25 19:53:44 /css/path/to/your/image.jpg.GET
+end: 04-05-25 19:53:44 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 19:53:44 /login.GET
+end: 04-05-25 19:53:44 /login.GET took 1 ms
+start: 04-05-25 19:53:45 /favicon.ico.GET
+end: 04-05-25 19:53:45 /favicon.ico.GET took 0 ms
+start: 04-05-25 19:53:45 /login.GET
+end: 04-05-25 19:53:45 /login.GET took 0 ms
+start: 04-05-25 19:53:47 /Login.POST
+end: 04-05-25 19:53:48 /Login.POST took 135 ms
+start: 04-05-25 19:55:19 /favicon.ico.GET
+start: 04-05-25 19:55:19 /Author.GET
+end: 04-05-25 19:55:19 /favicon.ico.GET took 47 ms
+end: 04-05-25 19:55:19 /Author.GET took 53 ms
+start: 04-05-25 19:55:22 /Author.GET
+start: 04-05-25 19:55:22 /favicon.ico.GET
+end: 04-05-25 19:55:22 /favicon.ico.GET took 0 ms
+end: 04-05-25 19:55:22 /Author.GET took 8 ms
+start: 04-05-25 19:55:25 /Author.GET
+end: 04-05-25 19:55:25 /Author.GET took 6 ms
+start: 04-05-25 19:55:25 /favicon.ico.GET
+end: 04-05-25 19:55:25 /favicon.ico.GET took 1 ms
+start: 04-05-25 20:00:25 /Author.GET
+end: 04-05-25 20:00:25 /Author.GET took 0 ms
+start: 04-05-25 20:00:37 /css/path/to/your/image.jpg.GET
+end: 04-05-25 20:00:37 /css/path/to/your/image.jpg.GET took 1 ms
+start: 04-05-25 20:00:39 /Author.GET
+end: 04-05-25 20:00:39 /Author.GET took 6 ms
+start: 04-05-25 20:05:05 /favicon.ico.GET
+end: 04-05-25 20:05:05 /favicon.ico.GET took 1 ms
+start: 04-05-25 20:05:08 /favicon.ico.GET
+end: 04-05-25 20:05:08 /favicon.ico.GET took 0 ms
+start: 04-05-25 20:05:42 /Author.GET
+end: 04-05-25 20:05:42 /Author.GET took 3 ms
+start: 04-05-25 20:05:42 /favicon.ico.GET
+end: 04-05-25 20:05:43 /favicon.ico.GET took 1 ms
+start: 04-05-25 20:07:46 /Author.GET
+end: 04-05-25 20:07:46 /Author.GET took 4 ms
+start: 04-05-25 20:07:46 /favicon.ico.GET
+end: 04-05-25 20:07:46 /favicon.ico.GET took 0 ms
+start: 04-05-25 20:11:47 /Author.GET
+end: 04-05-25 20:11:47 /Author.GET took 4 ms
+start: 04-05-25 20:11:47 /favicon.ico.GET
+end: 04-05-25 20:11:47 /favicon.ico.GET took 0 ms
+start: 04-05-25 20:11:57 /Author.POST
+end: 04-05-25 20:11:57 /Author.POST took 122 ms
+start: 04-05-25 20:11:57 /Author.GET
+end: 04-05-25 20:11:57 /Author.GET took 2 ms
+start: 04-05-25 20:12:23 /Author/7.DELETE
+end: 04-05-25 20:12:23 /Author/7.DELETE took 17 ms
+start: 04-05-25 20:12:23 /Author.GET
+end: 04-05-25 20:12:23 /Author.GET took 4 ms
+start: 04-05-25 20:12:25 /Author.GET
+end: 04-05-25 20:12:25 /Author.GET took 2 ms
+start: 04-05-25 20:12:35 /Author/6.PUT
+end: 04-05-25 20:12:35 /Author/6.PUT took 45 ms
+start: 04-05-25 20:12:38 /Author/6.PUT
+end: 04-05-25 20:12:38 /Author/6.PUT took 3 ms
+start: 04-05-25 20:12:38 /Author/6.PUT
+end: 04-05-25 20:12:38 /Author/6.PUT took 2 ms
+start: 04-05-25 20:12:39 /Author/6.PUT
+end: 04-05-25 20:12:39 /Author/6.PUT took 2 ms
+start: 04-05-25 20:13:40 /Author/6.PUT
+end: 04-05-25 20:13:40 /Author/6.PUT took 3 ms
+start: 04-05-25 20:13:45 /Author/6.PUT
+end: 04-05-25 20:13:45 /Author/6.PUT took 2 ms
+start: 04-05-25 20:15:03 /Author/6.PUT
+end: 04-05-25 20:15:03 /Author/6.PUT took 13 ms
+start: 04-05-25 23:22:30 /Author/6.PUT
+end: 04-05-25 23:22:30 /Author/6.PUT took 3 ms
+start: 04-05-25 23:22:31 /Author/6.PUT
+end: 04-05-25 23:22:31 /Author/6.PUT took 3 ms
+start: 04-05-25 23:22:41 /Author.GET
+end: 04-05-25 23:22:41 /Author.GET took 3 ms
+start: 04-05-25 23:23:29 /Author.POST
+end: 04-05-25 23:23:29 /Author.POST took 5 ms
+start: 04-05-25 23:23:29 /Author.GET
+end: 04-05-25 23:23:29 /Author.GET took 2 ms
+start: 04-05-25 23:23:53 /Author/1.PUT
+end: 04-05-25 23:23:53 /Author/1.PUT took 5 ms
+start: 04-05-25 23:31:01 /Author.GET
+end: 04-05-25 23:31:01 /Author.GET took 2 ms
+start: 04-05-25 23:31:57 /Author.GET
+end: 04-05-25 23:31:57 /Author.GET took 2 ms
+start: 04-05-25 23:33:12 /Author.GET
+end: 04-05-25 23:33:12 /Author.GET took 3 ms
+start: 04-05-25 23:33:12 /favicon.ico.GET
+end: 04-05-25 23:33:12 /favicon.ico.GET took 0 ms
+start: 04-05-25 23:33:24 /css/path/to/your/image.jpg.GET
+end: 04-05-25 23:33:24 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 23:33:29 /Author.GET
+end: 04-05-25 23:33:29 /Author.GET took 3 ms
+start: 04-05-25 23:34:07 /Author/4.PUT
+end: 04-05-25 23:34:07 /Author/4.PUT took 2 ms
+start: 04-05-25 23:37:10 /Author.GET
+end: 04-05-25 23:37:10 /Author.GET took 97 ms
+start: 04-05-25 23:37:30 /Author.POST
+end: 04-05-25 23:37:30 /Author.POST took 99 ms
+start: 04-05-25 23:37:30 /Author.GET
+end: 04-05-25 23:37:30 /Author.GET took 7 ms
+start: 04-05-25 23:38:04 /Author.POST
+end: 04-05-25 23:38:04 /Author.POST took 6 ms
+start: 04-05-25 23:38:04 /Author.GET
+end: 04-05-25 23:38:04 /Author.GET took 4 ms
+start: 04-05-25 23:40:19 /favicon.ico.GET
+start: 04-05-25 23:40:19 /Author.GET
+end: 04-05-25 23:40:19 /favicon.ico.GET took 52 ms
+end: 04-05-25 23:40:19 /Author.GET took 77 ms
+start: 04-05-25 23:40:27 /Author.POST
+end: 04-05-25 23:40:27 /Author.POST took 83 ms
+start: 04-05-25 23:44:13 /Author.GET
+end: 04-05-25 23:44:13 /Author.GET took 109 ms
+start: 04-05-25 23:44:26 /Author.POST
+end: 04-05-25 23:44:26 /Author.POST took 81 ms
+start: 04-05-25 23:44:26 /Author.GET
+end: 04-05-25 23:44:26 /Author.GET took 8 ms
+start: 04-05-25 23:48:34 /Author.GET
+end: 04-05-25 23:48:34 /Author.GET took 3 ms
+start: 04-05-25 23:48:34 /favicon.ico.GET
+end: 04-05-25 23:48:34 /favicon.ico.GET took 1 ms
+start: 04-05-25 23:49:08 /Author/4.PUT
+end: 04-05-25 23:49:08 /Author/4.PUT took 18 ms
+start: 04-05-25 23:49:09 /Author.GET
+end: 04-05-25 23:49:09 /Author.GET took 3 ms
+start: 04-05-25 23:49:36 /Author.GET
+end: 04-05-25 23:49:36 /Author.GET took 3 ms
+start: 04-05-25 23:49:52 /Author/7.PUT
+end: 04-05-25 23:49:52 /Author/7.PUT took 6 ms
+start: 04-05-25 23:49:57 /Author.GET
+end: 04-05-25 23:49:57 /Author.GET took 3 ms
+start: 04-05-25 23:50:53 /Author.GET
+end: 04-05-25 23:50:53 /Author.GET took 3 ms
+start: 04-05-25 23:50:53 /favicon.ico.GET
+end: 04-05-25 23:50:53 /favicon.ico.GET took 0 ms
+start: 04-05-25 23:51:06 /Author/1.PUT
+end: 04-05-25 23:51:06 /Author/1.PUT took 4 ms
+start: 04-05-25 23:51:08 /Author.GET
+end: 04-05-25 23:51:08 /Author.GET took 3 ms
+start: 04-05-25 23:52:12 /Author.GET
+end: 04-05-25 23:52:12 /Author.GET took 2 ms
+start: 04-05-25 23:52:40 /css/path/to/your/image.jpg.GET
+end: 04-05-25 23:52:40 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 23:53:45 /css/path/to/your/image.jpg.GET
+end: 04-05-25 23:53:45 /css/path/to/your/image.jpg.GET took 0 ms
+start: 04-05-25 23:53:45 /favicon.ico.GET
+end: 04-05-25 23:53:45 /favicon.ico.GET took 0 ms
+start: 04-05-25 23:53:50 /Author.GET
+end: 04-05-25 23:53:50 /Author.GET took 3 ms
+start: 04-05-25 23:54:03 /favicon.ico.GET
+start: 04-05-25 23:54:04 /Author.GET
+end: 04-05-25 23:54:04 /favicon.ico.GET took 43 ms
+end: 04-05-25 23:54:04 /Author.GET took 61 ms
+start: 04-05-25 23:54:21 /Author.POST
+end: 04-05-25 23:54:21 /Author.POST took 108 ms
+start: 04-05-25 23:54:21 /Author.GET
+end: 04-05-25 23:54:21 /Author.GET took 5 ms
+start: 04-05-25 23:54:47 /Author.GET
+end: 04-05-25 23:54:47 /Author.GET took 3 ms
+start: 04-05-25 23:56:52 /Author.GET
+end: 04-05-25 23:56:52 /Author.GET took 4 ms
+start: 04-05-25 23:56:52 /favicon.ico.GET
+end: 04-05-25 23:56:52 /favicon.ico.GET took 1 ms
+start: 04-05-25 23:57:03 /Author.POST
+end: 04-05-25 23:57:03 /Author.POST took 9 ms
+start: 04-05-25 23:57:05 /Author.GET
+end: 04-05-25 23:57:05 /Author.GET took 4 ms
+start: 05-05-25 00:04:31 /Author.GET
+end: 05-05-25 00:04:31 /Author.GET took 3 ms
+start: 05-05-25 00:04:31 /favicon.ico.GET
+end: 05-05-25 00:04:31 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:04:51 /favicon.ico.GET
+end: 05-05-25 00:04:51 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:06:00 /Book.GET
+start: 05-05-25 00:06:00 /favicon.ico.GET
+end: 05-05-25 00:06:00 /favicon.ico.GET took 0 ms
+end: 05-05-25 00:06:00 /Book.GET took 50 ms
+start: 05-05-25 00:09:13 /Book.GET
+end: 05-05-25 00:09:13 /Book.GET took 3 ms
+start: 05-05-25 00:09:13 /favicon.ico.GET
+end: 05-05-25 00:09:13 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:09:41 /Book.GET
+end: 05-05-25 00:09:41 /Book.GET took 2 ms
+start: 05-05-25 00:10:10 /Book/1.PUT
+end: 05-05-25 00:10:10 /Book/1.PUT took 19 ms
+start: 05-05-25 00:10:44 /Book.GET
+end: 05-05-25 00:10:44 /Book.GET took 4 ms
+start: 05-05-25 00:11:38 /Book.GET
+end: 05-05-25 00:11:38 /Book.GET took 4 ms
+start: 05-05-25 00:11:38 /favicon.ico.GET
+end: 05-05-25 00:11:38 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:14:15 /Book.GET
+end: 05-05-25 00:14:15 /Book.GET took 1 ms
+start: 05-05-25 00:14:15 /favicon.ico.GET
+end: 05-05-25 00:14:15 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:14:45 /Book.GET
+end: 05-05-25 00:14:45 /Book.GET took 4 ms
+start: 05-05-25 00:14:45 /favicon.ico.GET
+end: 05-05-25 00:14:45 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:16:02 /Book.GET
+end: 05-05-25 00:16:02 /Book.GET took 2 ms
+start: 05-05-25 00:16:02 /favicon.ico.GET
+end: 05-05-25 00:16:02 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:16:18 /favicon.ico.GET
+start: 05-05-25 00:16:18 /Book.GET
+end: 05-05-25 00:16:18 /favicon.ico.GET took 53 ms
+end: 05-05-25 00:16:18 /Book.GET took 81 ms
+start: 05-05-25 00:16:35 /Book/15.PUT
+end: 05-05-25 00:16:35 /Book/15.PUT took 68 ms
+start: 05-05-25 00:16:36 /Book.GET
+end: 05-05-25 00:16:36 /Book.GET took 8 ms
+start: 05-05-25 00:17:04 /Book.POST
+end: 05-05-25 00:17:04 /Book.POST took 32 ms
+start: 05-05-25 00:17:33 /Book.POST
+end: 05-05-25 00:17:33 /Book.POST took 3 ms
+start: 05-05-25 00:33:48 /favicon.ico.GET
+start: 05-05-25 00:33:48 /Book.GET
+end: 05-05-25 00:33:48 /favicon.ico.GET took 48 ms
+end: 05-05-25 00:33:48 /Book.GET took 60 ms
+start: 05-05-25 00:34:07 /Book/14.PUT
+end: 05-05-25 00:34:07 /Book/14.PUT took 49 ms
+start: 05-05-25 00:35:59 /favicon.ico.GET
+start: 05-05-25 00:35:59 /Book.GET
+end: 05-05-25 00:35:59 /favicon.ico.GET took 57 ms
+end: 05-05-25 00:35:59 /Book.GET took 70 ms
+start: 05-05-25 00:36:13 /Book.GET
+end: 05-05-25 00:36:13 /Book.GET took 6 ms
+start: 05-05-25 00:36:30 /Book/1.PUT
+end: 05-05-25 00:36:30 /Book/1.PUT took 61 ms
+start: 05-05-25 00:37:43 /favicon.ico.GET
+start: 05-05-25 00:37:43 /Book.GET
+end: 05-05-25 00:37:43 /favicon.ico.GET took 49 ms
+end: 05-05-25 00:37:43 /Book.GET took 69 ms
+start: 05-05-25 00:37:56 /Book/1.PUT
+end: 05-05-25 00:37:56 /Book/1.PUT took 43 ms
+start: 05-05-25 00:38:45 /favicon.ico.GET
+start: 05-05-25 00:38:45 /Book.GET
+end: 05-05-25 00:38:45 /favicon.ico.GET took 51 ms
+end: 05-05-25 00:38:46 /Book.GET took 65 ms
+start: 05-05-25 00:39:08 /Book/1.PUT
+end: 05-05-25 00:39:08 /Book/1.PUT took 65 ms
+start: 05-05-25 00:40:35 /Book/1.PUT
+end: 05-05-25 00:40:35 /Book/1.PUT took 134 ms
+start: 05-05-25 00:40:36 /Book/1.PUT
+end: 05-05-25 00:40:36 /Book/1.PUT took 7 ms
+start: 05-05-25 00:41:24 /Author.GET
+end: 05-05-25 00:41:25 /Author.GET took 96 ms
+start: 05-05-25 00:41:31 /Book.GET
+end: 05-05-25 00:41:31 /Book.GET took 36 ms
+start: 05-05-25 00:41:39 /Book/1.PUT
+end: 05-05-25 00:41:39 /Book/1.PUT took 36 ms
+start: 05-05-25 00:41:39 /Book.GET
+end: 05-05-25 00:41:39 /Book.GET took 2 ms
+start: 05-05-25 00:42:04 /Book/2.PUT
+end: 05-05-25 00:42:04 /Book/2.PUT took 5 ms
+start: 05-05-25 00:42:04 /Book.GET
+end: 05-05-25 00:42:04 /Book.GET took 3 ms
+start: 05-05-25 00:42:17 /Book.POST
+end: 05-05-25 00:42:17 /Book.POST took 20 ms
+start: 05-05-25 00:42:21 /Book.POST
+end: 05-05-25 00:42:21 /Book.POST took 1 ms
+start: 05-05-25 00:42:26 /Book.POST
+end: 05-05-25 00:42:26 /Book.POST took 2 ms
+start: 05-05-25 00:42:52 /Book.POST
+end: 05-05-25 00:42:52 /Book.POST took 2 ms
+start: 05-05-25 00:43:47 /Book.GET
+end: 05-05-25 00:43:47 /Book.GET took 1 ms
+start: 05-05-25 00:44:19 /Book.GET
+end: 05-05-25 00:44:19 /Book.GET took 70 ms
+start: 05-05-25 00:44:49 /Book.POST
+end: 05-05-25 00:44:49 /Book.POST took 75 ms
+start: 05-05-25 00:47:57 /favicon.ico.GET
+start: 05-05-25 00:47:57 /Book.GET
+end: 05-05-25 00:47:57 /favicon.ico.GET took 60 ms
+end: 05-05-25 00:47:57 /Book.GET took 63 ms
+start: 05-05-25 00:48:11 /Book.POST
+end: 05-05-25 00:48:11 /Book.POST took 49 ms
+start: 05-05-25 00:48:59 /favicon.ico.GET
+start: 05-05-25 00:48:59 /Book.GET
+end: 05-05-25 00:48:59 /favicon.ico.GET took 45 ms
+end: 05-05-25 00:48:59 /Book.GET took 60 ms
+start: 05-05-25 00:49:09 /Book.GET
+end: 05-05-25 00:49:09 /Book.GET took 14 ms
+start: 05-05-25 00:49:09 /favicon.ico.GET
+end: 05-05-25 00:49:09 /favicon.ico.GET took 2 ms
+start: 05-05-25 00:49:22 /Book.POST
+end: 05-05-25 00:49:22 /Book.POST took 66 ms
+start: 05-05-25 00:50:46 /Book.GET
+end: 05-05-25 00:50:46 /Book.GET took 70 ms
+start: 05-05-25 00:50:53 /Book.POST
+end: 05-05-25 00:50:53 /Book.POST took 33 ms
+start: 05-05-25 00:50:55 /Book.POST
+end: 05-05-25 00:50:55 /Book.POST took 4 ms
+start: 05-05-25 00:51:43 /Book.GET
+end: 05-05-25 00:51:43 /Book.GET took 3 ms
+start: 05-05-25 00:51:43 /favicon.ico.GET
+end: 05-05-25 00:51:43 /favicon.ico.GET took 0 ms
+start: 05-05-25 00:51:52 /Book.POST
+end: 05-05-25 00:51:52 /Book.POST took 2 ms
+start: 05-05-25 00:59:36 /favicon.ico.GET
+start: 05-05-25 00:59:36 /Book.GET
+end: 05-05-25 00:59:36 /favicon.ico.GET took 47 ms
+end: 05-05-25 00:59:36 /Book.GET took 49 ms
+start: 05-05-25 00:59:46 /Book.POST
+end: 05-05-25 00:59:46 /Book.POST took 45 ms
+start: 05-05-25 01:01:05 /favicon.ico.GET
+start: 05-05-25 01:01:05 /Book.GET
+end: 05-05-25 01:01:05 /favicon.ico.GET took 42 ms
+end: 05-05-25 01:01:05 /Book.GET took 46 ms
+start: 05-05-25 01:01:14 /Book.POST
+end: 05-05-25 01:01:14 /Book.POST took 30 ms
+start: 05-05-25 01:02:50 /favicon.ico.GET
+start: 05-05-25 01:02:50 /Book.GET
+end: 05-05-25 01:02:50 /favicon.ico.GET took 43 ms
+end: 05-05-25 01:02:50 /Book.GET took 53 ms
+start: 05-05-25 01:02:55 /Book.GET
+end: 05-05-25 01:02:55 /Book.GET took 8 ms
+start: 05-05-25 01:03:02 /Book.POST
+end: 05-05-25 01:03:03 /Book.POST took 24 ms
+start: 05-05-25 01:06:57 /css/path/to/your/image.jpg.GET
+end: 05-05-25 01:06:57 /css/path/to/your/image.jpg.GET took 52 ms
+start: 05-05-25 01:06:59 /Book.GET
+end: 05-05-25 01:06:59 /Book.GET took 52 ms
+start: 05-05-25 01:07:10 /Book.POST
+end: 05-05-25 01:07:10 /Book.POST took 29 ms
+start: 05-05-25 01:08:35 /Book.GET
+end: 05-05-25 01:08:35 /Book.GET took 69 ms
+start: 05-05-25 01:08:46 /Book.POST
+end: 05-05-25 01:08:46 /Book.POST took 51 ms
+start: 05-05-25 01:10:30 /favicon.ico.GET
+start: 05-05-25 01:10:30 /Book.GET
+end: 05-05-25 01:10:30 /favicon.ico.GET took 42 ms
+end: 05-05-25 01:10:30 /Book.GET took 54 ms
+start: 05-05-25 01:10:38 /Book.POST
+end: 05-05-25 01:10:38 /Book.POST took 56 ms
+start: 05-05-25 01:13:02 /favicon.ico.GET
+start: 05-05-25 01:13:02 /Book.GET
+end: 05-05-25 01:13:02 /favicon.ico.GET took 41 ms
+end: 05-05-25 01:13:02 /Book.GET took 53 ms
+start: 05-05-25 01:13:10 /Book.POST
+end: 05-05-25 01:13:10 /Book.POST took 40 ms
+start: 05-05-25 01:13:58 /Book.GET
+end: 05-05-25 01:13:58 /Book.GET took 142 ms
+start: 05-05-25 01:14:08 /Book.POST
+end: 05-05-25 01:14:08 /Book.POST took 58 ms
+start: 05-05-25 01:16:03 /Book.GET
+end: 05-05-25 01:16:03 /Book.GET took 4 ms
+start: 05-05-25 01:16:03 /favicon.ico.GET
+end: 05-05-25 01:16:03 /favicon.ico.GET took 3 ms
+start: 05-05-25 01:16:09 /Book.POST
+end: 05-05-25 01:16:09 /Book.POST took 5 ms
+start: 05-05-25 01:16:14 /Book.POST
+end: 05-05-25 01:16:14 /Book.POST took 4 ms
+start: 05-05-25 01:16:35 /Book.GET
+end: 05-05-25 01:16:35 /Book.GET took 152 ms
+start: 05-05-25 01:16:44 /Book.POST
+end: 05-05-25 01:16:44 /Book.POST took 125 ms
+start: 05-05-25 01:16:44 /Book.GET
+end: 05-05-25 01:16:44 /Book.GET took 6 ms
+start: 05-05-25 01:18:30 /Book.GET
+start: 05-05-25 01:18:30 /favicon.ico.GET
+end: 05-05-25 01:18:30 /favicon.ico.GET took 0 ms
+end: 05-05-25 01:18:30 /Book.GET took 25 ms
+start: 05-05-25 01:18:38 /Book.POST
+end: 05-05-25 01:18:39 /Book.POST took 31 ms
+start: 05-05-25 01:18:39 /Book.GET
+end: 05-05-25 01:18:39 /Book.GET took 3 ms
+start: 05-05-25 01:18:52 /Book/1.PUT
+end: 05-05-25 01:18:52 /Book/1.PUT took 14 ms
+start: 05-05-25 01:18:52 /Book.GET
+end: 05-05-25 01:18:52 /Book.GET took 13 ms
+start: 05-05-25 01:18:56 /Book/17.DELETE
+end: 05-05-25 01:18:56 /Book/17.DELETE took 10 ms
+start: 05-05-25 01:18:56 /Book.GET
+end: 05-05-25 01:18:56 /Book.GET took 4 ms
+start: 05-05-25 01:18:59 /Book.GET
+end: 05-05-25 01:18:59 /Book.GET took 16 ms
+start: 05-05-25 01:19:17 /login.GET
+end: 05-05-25 01:19:17 /login.GET took 44 ms
+start: 05-05-25 01:19:18 /css/path/to/your/image.jpg.GET
+end: 05-05-25 01:19:18 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 01:19:18 /login.GET
+end: 05-05-25 01:19:18 /login.GET took 0 ms
+start: 05-05-25 01:19:21 /Login.POST
+end: 05-05-25 01:19:21 /Login.POST took 46 ms
+start: 05-05-25 01:19:26 /Author.GET
+end: 05-05-25 01:19:26 /Author.GET took 64 ms
+start: 05-05-25 01:19:38 /Author.POST
+end: 05-05-25 01:19:38 /Author.POST took 17 ms
+start: 05-05-25 01:19:47 /Book.GET
+end: 05-05-25 01:19:47 /Book.GET took 27 ms
+start: 05-05-25 01:19:57 /Book/11.PUT
+end: 05-05-25 01:19:57 /Book/11.PUT took 39 ms
+start: 05-05-25 01:21:13 /Book.POST
+end: 05-05-25 01:21:13 /Book.POST took 4 ms
+start: 05-05-25 16:28:23 /css/path/to/your/image.jpg.GET
+start: 05-05-25 16:28:23 /favicon.ico.GET
+end: 05-05-25 16:28:23 /favicon.ico.GET took 2 ms
+end: 05-05-25 16:28:23 /css/path/to/your/image.jpg.GET took 3 ms
+start: 05-05-25 16:28:23 /login.GET
+start: 05-05-25 16:28:23 /login.GET
+end: 05-05-25 16:28:23 /login.GET took 17 ms
+end: 05-05-25 16:28:23 /login.GET took 1 ms
+start: 05-05-25 16:28:26 /favicon.ico.GET
+end: 05-05-25 16:28:26 /favicon.ico.GET took 0 ms
+start: 05-05-25 16:28:26 /login.GET
+end: 05-05-25 16:28:26 /login.GET took 0 ms
+start: 05-05-25 16:28:32 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 16:28:32 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 16:28:32 /login.GET
+end: 05-05-25 16:28:32 /login.GET took 1 ms
+start: 05-05-25 16:28:38 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 16:28:38 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 16:28:38 /login.GET
+end: 05-05-25 16:28:38 /login.GET took 0 ms
+start: 05-05-25 16:29:18 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 16:29:18 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 16:29:18 /login.GET
+end: 05-05-25 16:29:18 /login.GET took 1 ms
+start: 05-05-25 16:29:21 /favicon.ico.GET
+end: 05-05-25 16:29:21 /favicon.ico.GET took 0 ms
+start: 05-05-25 16:29:21 /login.GET
+end: 05-05-25 16:29:21 /login.GET took 0 ms
+start: 05-05-25 16:29:21 /Author.GET
+end: 05-05-25 16:29:21 /Author.GET took 0 ms
+start: 05-05-25 16:29:21 /login.GET
+end: 05-05-25 16:29:21 /login.GET took 0 ms
+start: 05-05-25 16:29:31 /favicon.ico.GET
+end: 05-05-25 16:29:31 /favicon.ico.GET took 100 ms
+start: 05-05-25 16:29:37 /favicon.ico.GET
+end: 05-05-25 16:29:37 /favicon.ico.GET took 0 ms
+start: 05-05-25 16:29:37 /Book.GET
+end: 05-05-25 16:29:37 /Book.GET took 108 ms
+start: 05-05-25 16:30:09 /Book.POST
+end: 05-05-25 16:30:09 /Book.POST took 53 ms
+start: 05-05-25 16:30:14 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 16:30:14 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 16:32:31 /Book.GET
+end: 05-05-25 16:32:31 /Book.GET took 126 ms
+start: 05-05-25 16:32:43 /Book.POST
+end: 05-05-25 16:32:43 /Book.POST took 66 ms
+start: 05-05-25 16:34:41 /Book.GET
+end: 05-05-25 16:34:41 /Book.GET took 79 ms
+start: 05-05-25 16:34:48 /Book.POST
+end: 05-05-25 16:34:48 /Book.POST took 90 ms
+start: 05-05-25 16:36:24 /Book.GET
+end: 05-05-25 16:36:24 /Book.GET took 74 ms
+start: 05-05-25 16:36:31 /Book.POST
+end: 05-05-25 16:36:31 /Book.POST took 79 ms
+start: 05-05-25 16:39:23 /Book.GET
+end: 05-05-25 16:39:23 /Book.GET took 80 ms
+start: 05-05-25 16:39:30 /Book.POST
+end: 05-05-25 16:39:30 /Book.POST took 83 ms
+start: 05-05-25 16:50:15 /Book.GET
+end: 05-05-25 16:50:15 /Book.GET took 65 ms
+start: 05-05-25 16:50:24 /Book.POST
+end: 05-05-25 16:50:24 /Book.POST took 67 ms
+start: 05-05-25 16:51:04 /Book.POST
+end: 05-05-25 16:51:04 /Book.POST took 5 ms
+start: 05-05-25 16:51:21 /Book.GET
+end: 05-05-25 16:51:21 /Book.GET took 75 ms
+start: 05-05-25 16:51:31 /Book.POST
+end: 05-05-25 16:51:31 /Book.POST took 87 ms
+start: 05-05-25 16:51:53 /Book.POST
+end: 05-05-25 16:51:53 /Book.POST took 8 ms
+start: 05-05-25 16:52:06 /Book.GET
+end: 05-05-25 16:52:06 /Book.GET took 71 ms
+start: 05-05-25 16:52:16 /Book.POST
+end: 05-05-25 16:52:16 /Book.POST took 70 ms
+start: 05-05-25 16:54:59 /Book.GET
+end: 05-05-25 16:54:59 /Book.GET took 91 ms
+start: 05-05-25 16:55:13 /Book.POST
+end: 05-05-25 16:55:13 /Book.POST took 73 ms
+start: 05-05-25 16:55:13 /Book.GET
+end: 05-05-25 16:55:13 /Book.GET took 4 ms
+start: 05-05-25 16:57:26 /Book.GET
+end: 05-05-25 16:57:26 /Book.GET took 68 ms
+start: 05-05-25 16:57:47 /Book.POST
+end: 05-05-25 16:57:47 /Book.POST took 71 ms
+start: 05-05-25 16:57:47 /Book.GET
+end: 05-05-25 16:57:47 /Book.GET took 4 ms
+start: 05-05-25 16:58:19 /Book/16.PUT
+end: 05-05-25 16:58:19 /Book/16.PUT took 18 ms
+start: 05-05-25 16:58:19 /Book.GET
+end: 05-05-25 16:58:19 /Book.GET took 14 ms
+start: 05-05-25 16:58:30 /Book/16.DELETE
+end: 05-05-25 16:58:30 /Book/16.DELETE took 27 ms
+start: 05-05-25 16:58:32 /Book/16.DELETE
+end: 05-05-25 16:58:32 /Book/16.DELETE took 3 ms
+start: 05-05-25 16:58:42 /Book.GET
+end: 05-05-25 16:58:42 /Book.GET took 5 ms
+start: 05-05-25 16:58:48 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 16:58:48 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:00:19 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:00:19 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:00:20 /Book.GET
+end: 05-05-25 17:00:20 /Book.GET took 2 ms
+start: 05-05-25 17:00:20 /favicon.ico.GET
+end: 05-05-25 17:00:20 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:00:21 /Book/16.DELETE
+end: 05-05-25 17:00:21 /Book/16.DELETE took 3 ms
+start: 05-05-25 17:24:33 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:24:33 /.well-known/appspecific/com.chrome.devtools.json.GET took 83 ms
+start: 05-05-25 17:24:34 /favicon.ico.GET
+end: 05-05-25 17:24:34 /favicon.ico.GET took 1 ms
+start: 05-05-25 17:24:34 /Book.GET
+end: 05-05-25 17:24:34 /Book.GET took 59 ms
+start: 05-05-25 17:24:39 /Book/16.DELETE
+end: 05-05-25 17:24:39 /Book/16.DELETE took 41 ms
+start: 05-05-25 17:24:39 /Book.GET
+end: 05-05-25 17:24:39 /Book.GET took 8 ms
+start: 05-05-25 17:24:42 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:24:42 /.well-known/appspecific/com.chrome.devtools.json.GET took 1 ms
+start: 05-05-25 17:24:42 /Book.GET
+end: 05-05-25 17:24:42 /Book.GET took 1 ms
+start: 05-05-25 17:32:29 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:32:29 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:32:35 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:32:35 /.well-known/appspecific/com.chrome.devtools.json.GET took 1 ms
+start: 05-05-25 17:32:35 /login.GET
+end: 05-05-25 17:32:35 /login.GET took 26 ms
+start: 05-05-25 17:32:35 /Book.GET
+end: 05-05-25 17:32:35 /Book.GET took 0 ms
+start: 05-05-25 17:32:35 /login.GET
+end: 05-05-25 17:32:35 /login.GET took 0 ms
+start: 05-05-25 17:32:39 /.well-known/appspecific/com.chrome.devtools.json.GET
+start: 05-05-25 17:32:39 /css/path/to/your/image.jpg.GET
+end: 05-05-25 17:32:39 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+end: 05-05-25 17:32:39 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 17:32:39 /login.GET
+end: 05-05-25 17:32:39 /login.GET took 0 ms
+start: 05-05-25 17:32:39 /login.GET
+end: 05-05-25 17:32:39 /login.GET took 1 ms
+start: 05-05-25 17:32:40 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:32:40 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:32:40 /login.GET
+end: 05-05-25 17:32:40 /login.GET took 0 ms
+start: 05-05-25 17:32:40 /css/path/to/your/image.jpg.GET
+end: 05-05-25 17:32:40 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 17:32:40 /login.GET
+end: 05-05-25 17:32:40 /login.GET took 0 ms
+start: 05-05-25 17:32:44 /Login.POST
+end: 05-05-25 17:32:44 /Login.POST took 74 ms
+start: 05-05-25 17:32:49 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:32:49 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:32:50 /Author.GET
+end: 05-05-25 17:32:50 /Author.GET took 6 ms
+start: 05-05-25 17:33:10 /Author.POST
+end: 05-05-25 17:33:10 /Author.POST took 51 ms
+start: 05-05-25 17:33:10 /Author.GET
+end: 05-05-25 17:33:10 /Author.GET took 1 ms
+start: 05-05-25 17:33:21 /Author/11.PUT
+end: 05-05-25 17:33:21 /Author/11.PUT took 9 ms
+start: 05-05-25 17:33:21 /Author.GET
+end: 05-05-25 17:33:21 /Author.GET took 6 ms
+start: 05-05-25 17:33:28 /Author/11.DELETE
+end: 05-05-25 17:33:28 /Author/11.DELETE took 7 ms
+start: 05-05-25 17:33:28 /Author.GET
+end: 05-05-25 17:33:28 /Author.GET took 3 ms
+start: 05-05-25 17:33:37 /Book.GET
+end: 05-05-25 17:33:37 /Book.GET took 17 ms
+start: 05-05-25 17:34:04 /Book.POST
+end: 05-05-25 17:34:04 /Book.POST took 35 ms
+start: 05-05-25 17:34:08 /Book.POST
+end: 05-05-25 17:34:08 /Book.POST took 4 ms
+start: 05-05-25 17:35:51 /Book.POST
+end: 05-05-25 17:35:51 /Book.POST took 8 ms
+start: 05-05-25 17:35:51 /Book.GET
+end: 05-05-25 17:35:51 /Book.GET took 7 ms
+start: 05-05-25 17:36:05 /Book/16.PUT
+end: 05-05-25 17:36:05 /Book/16.PUT took 15 ms
+start: 05-05-25 17:36:05 /Book.GET
+end: 05-05-25 17:36:05 /Book.GET took 2 ms
+start: 05-05-25 17:36:38 /Book/16.PUT
+end: 05-05-25 17:36:38 /Book/16.PUT took 6 ms
+start: 05-05-25 17:36:38 /Book.GET
+end: 05-05-25 17:36:38 /Book.GET took 4 ms
+start: 05-05-25 17:36:41 /Book/16.DELETE
+end: 05-05-25 17:36:41 /Book/16.DELETE took 4 ms
+start: 05-05-25 17:36:41 /Book.GET
+end: 05-05-25 17:36:41 /Book.GET took 3 ms
+start: 05-05-25 17:36:44 /Book.GET
+end: 05-05-25 17:36:44 /Book.GET took 3 ms
+start: 05-05-25 17:38:19 /Book.GET
+start: 05-05-25 17:38:19 /favicon.ico.GET
+end: 05-05-25 17:38:19 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:38:19 /Book.GET took 3 ms
+start: 05-05-25 17:38:20 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:38:20 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:38:25 /Book.GET
+end: 05-05-25 17:38:25 /Book.GET took 0 ms
+start: 05-05-25 17:38:25 /favicon.ico.GET
+end: 05-05-25 17:38:25 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:38:25 /login.GET
+start: 05-05-25 17:38:25 /login.GET
+end: 05-05-25 17:38:25 /login.GET took 0 ms
+end: 05-05-25 17:38:25 /login.GET took 0 ms
+start: 05-05-25 17:38:30 /login.GET
+end: 05-05-25 17:38:30 /login.GET took 1 ms
+start: 05-05-25 17:38:30 /css/path/to/your/image.jpg.GET
+end: 05-05-25 17:38:30 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 17:38:30 /login.GET
+end: 05-05-25 17:38:30 /login.GET took 1 ms
+start: 05-05-25 17:38:30 /favicon.ico.GET
+end: 05-05-25 17:38:30 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:38:30 /login.GET
+end: 05-05-25 17:38:30 /login.GET took 0 ms
+start: 05-05-25 17:38:36 /Login.POST
+end: 05-05-25 17:38:36 /Login.POST took 4 ms
+start: 05-05-25 17:39:03 /css/path/to/your/image.jpg.GET
+end: 05-05-25 17:39:03 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 17:39:07 /Author.GET
+end: 05-05-25 17:39:07 /Author.GET took 8 ms
+start: 05-05-25 17:39:07 /favicon.ico.GET
+end: 05-05-25 17:39:07 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:39:21 /login.GET
+end: 05-05-25 17:39:21 /login.GET took 1 ms
+start: 05-05-25 17:39:21 /Author.GET
+end: 05-05-25 17:39:21 /Author.GET took 2 ms
+start: 05-05-25 17:39:25 /Author.GET
+start: 05-05-25 17:39:25 /favicon.ico.GET
+end: 05-05-25 17:39:25 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:39:25 /Author.GET took 12 ms
+start: 05-05-25 17:39:27 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:39:27 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:39:34 /login.GET
+end: 05-05-25 17:39:34 /login.GET took 0 ms
+start: 05-05-25 17:39:34 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:39:34 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:39:34 /login.GET
+end: 05-05-25 17:39:34 /login.GET took 0 ms
+start: 05-05-25 17:39:34 /css/path/to/your/image.jpg.GET
+end: 05-05-25 17:39:34 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 17:39:34 /login.GET
+end: 05-05-25 17:39:34 /login.GET took 0 ms
+start: 05-05-25 17:39:37 /Login.POST
+end: 05-05-25 17:39:37 /Login.POST took 6 ms
+start: 05-05-25 17:39:38 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:39:38 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:39:38 /Author.GET
+end: 05-05-25 17:39:38 /Author.GET took 13 ms
+start: 05-05-25 17:39:48 /Author.POST
+end: 05-05-25 17:39:48 /Author.POST took 4 ms
+start: 05-05-25 17:40:10 /Author/5.PUT
+end: 05-05-25 17:40:10 /Author/5.PUT took 4 ms
+start: 05-05-25 17:40:10 /Author.GET
+end: 05-05-25 17:40:10 /Author.GET took 3 ms
+start: 05-05-25 17:41:30 /Author.GET
+start: 05-05-25 17:41:30 /favicon.ico.GET
+end: 05-05-25 17:41:30 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:41:30 /Author.GET took 2 ms
+start: 05-05-25 17:41:32 /login.GET
+end: 05-05-25 17:41:32 /login.GET took 12 ms
+start: 05-05-25 17:41:32 /Author.GET
+end: 05-05-25 17:41:32 /Author.GET took 1 ms
+start: 05-05-25 17:43:46 /Book.GET
+end: 05-05-25 17:43:46 /Book.GET took 1 ms
+start: 05-05-25 17:43:52 /Book/9.PUT
+end: 05-05-25 17:43:52 /Book/9.PUT took 5 ms
+start: 05-05-25 17:43:52 /Book.GET
+end: 05-05-25 17:43:52 /Book.GET took 11 ms
+start: 05-05-25 17:44:11 /Book.POST
+end: 05-05-25 17:44:11 /Book.POST took 5 ms
+start: 05-05-25 17:44:11 /Book.GET
+end: 05-05-25 17:44:11 /Book.GET took 4 ms
+start: 05-05-25 17:44:16 /Book.GET
+end: 05-05-25 17:44:16 /Book.GET took 2 ms
+start: 05-05-25 17:44:21 /Book/16.DELETE
+end: 05-05-25 17:44:21 /Book/16.DELETE took 3 ms
+start: 05-05-25 17:44:21 /Book.GET
+end: 05-05-25 17:44:21 /Book.GET took 2 ms
+start: 05-05-25 17:45:53 /favicon.ico.GET
+start: 05-05-25 17:45:54 /Book.GET
+end: 05-05-25 17:45:54 /favicon.ico.GET took 48 ms
+end: 05-05-25 17:45:54 /Book.GET took 65 ms
+start: 05-05-25 17:46:00 /Book/9.PUT
+end: 05-05-25 17:46:00 /Book/9.PUT took 68 ms
+start: 05-05-25 17:46:00 /Book.GET
+end: 05-05-25 17:46:00 /Book.GET took 5 ms
+start: 05-05-25 17:52:24 /favicon.ico.GET
+start: 05-05-25 17:52:24 /Book.GET
+end: 05-05-25 17:52:24 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:52:24 /Book.GET took 5 ms
+start: 05-05-25 17:52:27 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:52:27 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:52:33 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:52:33 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:52:33 /login.GET
+end: 05-05-25 17:52:33 /login.GET took 4 ms
+start: 05-05-25 17:52:33 /Book.GET
+start: 05-05-25 17:52:33 /favicon.ico.GET
+end: 05-05-25 17:52:33 /Book.GET took 0 ms
+end: 05-05-25 17:52:33 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:52:33 /login.GET
+start: 05-05-25 17:52:33 /login.GET
+end: 05-05-25 17:52:33 /login.GET took 0 ms
+end: 05-05-25 17:52:33 /login.GET took 0 ms
+start: 05-05-25 17:52:37 /login.GET
+end: 05-05-25 17:52:37 /login.GET took 1 ms
+start: 05-05-25 17:52:37 /css/path/to/your/image.jpg.GET
+start: 05-05-25 17:52:37 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:52:37 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+end: 05-05-25 17:52:37 /css/path/to/your/image.jpg.GET took 3 ms
+start: 05-05-25 17:52:37 /login.GET
+end: 05-05-25 17:52:37 /login.GET took 0 ms
+start: 05-05-25 17:52:37 /login.GET
+end: 05-05-25 17:52:37 /login.GET took 1 ms
+start: 05-05-25 17:52:38 /favicon.ico.GET
+end: 05-05-25 17:52:38 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:52:38 /login.GET
+end: 05-05-25 17:52:38 /login.GET took 0 ms
+start: 05-05-25 17:52:40 /Login.POST
+end: 05-05-25 17:52:40 /Login.POST took 26 ms
+start: 05-05-25 17:52:40 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:52:40 /.well-known/appspecific/com.chrome.devtools.json.GET took 1 ms
+start: 05-05-25 17:52:40 /Author.GET
+start: 05-05-25 17:52:40 /favicon.ico.GET
+end: 05-05-25 17:52:40 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:52:40 /Author.GET took 10 ms
+start: 05-05-25 17:52:49 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:52:49 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:52:50 /Book.GET
+end: 05-05-25 17:52:50 /Book.GET took 3 ms
+start: 05-05-25 17:53:02 /Book/9.PUT
+end: 05-05-25 17:53:02 /Book/9.PUT took 7 ms
+start: 05-05-25 17:53:06 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:53:06 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:53:34 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:53:34 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:53:35 /Book.GET
+end: 05-05-25 17:53:35 /Book.GET took 5 ms
+start: 05-05-25 17:54:17 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:54:17 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:54:50 /Book.GET
+end: 05-05-25 17:54:50 /Book.GET took 15 ms
+start: 05-05-25 17:54:51 /Book.GET
+start: 05-05-25 17:54:51 /favicon.ico.GET
+end: 05-05-25 17:54:51 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:54:51 /Book.GET took 14 ms
+start: 05-05-25 17:54:57 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:54:57 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:54:59 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:54:59 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:55:09 /Book.GET
+end: 05-05-25 17:55:09 /Book.GET took 9 ms
+start: 05-05-25 17:55:37 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 17:55:37 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 17:55:39 /Book.GET
+start: 05-05-25 17:55:39 /favicon.ico.GET
+end: 05-05-25 17:55:39 /favicon.ico.GET took 0 ms
+end: 05-05-25 17:55:39 /Book.GET took 1 ms
+start: 05-05-25 17:57:56 /Book.GET
+end: 05-05-25 17:57:57 /Book.GET took 13 ms
+start: 05-05-25 17:57:57 /favicon.ico.GET
+end: 05-05-25 17:57:57 /favicon.ico.GET took 0 ms
+start: 05-05-25 17:58:07 /Book.GET
+end: 05-05-25 17:58:07 /Book.GET took 3 ms
+start: 05-05-25 18:00:41 /favicon.ico.GET
+start: 05-05-25 18:00:41 /Book.GET
+end: 05-05-25 18:00:41 /favicon.ico.GET took 0 ms
+end: 05-05-25 18:00:41 /Book.GET took 11 ms
+start: 05-05-25 18:01:18 /Book.GET
+end: 05-05-25 18:01:18 /Book.GET took 13 ms
+start: 05-05-25 18:01:18 /favicon.ico.GET
+end: 05-05-25 18:01:18 /favicon.ico.GET took 0 ms
+start: 05-05-25 18:01:34 /Book.POST
+end: 05-05-25 18:01:34 /Book.POST took 34 ms
+start: 05-05-25 18:01:34 /Book.GET
+end: 05-05-25 18:01:34 /Book.GET took 1 ms
+start: 05-05-25 18:02:04 /Book.GET
+end: 05-05-25 18:02:04 /Book.GET took 5 ms
+start: 05-05-25 18:02:11 /Book.POST
+end: 05-05-25 18:02:11 /Book.POST took 6 ms
+start: 05-05-25 18:02:11 /Book.GET
+end: 05-05-25 18:02:11 /Book.GET took 6 ms
+start: 05-05-25 18:02:15 /Book.GET
+end: 05-05-25 18:02:15 /Book.GET took 15 ms
+start: 05-05-25 18:02:18 /Book/17.DELETE
+end: 05-05-25 18:02:18 /Book/17.DELETE took 11 ms
+start: 05-05-25 18:02:18 /Book.GET
+end: 05-05-25 18:02:18 /Book.GET took 4 ms
+start: 05-05-25 18:02:27 /Book.GET
+end: 05-05-25 18:02:27 /Book.GET took 73 ms
+start: 05-05-25 18:05:58 /Book.GET
+start: 05-05-25 18:05:58 /favicon.ico.GET
+end: 05-05-25 18:05:58 /favicon.ico.GET took 0 ms
+end: 05-05-25 18:05:58 /Book.GET took 4 ms
+start: 05-05-25 18:06:45 /Book.GET
+end: 05-05-25 18:06:45 /Book.GET took 8 ms
+start: 05-05-25 18:07:16 /Book.GET
+end: 05-05-25 18:07:16 /Book.GET took 3 ms
+start: 05-05-25 18:07:28 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:07:28 /.well-known/appspecific/com.chrome.devtools.json.GET took 1 ms
+start: 05-05-25 18:07:58 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:07:58 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 18:08:00 /Book.GET
+end: 05-05-25 18:08:00 /Book.GET took 3 ms
+start: 05-05-25 18:11:36 /Book.GET
+start: 05-05-25 18:11:36 /favicon.ico.GET
+end: 05-05-25 18:11:36 /favicon.ico.GET took 0 ms
+end: 05-05-25 18:11:36 /Book.GET took 4 ms
+start: 05-05-25 18:11:44 /Author.GET
+end: 05-05-25 18:11:44 /Author.GET took 8 ms
+start: 05-05-25 18:12:52 /favicon.ico.GET
+start: 05-05-25 18:12:52 /Author.GET
+end: 05-05-25 18:12:52 /favicon.ico.GET took 0 ms
+end: 05-05-25 18:12:52 /Author.GET took 1 ms
+start: 05-05-25 18:47:09 /Author.GET
+start: 05-05-25 18:47:09 /favicon.ico.GET
+end: 05-05-25 18:47:09 /Author.GET took 3 ms
+end: 05-05-25 18:47:09 /favicon.ico.GET took 0 ms
+start: 05-05-25 18:47:20 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:47:20 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 18:47:25 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:47:25 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 18:47:25 /login.GET
+end: 05-05-25 18:47:25 /login.GET took 2 ms
+start: 05-05-25 18:47:30 /login.GET
+end: 05-05-25 18:47:30 /login.GET took 1 ms
+start: 05-05-25 18:47:30 /Author.GET
+end: 05-05-25 18:47:30 /Author.GET took 0 ms
+start: 05-05-25 18:47:31 /css/path/to/your/image.jpg.GET
+end: 05-05-25 18:47:31 /css/path/to/your/image.jpg.GET took 0 ms
+start: 05-05-25 18:47:31 /login.GET
+end: 05-05-25 18:47:31 /login.GET took 0 ms
+start: 05-05-25 18:47:31 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:47:31 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 18:47:31 /login.GET
+end: 05-05-25 18:47:31 /login.GET took 0 ms
+start: 05-05-25 18:47:33 /Login.POST
+end: 05-05-25 18:47:33 /Login.POST took 51 ms
+start: 05-05-25 18:47:33 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 18:47:33 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 18:47:34 /Author.GET
+end: 05-05-25 18:47:34 /Author.GET took 19 ms
+start: 05-05-25 18:47:52 /Book.GET
+end: 05-05-25 18:47:52 /Book.GET took 7 ms
+start: 05-05-25 22:46:42 /Book.GET
+end: 05-05-25 22:46:42 /Book.GET took 3 ms
+start: 05-05-25 22:53:50 /Book.GET
+end: 05-05-25 22:53:50 /Book.GET took 3 ms
+start: 05-05-25 22:53:50 /favicon.ico.GET
+end: 05-05-25 22:53:50 /favicon.ico.GET took 0 ms
+start: 05-05-25 22:54:04 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:54:04 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:56:38 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:56:38 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:56:39 /Author.GET
+end: 05-05-25 22:56:39 /Author.GET took 2 ms
+start: 05-05-25 22:56:39 /favicon.ico.GET
+end: 05-05-25 22:56:39 /favicon.ico.GET took 0 ms
+start: 05-05-25 22:56:49 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:56:49 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:56:52 /Author.GET
+end: 05-05-25 22:56:52 /Author.GET took 4 ms
+start: 05-05-25 22:57:09 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:57:09 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:57:12 /Author.GET
+end: 05-05-25 22:57:12 /Author.GET took 4 ms
+start: 05-05-25 22:57:25 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:57:25 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:57:38 /Author.GET
+end: 05-05-25 22:57:38 /Author.GET took 4 ms
+start: 05-05-25 22:57:45 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:57:45 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:57:55 /Author.GET
+end: 05-05-25 22:57:55 /Author.GET took 2 ms
+start: 05-05-25 22:58:05 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:58:05 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:58:09 /Author.GET
+end: 05-05-25 22:58:09 /Author.GET took 3 ms
+start: 05-05-25 22:59:11 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:59:11 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 22:59:22 /Author.GET
+end: 05-05-25 22:59:22 /Author.GET took 1 ms
+start: 05-05-25 22:59:23 /favicon.ico.GET
+end: 05-05-25 22:59:23 /favicon.ico.GET took 1 ms
+start: 05-05-25 22:59:40 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 22:59:40 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 23:05:48 /Author.GET
+end: 05-05-25 23:05:48 /Author.GET took 3 ms
+start: 05-05-25 23:05:57 /favicon.ico.GET
+end: 05-05-25 23:05:57 /favicon.ico.GET took 1 ms
+start: 05-05-25 23:06:19 /Author.POST
+end: 05-05-25 23:06:19 /Author.POST took 58 ms
+start: 05-05-25 23:06:19 /Author.GET
+end: 05-05-25 23:06:19 /Author.GET took 2 ms
+start: 05-05-25 23:07:32 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 23:07:32 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 23:10:29 /.well-known/appspecific/com.chrome.devtools.json.GET
+end: 05-05-25 23:10:29 /.well-known/appspecific/com.chrome.devtools.json.GET took 0 ms
+start: 05-05-25 23:10:32 /Author.GET
+end: 05-05-25 23:10:32 /Author.GET took 4 ms
+start: 05-05-25 23:10:32 /favicon.ico.GET
+end: 05-05-25 23:10:32 /favicon.ico.GET took 0 ms
+start: 05-05-25 23:10:44 /Author.POST
+end: 05-05-25 23:10:44 /Author.POST took 5 ms
+start: 05-05-25 23:10:44 /Author.GET
+end: 05-05-25 23:10:44 /Author.GET took 1 ms
+start: 05-05-25 23:11:05 /Author/12.DELETE
+end: 05-05-25 23:11:05 /Author/12.DELETE took 15 ms
+start: 05-05-25 23:11:05 /Author.GET
+end: 05-05-25 23:11:05 /Author.GET took 2 ms
+start: 05-05-25 23:11:17 /Author/11.PUT
+end: 05-05-25 23:11:17 /Author/11.PUT took 12 ms
+start: 05-05-25 23:11:17 /Author.GET
+end: 05-05-25 23:11:17 /Author.GET took 3 ms

@@ -23,19 +23,17 @@ public class LoginController : ControllerBase
         string token = loginService.Login(request.Id);
         if (token == "User not found")
             return Unauthorized("Invalid credentials");
-
         HttpContext.Response.Cookies.Append(
             "AuthToken",
             token,
             new CookieOptions
             {
-                HttpOnly = true,
+                HttpOnly = false,
                 Secure = true, // שקול לשנות ל-false בזמן פיתוח
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTimeOffset.UtcNow.AddDays(30),
             }
         );
-
         return Ok(token); // החזר תגובה פשוטה של הצלחה
     }
 

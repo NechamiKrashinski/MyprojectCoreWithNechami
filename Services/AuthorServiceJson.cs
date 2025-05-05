@@ -121,16 +121,22 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         }
     }
 
+    internal int Id(string name){
+            return MyList.FirstOrDefault(b => b.Name == name).Id;
+    }
+
     public override List<Author> Get()
     {
         if (userauth.role == Role.Author)
         {
+            System.Console.WriteLine("Get() called for Author role");
             return new List<Author> { Get(userauth.Id) }
                 .Where(a => a != null)
                 .ToList();
         }
         else if (userauth.role == Role.Admin)
         {
+            System.Console.WriteLine("Get() called for Admin role");
             return MyList;
         }
         return new List<Author>();
@@ -138,13 +144,12 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 
     public Author Get(int id)
     {
-        var author= MyList.FirstOrDefault(b => b.Id == id);
+        var author = MyList.FirstOrDefault(b => b.Id == id);
         if (author == null)
         {
             return null;
         }
         return author;
-
     }
 
     public int Insert(Author newUser)
@@ -248,8 +253,8 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         return true;
     }
 
-    protected void saveToFile()
-    {
-        File.WriteAllText("authors.json", JsonSerializer.Serialize(MyList));
-    }
+    // protected void saveToFile()
+    // {
+    //     File.WriteAllText("../data/author.json", JsonSerializer.Serialize(MyList));
+    // }
 }

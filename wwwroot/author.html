@@ -9,13 +9,18 @@
 
 <body>
     <h1>Author CRUD</h1>
-    <h3>Add Author</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
-        <input type="text" id="add-name" placeholder="Author Name" required>
-        <input type="text" id="add-address" placeholder="Address" required>
-        <input type="date" id="add-birthdate" placeholder="Birth Date" required>
-        <input type="submit" value="Add Author">
-    </form>
+    <div id="addAuthorButtonContainer"></div> <!-- מיכל לכפתור הוספת סופר -->
+    
+    <div id="addForm" style="display:none;">
+        <h3>Add Author</h3>
+        <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
+            <input type="text" id="add-name" placeholder="Author Name" required>
+            <input type="text" id="add-address" placeholder="Address" required>
+            <input type="date" id="add-birthdate" placeholder="Birth Date" required>
+            <input type="submit" value="Add Author">
+            <a onclick="closeAddForm()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
 
     <div id="editForm" style="display:none;">
         <h3>Edit Author</h3>
@@ -39,11 +44,10 @@
         </tr>
         <tbody id="authors"></tbody>
     </table>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script src="js/base.js" asp-append-version="true"></script>
     <script src="js/authors.js" asp-append-version="true"></script>
-    <script type="text/javascript">
-        getUsers();
-    </script>
 </body>
 
 </html>

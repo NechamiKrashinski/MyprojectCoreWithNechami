@@ -233,3 +233,35 @@ a:hover {
     color: #16a085; /* צבע הקישור כאשר עובר עליו בעכבר */
 }
 
+.book-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    display: inline-block; /* מאפשר לסדר את הריבועים באותו שורה */
+    width: calc(25% - 20px); /* רוחב של כל ריבוע */
+    vertical-align: top; /* מיישר את הריבועים */
+}
+
+.book-card h4 {
+    color: #1abc9c;
+}
+
+.book-card p {
+    color: #2c3e50;
+}
+
+.book-card button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-card button:hover {
+    background-color: #c0392b;
+}

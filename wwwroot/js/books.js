@@ -1,131 +1,167 @@
-const uri = '/book';
-let books = [];
-
-function getItems() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+let token = getCookieValue('AuthToken'); // משתנה גלובלי
+let userRole = getUserRoleFromToken(token); 
+let auothorsList;
+let currentAuthor;// קבלת תפקיד המשתמש מהטוקן
+// קריאה ל-API כדי לקבל את רשימת הספרים
+async function getBooks() {
+    try {
+        const response = await axios.get('/Book', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        const books = response.data;
+        const booksContainer = document.getElementById('books');
+        booksContainer.innerHTML = ''; // ניקוי התוכן הקיים
+        currentAuthor = books[0].author;
+         // הנחה שהמחבר הראשון הוא המחבר הנוכחי
+        books.forEach(book => {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            card.innerHTML = `
+                <h4>${book.name}</h4>
+                <p>Author: ${book.author}</p>
+                <p>Price: $${book.price}</p>
+                <p>Publish Date: ${book.date}</p>
+                <button onclick="editBook(${book.id}, '${book.name}', '${book.author}', ${book.price}, '${book.date}')">Edit</button>
+                <button onclick="deleteBook(${book.id})">Delete</button>
+            `;
+            booksContainer.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Error fetching books:", error);
+    }
 }
 
-function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
-    const addAuthorTextbox = document.getElementById('add-author');
-    const addPriceTextbox = document.getElementById('add-price');
-    const addDateTextbox = document.getElementById('add-date');
-
-    const item = {
-        name: addNameTextbox.value.trim(),
-        author: addAuthorTextbox.value.trim(),
-        price: parseFloat(addPriceTextbox.value),
-        date: addDateTextbox.value
+async function addBook() {
+    const nameField = document.getElementById('add-name');
+    const authorField = document.getElementById('add-author');
+    const priceField = document.getElementById('add-price');
+    const dateField = document.getElementById('add-date');
+    
+    const name = nameField.value;
+    const author = authorField.value;
+    const price = parseFloat(priceField.value);
+    const date = dateField.value;
+    
+    const newBook = {
+        name: name,
+        author: author,
+        price: price,
+        date: date
     };
 
-    fetch(uri, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(item)
-    })
-    .then(response => response.json())
-    .then(() => {
-        getItems();
-        addNameTextbox.value = '';
-        addAuthorTextbox.value = '';
-        addPriceTextbox.value = '';
-        addDateTextbox.value = '';
-    })
-    .catch(error => console.error('Unable to add item.', error));
+    try {
+        await axios.post('/Book', newBook, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        nameField.value = '';
+        authorField.value = '';
+        priceField.value = '';
+        dateField.value = '';
+        document.getElementById('addBookForm').style.display = 'none'; // הצג את טופס הוספת הספר
+
+        getBooks(); // רענן את רשימת הספרים
+    } catch (error) {
+        console.error("Error adding book:", error);
+    }
 }
 
-function deleteItem(id) {
-    fetch(`${uri}/${id}`, {
-        method: 'DELETE'
-    })
-    .then(() => getItems())
-    .catch(error => console.error('Unable to delete item.', error));
+function editBook(id, name, author, price, date) {
+    document.getElementById('edit-id').value = id;
+    document.getElementById('edit-name').value = name;
+    document.getElementById('edit-author').value = author;
+    document.getElementById('edit-price').value = price;
+    document.getElementById('edit-date').value = date;
+    if (userRole === 'Author') {
+        document.getElementById('edit-author').disabled = true; // Disable the author field
+    } else {
+        document.getElementById('edit-author').disabled = false; // Enable the author field for admins
+    }
+    document.getElementById('editForm').style.display = 'block'; // הצג את טופס העריכה
 }
 
-function displayEditForm(id) {
-    const item = books.find(item => item.id === id);
+async function updateBook() {
+    const id = document.getElementById('edit-id').value;
+    const name = document.getElementById('edit-name').value;
+    const author = document.getElementById('edit-author').value;
+    const price = parseFloat(document.getElementById('edit-price').value);
+    const date = document.getElementById('edit-date').value;
 
-    document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-author').value = item.author;
-    document.getElementById('edit-price').value = item.price;
-    document.getElementById('edit-date').value = item.date;
-    document.getElementById('edit-id').value = item.id;
-    document.getElementById('editForm').style.display = 'block';
-}
-
-function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
-    const item = {
-        id: parseInt(itemId, 10),
-        name: document.getElementById('edit-name').value.trim(),
-        author: document.getElementById('edit-author').value.trim(),
-        price: parseFloat(document.getElementById('edit-price').value),
-        date: document.getElementById('edit-date').value
+    const updatedBook = {
+        id: id,
+        name: name,
+        author: author,
+        price: price,
+        date: date
     };
 
-    fetch(`${uri}/${itemId}`, {
-        method: 'PUT',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(item)
-    })
-    .then(() => getItems())
-    .catch(error => console.error('Unable to update item.', error));
+    try {
+        await axios.put(`/Book/${id}`, updatedBook, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        closeInput(); // סגור את טופס העריכה
+        getBooks(); // רענן את רשימת הספרים
+    } catch (error) {
+        console.error("Error updating book:", error);
+    }
+}
 
-    closeInput();
-    return false;
+async function deleteBook(id) {
+    try {
+        await axios.delete(`/Book/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        getBooks(); // רענן את רשימת הספרים
+    } catch (error) {
+        console.error("Error deleting book:", error);
+    }
 }
 
 function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
+    document.getElementById('editForm').style.display = 'none'; // הסתר את טופס העריכה
 }
 
-function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'book' : 'books';
-    document.getElementById('counter').innerText = `${itemCount} ${name}`;
+// קריאה ל-API כדי לקבל את רשימת הספרים
+getBooks();
+
+function getCookieValue(cookieName) {
+    let cookies = document.cookie;
+    let cookieArray = cookies.split('; ');
+
+    let cookie = cookieArray.find(c => c.startsWith(cookieName + '='));
+
+    if (cookie) {
+        return cookie.split('=')[1];
+    }
+    return null; // אם הקוקי לא נמצא
 }
 
-function _displayItems(data) {
-    const tBody = document.getElementById('books');
-    tBody.innerHTML = '';
 
-    _displayCount(data.length);
 
-    data.forEach(item => {
-        let tr = tBody.insertRow();
+function getUserRoleFromToken(token) {
+    if (!token) return null;
 
-        let td1 = tr.insertCell(0);
-        td1.appendChild(document.createTextNode(item.author));
+    // חילוץ החלקים של ה-JWT
+    const payload = token.split('.')[1]; // החלק השני הוא ה-payload
+    const decodedPayload = JSON.parse(atob(payload)); // פענוח ה-base64
 
-        let td2 = tr.insertCell(1);
-        td2.appendChild(document.createTextNode(item.name));
+    // החזר את תפקיד המשתמש
+    return decodedPayload.Role; // הנח שהשדה שמכיל את התפקיד נקרא "role"
+}
+function showAddBookForm() {
+    if (userRole === 'Author') {
+        document.getElementById('add-author').disabled = true; // Disable the author field
+        document.getElementById('add-author').value = currentAuthor; // Set the author field to the current author
+    } else {
+        document.getElementById('add-author').disabled = false; // Enable the author field for admins
+    }
+    document.getElementById('addBookForm').style.display = 'block'; // הצג את טופס הוספת הספר
 
-        let td3 = tr.insertCell(2);
-        td3.appendChild(document.createTextNode(item.price));
-
-        let td4 = tr.insertCell(3);
-        td4.appendChild(document.createTextNode(item.date));
-
-        let td5 = tr.insertCell(4);
-        let editButton = document.createElement('button');
-        editButton.innerText = 'Edit';
-        editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
-        td5.appendChild(editButton);
-
-        let td6 = tr.insertCell(5);
-        let deleteButton = document.createElement('button');
-        deleteButton.innerText = 'Delete';
-        deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
-        td6.appendChild(deleteButton);
-    });
-
-    books = data;
 }

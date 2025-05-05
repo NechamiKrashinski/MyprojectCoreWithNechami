@@ -31,6 +31,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         : base(env)
     {
         this.authorService = (AuthorServiceJson)authorService;
+        System.Console.WriteLine(authorService.ToString() + "===" + authorService.ToString());
         Console.WriteLine("BookServiceJson initialized");
     }
 
@@ -70,47 +71,92 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
     public int Insert(Book newBook)
     {
         Console.WriteLine("Insert() called");
-        if (
-            newBook == null
-            || string.IsNullOrWhiteSpace(newBook.Name)
-            || newBook.Price <= 0
-            || newBook.AuthorId != userauth.Id && userauth.role != Role.Admin
-        )
+        try
         {
-            Console.WriteLine("Insert failed: Invalid book data");
+            // בדיקת נתוני הספר
+            if (newBook == null)
+            {
+                Console.WriteLine("Insert failed: newBook is null");
+                return -1;
+            }
+            if (string.IsNullOrWhiteSpace(newBook.Name))
+            {
+                Console.WriteLine("Insert failed: Book name is null or whitespace");
+                return -1;
+            }
+            if (newBook.Price <= 0)
+            {
+                Console.WriteLine("Insert failed: Book price must be greater than zero");
+                return -1;
+            }
+            if (newBook.Date == default) // בדיקת תאריך
+            {
+                Console.WriteLine("Insert failed: Book date is not set");
+                return -1;
+            }
+
+            Console.WriteLine(
+                $"New book details: Id: {newBook.Id}, Name: {newBook.Name}, Author: {newBook.Author}, AuthorId: {newBook.AuthorId}, Price: {newBook.Price}, Date: {newBook.Date}"
+            );
+            if (authorService == null)
+            {
+                Console.WriteLine("Insert failed: authorService is null");
+                return -1;
+            }
+
+            var authorId = authorService.Id(newBook.Author);
+            Console.WriteLine($"Author ID: {authorId} | User ID: {userauth.Id}");
+
+            // בדיקת הרשאות
+            if (authorId != userauth.Id && userauth.role != Role.Admin)
+            {
+                Console.WriteLine("Insert failed: Author not found or user is not authorized");
+                return -1;
+            }
+
+            // הגדרת AuthorId לספר
+            newBook.AuthorId = authorId;
+            int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0;
+            newBook.Id = maxId + 1;
+
+            // הוספת הספר לרשימה ושמירה לקובץ
+            MyList.Add(newBook);
+            saveToFile();
+            Console.WriteLine($"Book inserted successfully with Id: {newBook.Id}");
+
+            return newBook.Id;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
             return -1;
         }
-
-        var authorName = authorService.Get(newBook.AuthorId)?.Name;
-        if (authorName == null)
-        {
-            Console.WriteLine("Insert failed: Author not found");
-            return -1;
-        }
-
-        newBook.Author = authorName;
-        int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0;
-        newBook.Id = maxId + 1;
-        MyList.Add(newBook);
-        saveToFile();
-        Console.WriteLine($"Book inserted with Id: {newBook.Id}");
-        return newBook.Id;
     }
 
     public bool Update(int id, Book book)
     {
         Console.WriteLine($"Update({id}) called");
+        Console.WriteLine(book.ToString() + "service");
         if (
             book == null
             || book.Id != id
             || string.IsNullOrWhiteSpace(book.Name)
             || book.Price <= 0
-            || book.AuthorId != userauth.Id && userauth.role != Role.Admin
         )
         {
             Console.WriteLine("Update failed: Invalid book data");
             return false;
         }
+        Console.WriteLine(book.ToString() + "service2");
+        var authorId = authorService.Id(book.Author);
+
+        if (authorId == null || (authorId != userauth.Id && userauth.role != Role.Admin))
+        {
+            Console.WriteLine("Insert failed: Author not found");
+            return false;
+        }
+
+        // book.AuthorId = authorId.Value;
 
         var currentBook = MyList.FirstOrDefault(b => b.Id == id);
         if (currentBook == null)
@@ -129,7 +175,10 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
     public bool Delete(int id)
     {
         Console.WriteLine($"Delete({id}) called");
-        if (id != userauth.Id && userauth.role != Role.Admin)
+        var authorId = Get(id)?.AuthorId;
+        if (authorId == null)
+            return false;
+        if (authorId != userauth.Id && userauth.role != Role.Admin)
         {
             Console.WriteLine("Delete failed: Unauthorized access");
             return false;
@@ -145,11 +194,5 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         saveToFile();
         Console.WriteLine("Book deleted successfully");
         return true;
-    }
-
-    protected void saveToFile()
-    {
-        Console.WriteLine("Saving books to file");
-        File.WriteAllText("books.json", JsonSerializer.Serialize(MyList));
     }
 }

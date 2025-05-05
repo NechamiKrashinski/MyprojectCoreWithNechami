@@ -11,20 +11,26 @@ namespace project.Controllers;
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
+    private readonly IService<Author> service2;
 
     private string? token;
 
-    public BookController(IService<Book> service)
+    public BookController(IService<Book> service, IService<Author> service2)
     {
         this.service = service;
+        this.service2 = service2;
     }
 
     private void SetToken()
     {
         token = HttpContext.Request.Cookies["AuthToken"]!;
         if (!string.IsNullOrEmpty(token))
+        {
             service.Token = token;
+            service2.Token = token;
+        }
     }
+
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
@@ -61,7 +67,7 @@ public class BookController : ControllerBase
     {
         SetToken();
 
-        Console.WriteLine("Post() called");
+        Console.WriteLine("Post() called---------------");
         var newId = service.Insert(newBook);
         if (newId == -1)
         {

@@ -28,6 +28,14 @@ public abstract class GetFuncService<T>
         }
     }
 
-    public abstract List<T> Get();
+    public void saveToFile()
+    {
+        var jsonString = JsonSerializer.Serialize(
+            MyList,
+            new JsonSerializerOptions { WriteIndented = true }
+        );
+        File.WriteAllText(filePath, jsonString);
+    }
 
+    public abstract List<T> Get();
 }
