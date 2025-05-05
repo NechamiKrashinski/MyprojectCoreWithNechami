@@ -18,11 +18,12 @@ public class LoginController : ControllerBase
 
 
     private readonly ILogin<Author> loginService;
+ 
 
 
     public LoginController(ILogin<Author> loginService)
     {
-
+        System.Console.WriteLine("LoginController constructor called");
         this.loginService = loginService;
     }
 
@@ -31,6 +32,7 @@ public class LoginController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<string>> Login([FromBody] LoginRequest loginRequest)
     {
+        System.Console.WriteLine(loginRequest.id + " id in login controller");
         string token = loginService.Login(loginRequest.id);
         if (token == "Invalid credentials")
         {
@@ -39,21 +41,21 @@ public class LoginController : ControllerBase
         else
         {
             System.Console.WriteLine(token);
-            // Save token in a cookie
+                    //  Save token in a cookie
             HttpContext.Response.Cookies.Append("authToken", token, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true,
+                Secure = false, // Set to true in production
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTimeOffset.UtcNow.AddDays(30)
             });
-           
+
             var handler = new JwtSecurityTokenHandler();
-          
+
             var jwtToken = handler.ReadJwtToken(token); // token הוא הטוקן שקיבלת
-           
+
             var userRole = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Role).Value;
-           var userName = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Name).Value;
+            var userName = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Name).Value;
             var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name,userName ) ,
@@ -65,37 +67,32 @@ public class LoginController : ControllerBase
 
             // הכנס את ה-ClaimsPrincipal להקשר של המשתמש
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
-          
+
             var userClaims = HttpContext.User.Claims;
-            //    System.Console.WriteLine(userClaims+ "  userClaims");
-            // foreach (var claim in userClaims)
-            // {
-            //     Console.WriteLine($"{claim.Type}: {claim.Value}");
-            // }
-            // System.Console.WriteLine("  controller 7");
 
-        
 
-    try
-    {
-        // מנסה לאמת את הטוקן
-        ClaimsPrincipal principal = TokenService.ValidateToken(token);
-        
-        // אם ההגעה כאן, האימות הצליח
-        Console.WriteLine(" // אם ההגעה כאן, האימות הצליחToken is valid.");
-    }
-    catch (SecurityTokenException)
-    {
-        // אם הושלך חריגה, האימות נכשל
-        Console.WriteLine("   // אם הושלך חריגה, האימות נכשלToken is invalid.");
-    }
-    catch (Exception ex)
-    {
-        // טיפול בשגיאות אחרות אם יש
-        Console.WriteLine($"An error occurred: {ex.Message}");
-    }
 
-            return Ok(token);
+
+            try
+            {
+                // מנסה לאמת את הטוקן
+                ClaimsPrincipal principal = TokenService.ValidateToken(token);
+
+                // אם ההגעה כאן, האימות הצליח
+                Console.WriteLine(" // אם ההגעה כאן, האימות הצליחToken is valid.");
+            }
+            catch (SecurityTokenException)
+            {
+                // אם הושלך חריגה, האימות נכשל
+                Console.WriteLine("   // אם הושלך חריגה, האימות נכשלToken is invalid.");
+            }
+            catch (Exception ex)
+            {
+                // טיפול בשגיאות אחרות אם יש
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            System.Console.WriteLine("Token is valid.");
+         return Ok(new { token  });
         }
     }
     public class LoginRequest

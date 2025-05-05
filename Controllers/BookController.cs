@@ -17,12 +17,13 @@ public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
     private readonly BookServiceJson bookService;
+    private readonly User user;
     
-    public BookController(IService<Book> service, BookServiceJson bookService)
+    public BookController(IService<Book> service, BookServiceJson bookService,User user)
     {
         System.Console.WriteLine(bookService + " bookService in BookController");
         this.bookService = bookService;
-        
+        this.user = user;
         this.service = service;
     }
    
@@ -59,7 +60,7 @@ public class BookController : ControllerBase
             string name = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
             return bookService.GetAuthorsBook(name) ?? new List<Book>();
         }
-        return service.Get();
+         return service.Get();
     }
 
     [HttpGet("{id}")]

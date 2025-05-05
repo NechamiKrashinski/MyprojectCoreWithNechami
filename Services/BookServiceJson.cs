@@ -32,9 +32,10 @@ public class BookServiceJson : ServiceJson<Book>
 
     public override List<Book> Get()
     {
+        
         return MyList;
     }
-    public List< Book> GetAuthorsBook(String authorName)
+    public List< Book>? GetAuthorsBook(String authorName)
     {
         System.Console.WriteLine(authorName + " authorName in book service");
         List< Book> books = MyList.FindAll(b => b.Author == authorName);

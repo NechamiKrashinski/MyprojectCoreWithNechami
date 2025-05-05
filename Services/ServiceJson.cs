@@ -72,5 +72,6 @@ public static class ServiceUtilities
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
         services.AddScoped<BookServiceJson, BookServiceJson>();
-
+        services.AddSingleton<User, CurrentUserService>();
+        services.AddHttpContextAccessor();
     }}

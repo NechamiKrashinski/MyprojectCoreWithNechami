@@ -19,6 +19,7 @@ public class LoginService<T> :ILogin<T> where T : IGeneric, IRole
 
     public string Login(int userId)
 {
+    System.Console.WriteLine(userId + " id in login service");
     List<T> users = authentication.Get();
     T CurrentUser = users.FirstOrDefault(a => a.Id == userId) ;
     if (users.FirstOrDefault(a => a.Id == userId) == null)

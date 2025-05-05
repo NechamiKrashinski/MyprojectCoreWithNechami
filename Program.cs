@@ -52,16 +52,33 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+ app.UseHttpsRedirection();
 
-
+// app.UseLogMiddleware();
+// app.UseErrorMiddleware();
+// app.UseStaticFiles();    // ממוקם כאן
+//  
+// app.UseRouting();
+// app.UseDefaultFiles(new DefaultFilesOptions
+// {
+//     DefaultFileNames = new List<string> { "book.html" }
+// });
+// app.UseAuthentication();
+// app.UseAuthorization();
+// app.MapControllers();
 
 app.UseLogMiddleware();
 app.UseErrorMiddleware();
-app.UseHttpsRedirection();
+
+app.UseStaticFiles(); 
+
 app.UseRouting();
-app.UseDefaultFiles();
-app.UseStaticFiles();
-app.UseHttpsRedirection();
+
+app.UseDefaultFiles(new DefaultFilesOptions
+{
+    DefaultFileNames = new List<string> { "book.html" }
+});
+ app.UseAuthMiddleware();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
