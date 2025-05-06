@@ -17,13 +17,13 @@ public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
     private readonly BookServiceJson bookService;
-    private readonly User user;
+   
     
-    public BookController(IService<Book> service, BookServiceJson bookService,User user)
+    public BookController(IService<Book> service, BookServiceJson bookService)
     {
         System.Console.WriteLine(bookService + " bookService in BookController");
         this.bookService = bookService;
-        this.user = user;
+       
         this.service = service;
     }
    
@@ -47,47 +47,15 @@ public class BookController : ControllerBase
 
     public ActionResult<IEnumerable<Book>> Get()
     {
-        var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
-        if (role == "Admin")
-        {
-            System.Console.WriteLine("Admin role in BookController");
-            return service.Get();
-        }
-        else if (role == "Author")
-        {
-            
-            System.Console.WriteLine("Author role in BookController");
-            string name = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
-            return bookService.GetAuthorsBook(name) ?? new List<Book>();
-        }
+        System.Console.WriteLine("Get method in BookController called");
          return service.Get();
     }
 
     [HttpGet("{id}")]
     public ActionResult<Book> Get(int id)
     {
-        System.Console.WriteLine(id + " id in BookController");
-        var book = service.Get(id);
-        System.Console.WriteLine(book.Author + " book in BookController");
-        var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
-        if (role == "Admin")
-        {
-
-            if (book == null)
-                throw new ApplicationException("Book not found");
-            return book;
-        }
-        else if (role == "Author")
-        {
-            System.Console.WriteLine("Auther role in getBYId in BookController");
-            var authorName = HttpContext.User.FindFirst("Name")?.Value;
-            System.Console.WriteLine(authorName.ToString() + " authorName in BookController");
-            if (book == null)
-                throw new ApplicationException("Book not ");
-            if (book.Author != authorName.ToString())
-                throw new ApplicationException(" unauthorized access");
-            return book;
-        }
+        
+       
         return BadRequest("Unauthorized access");
     }
 
@@ -96,49 +64,33 @@ public class BookController : ControllerBase
     [HttpPost]
     public ActionResult Post(Book newBook)
     {
-        System.Console.WriteLine("post in BookController");
-        var authorName = HttpContext.User.FindFirst(ClaimTypes.Name)?.Value;
-        var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
-
-        // אם המשתמש הוא מנהל, אפשר ליצור ספר עבור כל סופר
-        if (role == "Admin")
-        {
+        
             var newId = service.Insert(newBook);
-            newBook.Id = newId;
-            System.Console.WriteLine(newId + " newId in BookController");
-
+            System.Console.WriteLine(newId + " newId in post in BookController");
+        
             if (newId == -1)
             {
                 return BadRequest("Failed to create new book.");
             }
-            return CreatedAtAction(nameof(Post), new { Id = newId });
-        }
-        // אם המשתמש הוא Author, בדוק אם השם של הסופר תואם לשם של המשתמש
-        else if (role == "Author")
-        {
-            if (newBook.Author != authorName)
+            if (newId == -2)
             {
                 return Forbid("Unauthorized: Author name does not match the logged-in user.");
             }
-
-            var newId = service.Insert(newBook);
-            newBook.Id = newId;
-            System.Console.WriteLine(newId + " newId in BookController");
-
-            if (newId == -1)
-            {
-                return BadRequest("Failed to create new book.");
-            }
             return CreatedAtAction(nameof(Post), new { Id = newId });
-        }
+        
+       }
+        
+           
 
-        return BadRequest("Unauthorized access.");
-    }
+            
+    
+
+       
+    
 
     [HttpPut("{id}")]
     public ActionResult Put(int id, Book book)
     {
-        System.Console.WriteLine("put in BookController");
         var existingBook = service.Get(id);
         var role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
         var authorName = HttpContext.User.FindFirst("Name")?.Value;

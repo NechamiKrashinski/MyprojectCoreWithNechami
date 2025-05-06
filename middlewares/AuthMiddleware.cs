@@ -24,7 +24,7 @@ public class AuthMiddleware
 
     Console.WriteLine($"Request Path: {context.Request.Path.Value}");
     Console.WriteLine($"Is Login Request: {isLoginRequest}");
-    Console.WriteLine($"Token: {token}");
+    
 
     if (!isLoginRequest)
     {

@@ -79,6 +79,7 @@ app.UseDefaultFiles(new DefaultFilesOptions
     DefaultFileNames = new List<string> { "book.html" }
 });
  app.UseAuthMiddleware();
+ app.UseUserMiddleware();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

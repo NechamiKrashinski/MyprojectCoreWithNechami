@@ -19,21 +19,62 @@ namespace project.Services;
 public class BookServiceJson : ServiceJson<Book>
 {
     private readonly IService<Author> authorService;
-
+     private readonly CurrentUserService user;
 
 
    
 
-    public BookServiceJson(IHostEnvironment env, IService<Author> autherS) : base(env)
+    public BookServiceJson(IHostEnvironment env, IService<Author> autherS ,CurrentUserService currentUserService) : base(env)
     {
        
         authorService = autherS; // Incorrect assignment
+        this.user = currentUserService;
+        System.Console.WriteLine(user.Name + " user in book service");
     }
 
     public override List<Book> Get()
     {
+        var role = user.Role;
+        if (role == "Admin")
+        {
+            System.Console.WriteLine("Admin role in BookController");
+            
+        return MyList;
+        }
+        else if (role == "Author")
+        {
+            
+            System.Console.WriteLine("Author role in BookController");
+            string name = user.Name;
+            return GetAuthorsBook(name) ?? new List<Book>();
+        }
         
         return MyList;
+    }
+     public override Book Get(int id)
+    {
+        var book = MyList.FirstOrDefault(b => b.Id == id);
+        
+       var role = user.Role;
+        if (role == "Admin")
+        {
+
+            if (book == null)
+                throw new ApplicationException("Book not found");
+            return book;
+        }
+        else if (role == "Author")
+        {
+            string authorName = user.Name;
+            if (book == null)
+                throw new ApplicationException("Book not ");
+            if (book.Author != authorName.ToString())
+                throw new ApplicationException(" unauthorized access");
+            return book;
+        }
+       
+       
+        return book;
     }
     public List< Book>? GetAuthorsBook(String authorName)
     {
@@ -55,13 +96,40 @@ public class BookServiceJson : ServiceJson<Book>
         }
     }
     
-    public override int Insert(Book newBook)
+    public override int Insert(Book newBook){
+        
+        var authorName = user.Name;
+        var role = user.Role;
+        System.Console.WriteLine(authorName + " authorName in book service");
+
+        // // אם המשתמש הוא מנהל, אפשר ליצור ספר עבור כל סופר
+        if (role == "Admin")
+        {
+            var newId = Insert2(newBook);
+            newBook.Id = newId;
+            return newId;
+            
+           
+        }
+        // אם המשתמש הוא Author, בדוק אם השם של הסופר תואם לשם של המשתמש
+        else if (role == "Author")
+        {
+            if (newBook.Author != authorName)
+            {
+                return -2;
+            }
+
+            var newId = Insert2(newBook);
+            newBook.Id = newId;
+            return newId;
+           
+           
+        }
+        return -1;
+    }
+    public  int Insert2(Book newBook)
     {
-        System.Console.WriteLine(newBook.Name);
-        System.Console.WriteLine(newBook.Price);
-        System.Console.WriteLine(newBook.Author);
-        System.Console.WriteLine(newBook.Date);
-        System.Console.WriteLine(newBook.Id);
+      
       
         if (string.IsNullOrWhiteSpace(newBook.Name))
         {
@@ -81,7 +149,6 @@ public class BookServiceJson : ServiceJson<Book>
             return -1;
         }
 
-        
         if (authorService.Get().FirstOrDefault(u => u.Name == newBook.Author) != null)
         {
             System.Console.WriteLine("Author exists in the list.");

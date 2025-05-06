@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using project.Interfaces;
 using project.Models;
 
@@ -37,13 +38,7 @@ public abstract class ServiceJson<T> : GetFuncService<T>, IService<T> where T : 
 
 
 
-    public  T Get(int id)
-    {
-        System.Console.WriteLine(id + " id in  serviceJson");
-        var t = MyList.FirstOrDefault(b => b.Id == id);
-        System.Console.WriteLine(t  + " t in  serviceJson");
-        return t;
-    }
+    public abstract T Get(int id);
 
     public abstract int Insert(T newT);
 
@@ -67,11 +62,13 @@ public static class ServiceUtilities
     public static void AddService(this IServiceCollection services)
     {
         System.Console.WriteLine("AddService----------------------------");
-        services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Author>, AuthorServiceJson>();
+        services.AddScoped<IService<Book>, BookServiceJson>();
+        services.AddScoped<IService<Author>, AuthorServiceJson>();
         services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
         services.AddScoped<ILogin<Author>, LoginService<Author>>();
         services.AddScoped<BookServiceJson, BookServiceJson>();
-        services.AddSingleton<User, CurrentUserService>();
-        services.AddHttpContextAccessor();
-    }}
+        services.AddScoped<CurrentUserService, CurrentUserService>();
+        services.AddScoped<CurrentUserService>();        // services.AddHttpContextAccessor();
+        System.Console.WriteLine("finish to load services");
+    }
+}
