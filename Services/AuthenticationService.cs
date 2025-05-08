@@ -4,7 +4,7 @@ using project.Models;
 namespace project.Services;
 
 public class AuthenticationService<T> : GetFuncService<T>, IAuthentication<T>
-    where T : IUser
+    where T : ILogin<T>
 {
     public AuthenticationService(IHostEnvironment env)
         : base(env) { }

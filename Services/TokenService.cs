@@ -72,14 +72,14 @@ public static class TokenService
         }
     }
 
-    public static UserAuth GetUserAuth(string token)
+    public static CurrentUser GetCurrentUser(string token)
     {
         var claims = DecodeToken(token);
 
-        UserAuth userauth = new UserAuth();
-        userauth.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
-        userauth.role = (Role)
+        CurrentUser currentUser = new CurrentUser();
+        currentUser.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
+        currentUser.role = (Role)
             Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value);
-        return userauth;
+        return currentUser;
     }
 }

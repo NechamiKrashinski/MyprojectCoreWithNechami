@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/site.css" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
     <h1>Login</h1>
     <form id="loginForm">
         <input type="number" id="login-id" placeholder="User ID" required>
         <input type="submit" value="Login">
+        <button class="google-signin-button" onclick="signIn()">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" width="20" height="20">
+                           Sign in with Google
+        </button>
     </form>
     <div id="message"></div>
 
+    <!-- כפתור הזדהות עם גוגל -->
+    
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/login.js" asp-append-version="true" type="module"></script>
+    <script>
+        function signIn() {
+            // כאן תוסיף את הקוד שלך להזדהות עם גוגל
+            console.log("Sign in with Google clicked");
+        }
+    </script>
 </body>
 </html>

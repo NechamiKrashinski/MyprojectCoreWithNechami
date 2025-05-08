@@ -105,11 +105,14 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 {
     private string _token;
 
-    //private List<Author> MyList = new List<Author>(); // רשימה לאחסון מחברים
-    protected UserAuth userauth;
+    //private List<Author> MyList = new List<Author>(); // רשימה לםחסון מחברים
+    protected ILogin<CurrentUser> currentUser;
 
-    public AuthorServiceJson(IHostEnvironment env)
-        : base(env) { }
+    public AuthorServiceJson(IHostEnvironment env, ILogin<CurrentUser> user)
+        : base(env)
+    {
+        currentUser = user;
+    }
 
     public string Token
     {
@@ -117,24 +120,25 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         set
         {
             _token = value;
-            userauth = TokenService.GetUserAuth(_token);
+            currentUser = TokenService.GetCurrentUser(_token);
         }
     }
 
-    internal int Id(string name){
-            return MyList.FirstOrDefault(b => b.Name == name).Id;
+    internal int Id(string name)
+    {
+        return MyList.FirstOrDefault(b => b.Name == name).Id;
     }
 
     public override List<Author> Get()
     {
-        if (userauth.role == Role.Author)
+        if (currentUser.role == Role.Author)
         {
             System.Console.WriteLine("Get() called for Author role");
-            return new List<Author> { Get(userauth.Id) }
+            return new List<Author> { Get(currentUser.Id) }
                 .Where(a => a != null)
                 .ToList();
         }
-        else if (userauth.role == Role.Admin)
+        else if (currentUser.role == Role.Admin)
         {
             System.Console.WriteLine("Get() called for Admin role");
             return MyList;
@@ -178,7 +182,10 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 
     public bool Update(int id, Author author)
     {
-        if (userauth.role == Role.Admin || userauth.role == Role.Author && userauth.Id == id)
+        if (
+            currentUser.role == Role.Admin
+            || currentUser.role == Role.Author && currentUser.Id == id
+        )
         {
             Console.WriteLine($"Update called with id: {id}");
             Console.WriteLine($"Author provided: {author}");

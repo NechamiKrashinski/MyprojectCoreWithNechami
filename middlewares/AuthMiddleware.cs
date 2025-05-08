@@ -6,13 +6,19 @@ using project.Services;
 
 namespace project.middleware;
 
-public class AuthMiddleware
+public class AuthMiddleware<T>
+    where T : ILogin<T>, new()
 {
     private readonly RequestDelegate _next;
-    public AuthMiddleware(RequestDelegate next)
+
+    private ILogin<T> _currentUser;
+
+    public AuthMiddleware(RequestDelegate next, ILogin<T> currentUser)
     {
         _next = next;
+        _currentUser = currentUser;
     }
+
     public async Task InvokeAsync(HttpContext context)
     {
         var token = context.Request.Cookies["AuthToken"];
@@ -21,7 +27,7 @@ public class AuthMiddleware
         if (string.IsNullOrEmpty(token) || !TokenService.IsTokenValid(token))
         {
             // בדוק אם הבקשה היא לדף הכניסה
-            if (context.Request.Path.Value.Equals("/login", StringComparison.OrdinalIgnoreCase))
+            if (context.Request.Path.Equals("/login", StringComparison.OrdinalIgnoreCase))
             {
                 // אם הבקשה היא לדף הכניסה, המשך לעבד את הבקשה
                 await _next(context);
@@ -42,21 +48,24 @@ public class AuthMiddleware
                 context.Response.Redirect("/login");
                 return;
             }
-            // אם אתה רוצה להחזיר את ה-claims כתגובה, תוכל להחזיר את זה כאן
-            //login.SaveToken(claims);
-            // אם אתה רוצה להחזיר את ה-claims כתגובה, תוכל להחזיר את זה כאן
-            // context.Response.WriteAsync(claims.ToString());
-            // הפנה לדף /author
-            context.Response.Redirect("/author.html");
+            var currentUser = new T
+            {
+                Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value),
+                role = (Role)
+                    Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value),
+            };
+
+            _currentUser.SetCurrentUser(currentUser);
         }
         // המשך לעבד את הבקשה
         await _next(context);
     }
 }
+
 public static partial class MiddlewareExtensions
 {
-    public static IApplicationBuilder UseAuthMiddleware(this IApplicationBuilder builder)
+    public static IApplicationBuilder UseAuthMiddleware<T>(this IApplicationBuilder builder) where T: ILogin<T>, new()
     {
-        return builder.UseMiddleware<AuthMiddleware>();
+        return builder.UseMiddleware<AuthMiddleware<T>>();
     }
 }

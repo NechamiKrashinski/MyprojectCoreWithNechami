@@ -10,7 +10,7 @@ namespace project.Services;
 
 public class BookServiceJson : GetFuncService<Book>, IService<Book>
 {
-    protected UserAuth userauth;
+    protected ILogin<CurrentUser> currentUser;
 
     private string _token;
 
@@ -20,17 +20,18 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         set
         {
             _token = value;
-            userauth = TokenService.GetUserAuth(_token);
+            currentUser = TokenService.GetCurrentUser(_token);
             Console.WriteLine($"Token set: {_token}");
         }
     }
 
     private readonly AuthorServiceJson authorService;
 
-    public BookServiceJson(IHostEnvironment env, IService<Author> authorService)
+    public BookServiceJson(IHostEnvironment env, IService<Author> authorService,ILogin<CurrentUser> user)
         : base(env)
     {
         this.authorService = (AuthorServiceJson)authorService;
+        this.currentUser = user;
         System.Console.WriteLine(authorService.ToString() + "===" + authorService.ToString());
         Console.WriteLine("BookServiceJson initialized");
     }
@@ -39,13 +40,13 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
     {
         Console.WriteLine("Get() called");
         Console.WriteLine("Get() called" + MyList.Count + "===" + MyList.ToString());
-        if (userauth.role == Role.Author)
+        if (currentUser.role == Role.Author)
         {
-            var result = MyList.Where(a => userauth.Id == a.AuthorId).ToList();
+            var result = MyList.Where(a => currentUser.Id == a.AuthorId).ToList();
             Console.WriteLine($"Returning {result.Count} books for Author role");
             return result;
         }
-        else if (userauth.role == Role.Admin)
+        else if (currentUser.role == Role.Admin)
         {
             Console.WriteLine("Returning all books for Admin role");
             return MyList;
@@ -59,7 +60,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         Console.WriteLine($"Get({id}) called");
         Book? book = MyList.FirstOrDefault(b => b.Id == id);
 
-        if (userauth.role == Role.Admin || (book != null && userauth.Id == book.AuthorId))
+        if (currentUser.role == Role.Admin || (book != null && currentUser.Id == book.AuthorId))
         {
             Console.WriteLine($"Returning book with Id: {id}");
             return book;
@@ -105,10 +106,10 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
             }
 
             var authorId = authorService.Id(newBook.Author);
-            Console.WriteLine($"Author ID: {authorId} | User ID: {userauth.Id}");
+            Console.WriteLine($"Author ID: {authorId} | User ID: {currentUser.Id}");
 
             // בדיקת הרשאות
-            if (authorId != userauth.Id && userauth.role != Role.Admin)
+            if (authorId != currentUser.Id && currentUser.role != Role.Admin)
             {
                 Console.WriteLine("Insert failed: Author not found or user is not authorized");
                 return -1;
@@ -150,7 +151,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         Console.WriteLine(book.ToString() + "service2");
         var authorId = authorService.Id(book.Author);
 
-        if (authorId == null || (authorId != userauth.Id && userauth.role != Role.Admin))
+        if (authorId == null || (authorId != currentUser.Id && currentUser.role != Role.Admin))
         {
             Console.WriteLine("Insert failed: Author not found");
             return false;
@@ -178,7 +179,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         var authorId = Get(id)?.AuthorId;
         if (authorId == null)
             return false;
-        if (authorId != userauth.Id && userauth.role != Role.Admin)
+        if (authorId != currentUser.Id && currentUser.role != Role.Admin)
         {
             Console.WriteLine("Delete failed: Unauthorized access");
             return false;

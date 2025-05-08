@@ -1,5 +1,7 @@
 using Microsoft.OpenApi.Models;
+using project.Interfaces;
 using project.middleware;
+using project.Models;
 using project.Services;
 using Services;
 
@@ -67,7 +69,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseLogMiddleware();
 app.UseErrorMiddleware();
-app.UseAuthMiddleware();
+app.UseAuthMiddleware<CurrentUser>();
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // הוספת המידלוויר של CORS
 app.UseAuthorization();

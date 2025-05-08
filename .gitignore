@@ -37,3 +37,6 @@ build/
 
 # Ignore axios specific files
 axios/
+
+
+* text=auto

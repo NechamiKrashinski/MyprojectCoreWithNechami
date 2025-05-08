@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Author CRUD</h1>
+    <h1>Authors</h1>
     <div id="addAuthorButtonContainer"></div> <!-- מיכל לכפתור הוספת סופר -->
     
     <div id="addForm" style="display:none;">
@@ -34,18 +34,9 @@
         </form>
     </div>
 
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Birth Date</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tbody id="authors"></tbody>
-    </table>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <div id="authors" class="authors-container"></div> <!-- מיכל להצגת הסופרים -->
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/base.js" asp-append-version="true"></script>
     <script src="js/authors.js" asp-append-version="true"></script>
 </body>

@@ -3,8 +3,8 @@ using project.Interfaces;
 
 namespace project.Services;
 
-public class LoginService<T> : ILogin<T>
-    where T : IUser
+public class LoginService<T>
+    where T : ILogin<T>
 {
     private readonly IAuthentication<T> authenticationService;
     public LoginService(IAuthentication<T> authentication)

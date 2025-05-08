@@ -7,23 +7,26 @@
     <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-    <h1>Book CRUD</h1>
-    <button onclick="showAddBookForm()">Add New Book</button>
+    <h1>Books</h1>
+    <div id="addAuthorButtonContainer" style="text-align: center; margin: 20px 0;">
+        <button onclick="showAddBookForm()">Add New Book</button>
+    </div>
+    
     <form id="addBookForm" action="javascript:void(0);" method="POST" onsubmit="addBook()" style="display:none;">
         <input type="text" id="add-name" placeholder="Book Name" required>
-        <input type="text" id="add-author" placeholder="Author" required>
+        <select id="add-author" required></select> <!-- שדה בחירה לסופר -->
         <input type="number" id="add-price" placeholder="Price" required>
         <input type="date" id="add-date" placeholder="Publish Date" required>
         <input type="submit" value="Add Book">
     </form>
     
 
+
     <div id="editForm" style="display:none;">
-        <h3>Edit Book</h3>
         <form action="javascript:void(0);" onsubmit="updateBook()">
             <input type="hidden" id="edit-id">
             <input type="text" id="edit-name" required> <!-- שדה Name -->
-            <input type="text" id="edit-author" required>
+            <select id="edit-author" required></select>
             <input type="number" id="edit-price" required> <!-- שדה Price -->
             <input type="date" id="edit-date" required> <!-- שדה Date -->
             <input type="submit" value="Save Changes">
@@ -37,6 +40,7 @@
        
    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/base.js" asp-append-version="true"></script>
     <script src="js/books.js" asp-append-version="true"></script>
 </body>
 </html>

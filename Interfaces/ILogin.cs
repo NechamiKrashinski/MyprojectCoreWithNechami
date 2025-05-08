@@ -1,7 +1,10 @@
+using project.Models;
+
 namespace project.Interfaces;
 
-public interface ILogin<T>
-    where T : IUser
+public interface ILogin<T> : IUser
 {
-    public string Login(int id);
+    T GetCurrentUser();
+    void SetCurrentUser(T user);
+
 }

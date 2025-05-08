@@ -1,27 +1,36 @@
-let token = getCookieValue('AuthToken'); // משתנה גלובלי
-let userRole = getUserRoleFromToken(token); 
-let auothorsList;
-let currentAuthor;// קבלת תפקיד המשתמש מהטוקן
-// קריאה ל-API כדי לקבל את רשימת הספרים
+
+// הוסף את הפונקציה הזו בקובץ books.js
+const fillAuthorsDropdown = () => {
+    const authorSelect = document.getElementById('add-author');
+    const authorSelectEdit = document.getElementById('edit-author');
+    authorSelect.innerHTML = ''; // ניקוי התוכן הקיים
+    authorSelectEdit.innerHTML = '';
+
+    authorsList.forEach(author => {
+        const option = document.createElement('option');
+        option.value = author.name; // הנח שהשדה שמכיל את שם הסופר נקרא "name"
+        option.textContent = author.name;
+        authorSelect.appendChild(option);
+        authorSelectEdit.appendChild(option.cloneNode(true)); // הוספת אפשרות לעריכת סופר
+    });
+};
+
 async function getBooks() {
     try {
-        const response = await axios.get('/Book', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-        const books = response.data;
+        await getAuthorsAndBooksList(); // קריאה לפונקציה לקבלת רשימת הסופרים
+
+        fillAuthorsDropdown(); // קריאה למילוי רשימת הסופרים
+
         const booksContainer = document.getElementById('books');
         booksContainer.innerHTML = ''; // ניקוי התוכן הקיים
-        currentAuthor = books[0].author;
-         // הנחה שהמחבר הראשון הוא המחבר הנוכחי
-        books.forEach(book => {
+
+        booksList.forEach(book => {
             const card = document.createElement('div');
             card.className = 'book-card';
             card.innerHTML = `
                 <h4>${book.name}</h4>
                 <p>Author: ${book.author}</p>
-                <p>Price: $${book.price}</p>
+                <p>Price: ${book.price}</p>
                 <p>Publish Date: ${book.date}</p>
                 <button onclick="editBook(${book.id}, '${book.name}', '${book.author}', ${book.price}, '${book.date}')">Edit</button>
                 <button onclick="deleteBook(${book.id})">Delete</button>

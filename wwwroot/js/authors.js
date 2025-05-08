@@ -1,22 +1,23 @@
-
-
-// קריאה ל-API עם טוקן מהקוקי
 async function getUsers() {
     try {
-        await getAuthorsList(); // קריאה לפונקציה לקבלת רשימת הסופרים
-        const authorsTable = document.getElementById('authors');
-        authorsTable.innerHTML = ''; // ניקוי התוכן הקיים
+        await getAuthorsAndBooksList(); // קריאה לפונקציה לקבלת רשימת הסופרים
+
+        const authorsContainer = document.getElementById('authors');
+        authorsContainer.innerHTML = ''; // ניקוי התוכן הקיים
         authorsList.forEach(author => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${author.name}</td>
-                <td>${author.address}</td>
-                <td>${author.birthDate}</td>
-                <td><button onclick="editUser(${author.id}, '${author.name}', '${author.address}', '${author.birthDate}')">Edit</button></td>
-                <td><button onclick="deleteUser(${author.id})">Delete</button></td>
+            const authorCard = document.createElement('div');
+            authorCard.className = 'author-card'; // הוסף מחלקה עבור עיצוב
+
+            authorCard.innerHTML = `
+                <h4>${author.name}</h4>
+                <p>Address: ${author.address}</p>
+                <p>Birth Date: ${author.birthDate}</p>
+                <button onclick="editUser(${author.id}, '${author.name}', '${author.address}', '${author.birthDate}')">Edit</button>
+                <button onclick="deleteUser(${author.id})">Delete</button>
             `;
-            authorsTable.appendChild(row);
+            authorsContainer.appendChild(authorCard);
         });
+
         // הוספת כפתור הוספת סופר אם ה-role הוא Admin
         if (userRole === 'Admin') {
             // בדוק אם הכפתור כבר קיים

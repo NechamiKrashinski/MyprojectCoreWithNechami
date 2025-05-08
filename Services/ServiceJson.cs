@@ -7,7 +7,7 @@ namespace project.Services;
 // public abstract class ServiceJson<T> : GetFuncService<T>, IService<T>
 //     where T : IGeneric
 // {
-//     protected UserAuth userauth;
+//     protected CurrentUser currentUser;
 //     private string _token;
 
 //     public string Token
@@ -17,10 +17,10 @@ namespace project.Services;
 //         {
 //             Console.WriteLine("Token set to: " + value);
 //             _token = value;
-//             userauth = TokenService.GetUserAuth(_token);
-//             Console.WriteLine("Token set to: " + userauth.ToString());
+//             currentUser = TokenService.GetCurrentUser(_token);
+//             Console.WriteLine("Token set to: " + currentUser.ToString());
 //             System.Console.WriteLine(
-//                 userauth.Id + "===" + userauth.role.ToString() + "====" + userauth.role
+//                 currentUser.Id + "===" + currentUser.role.ToString() + "====" + currentUser.role
 //             );
 //         }
 //     }
@@ -35,11 +35,11 @@ namespace project.Services;
 
 //     public override List<T> Get()
 //     {
-//         if (userauth.role == Role.Author)
+//         if (currentUser.role == Role.Author)
 //         {
-//             return MyList.Where(a => userauth.Id == a.Id).ToList();
+//             return MyList.Where(a => currentUser.Id == a.Id).ToList();
 //         }
-//         else if (userauth.role == Role.Admin)
+//         else if (currentUser.role == Role.Admin)
 //         {
 //             return MyList;
 //         }
@@ -75,8 +75,8 @@ public static class ServiceUtilities
     {
         services.AddSingleton<IService<Book>, BookServiceJson>();
         services.AddSingleton<IService<Author>, AuthorServiceJson>();
-        services.AddScoped<IAuthentication<UserAuth>, AuthenticationService<UserAuth>>(); // ודא שזה קיים
-        services.AddScoped<LoginService<UserAuth>>(); // הוסף שורה זו
-        services.AddScoped<ILogin<UserAuth>, LoginService<UserAuth>>();
+        services.AddScoped<IAuthentication<CurrentUser>, AuthenticationService<CurrentUser>>(); // ודא שזה קיים
+        services.AddScoped<LoginService<CurrentUser>>(); // הוסף שורה זו
+        services.AddScoped<ILogin<CurrentUser>, CurrentUser>();
     }
 }
