@@ -1,24 +1,29 @@
 using project.Interfaces;
 
-namespace project.Models
+namespace project.Models;
+
+public static class CurrentUser
 {
-    public class CurrentUser : ILogin<CurrentUser>
+    public static int Id { get; set; } = -1; // ערך ברירת מחדל
+    public static Role role { get; set; } = Role.Reader; // ערך ברירת מחדל
+
+    // החזרת הערכים הנוכחיים
+    // public static (int Id, Role Role) GetCurrentUser()
+    // {
+    //     return (Id, role);
+    // }
+
+    // מימוש השיטה כך שהיא מקבלת את סוג CurrentUser
+    public static void SetCurrentUser(int id, Role role2)
     {
-        public int Id { get; set; }
-        public Role role { get; set; }
+        Id = id;
+        role = role2;
+        System.Console.WriteLine(id+"=======================================");
+    }
 
-        private CurrentUser _currentUser;
-
-        // מימוש השיטה כך שהיא מחזירה את סוג T
-        public CurrentUser GetCurrentUser()
-        {
-            return _currentUser;
-        }
-
-        // מימוש השיטה כך שהיא מקבלת את סוג T
-        public void SetCurrentUser(CurrentUser user)
-        {
-            _currentUser = user;
-        }
+    // שימוש במילת המפתח new
+    public static new string ToString()
+    {
+        return $"CurrentUser: Id = {Id}, Role = {role}";
     }
 }

@@ -4,7 +4,7 @@ using project.Interfaces;
 namespace project.Services;
 
 public class LoginService<T>
-    where T : ILogin<T>
+    where T : IUser
 {
     private readonly IAuthentication<T> authenticationService;
     public LoginService(IAuthentication<T> authentication)
@@ -14,12 +14,10 @@ public class LoginService<T>
 
     public string Login(int id)
     {
-        System.Console.WriteLine("Login called with id: " + id.ToString());
         var userAthenticate = authenticationService.Get().FirstOrDefault(a => a.Id == id);
-        System.Console.WriteLine(userAthenticate!.ToString() + "===" + userAthenticate.Id.ToString() + "===" + id.ToString());
         if (userAthenticate == null)
             return "User not found";
-
+        Console.WriteLine("User found: " + userAthenticate.ToString()+userAthenticate.role.ToString());
         var claims = new List<Claim>
         {
             new("Id", userAthenticate.Id.ToString()),
@@ -29,12 +27,4 @@ public class LoginService<T>
         var tokenString = TokenService.WriteToken(token);
         return tokenString;
     }
-
-    // public void SaveToken(ClaimsPrincipal claims)
-    // {
-    //     userauth.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
-    //     userauth.role = (Role)Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value);
-
-    // }
-
 }

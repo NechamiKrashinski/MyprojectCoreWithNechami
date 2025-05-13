@@ -34,14 +34,11 @@ public class BookController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
-        Console.WriteLine("Get() called");
         var list = service.Get();
         if (list.Count <= 0)
         {
-            Console.WriteLine("No books found, unauthorized access");
             return BadRequest("Unauthorized access");
         }
-        Console.WriteLine($"Returning {list.Count} books");
         return Ok(list);
     }
 

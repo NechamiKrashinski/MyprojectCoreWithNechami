@@ -70,7 +70,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseLogMiddleware();
 app.UseErrorMiddleware();
-app.UseAuthMiddleware<CurrentUser>();
+app.UseAuthMiddleware<Author>();
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // הוספת המידלוויר של CORS
 app.UseAuthorization();

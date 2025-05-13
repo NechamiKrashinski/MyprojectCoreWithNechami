@@ -7,6 +7,7 @@ async function getUsers() {
         authorsList.forEach(author => {
             const authorCard = document.createElement('div');
             authorCard.className = 'author-card'; // הוסף מחלקה עבור עיצוב
+            authorCard.setAttribute('data-id', author.id); // הוסף את ה-ID כ-data attribute
 
             authorCard.innerHTML = `
                 <h4>${author.name}</h4>
@@ -40,7 +41,6 @@ function openAddForm() {
 function closeAddForm() {
     document.getElementById('addForm').style.display = 'none'; // הסתר את טופס ההוספה
 }
-
 
 // פונקציה להוספת מחבר חדש
 async function addUser() {
@@ -110,18 +110,54 @@ async function deleteUser(id) {
 
 // פונקציה לעדכון טופס העריכה
 function editUser(id, name, address, birthDate) {
-    document.getElementById('edit-id').value = id;
-    document.getElementById('edit-name').value = name;
-    document.getElementById('edit-address').value = address;
-    document.getElementById('edit-birthdate').value = birthDate;
-    document.getElementById('editForm').style.display = 'block'; // הצג את טופס העריכה
+    const authorsContainer = document.getElementById('authors');
+    const authorCard = authorsContainer.querySelector(`.author-card[data-id='${id}']`);
+
+    authorCard.innerHTML = `
+        <input type="text" value="${name}" id="edit-name-${id}" required>
+        <input type="text" value="${address}" id="edit-address-${id}" required>
+        <input type="date" value="${birthDate}" id="edit-birthdate-${id}" required>
+        <button onclick="saveUser(${id})">Save</button>
+        <button onclick="cancelEdit(${id}, '${name}', '${address}', '${birthDate}')">Cancel</button>
+    `;
 }
 
-// פונקציה לסגירת טופס העריכה
-function closeInput() {
-    document.getElementById('editForm').style.display = 'none'; // הסתר את טופס העריכה
+async function saveUser(id) {
+    const name = document.getElementById(`edit-name-${id}`).value;
+    const address = document.getElementById(`edit-address-${id}`).value;
+    const birthDate = document.getElementById(`edit-birthdate-${id}`).value;
+
+    const updatedAuthor = {
+        id: id,
+        name: name,
+        address: address,
+        birthDate: birthDate
+    };
+
+    try {
+        await axios.put(`/Author/${id}`, updatedAuthor, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        getUsers(); // רענן את רשימת המחברים
+    } catch (error) {
+        console.error("Error updating author:", error);
+    }
+}
+
+function cancelEdit(id, name, address, birthDate) {
+    const authorsContainer = document.getElementById('authors');
+    const authorCard = authorsContainer.querySelector(`.author-card[data-id='${id}']`);
+
+    authorCard.innerHTML = `
+        <h4>${name}</h4>
+        <p>Address: ${address}</p>
+        <p>Birth Date: ${birthDate}</p>
+        <button onclick="editUser(${id}, '${name}', '${address}', '${birthDate}')">Edit</button>
+        <button onclick="deleteUser(${id})">Delete</button>
+    `;
 }
 
 // קריאה ל-API כדי לקבל את רשימת המחברים
 getUsers();
-

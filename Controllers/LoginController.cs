@@ -10,9 +10,9 @@ namespace project.Controllers;
 [Route("[controller]")]
 public class LoginController : ControllerBase
 {
-    private readonly LoginService<CurrentUser> loginService;
+    private readonly LoginService<Author> loginService;
 
-    public LoginController(LoginService<CurrentUser> loginService)
+    public LoginController(LoginService<Author> loginService)
     {
         this.loginService = loginService;
     }

@@ -10,7 +10,6 @@ namespace project.Services;
 
 public class BookServiceJson : GetFuncService<Book>, IService<Book>
 {
-    protected ILogin<CurrentUser> currentUser;
 
   //  private string _token;
 
@@ -27,57 +26,48 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
 
     private readonly AuthorServiceJson authorService;
 
-    public BookServiceJson(IHostEnvironment env, IService<Author> authorService,ILogin<CurrentUser> user)
+    private readonly int authorId;
+    private readonly Role role;
+    public BookServiceJson(IHostEnvironment env, IService<Author> authorService)
         : base(env)
     {
         this.authorService = (AuthorServiceJson)authorService;
-        this.currentUser = user;
-        System.Console.WriteLine(authorService.ToString() + "===" + authorService.ToString());
-        Console.WriteLine("BookServiceJson initialized");
+        authorId = CurrentUser.Id;
+        role = CurrentUser.role;
     }
 
     public override List<Book> Get()
     {
-        Console.WriteLine("Get() called");
-        Console.WriteLine("Get() called" + MyList.Count + "===" + MyList.ToString());
-        if (currentUser.role == Role.Author)
+        if (role == Role.Author)
         {
-            var result = MyList.Where(a => currentUser.Id == a.AuthorId).ToList();
-            Console.WriteLine($"Returning {result.Count} books for Author role");
+            var result = MyList.Where(a => authorId == a.AuthorId).ToList();
             return result;
         }
-        else if (currentUser.role == Role.Admin)
+        else if (role == Role.Admin)
         {
-            Console.WriteLine("Returning all books for Admin role");
             return MyList;
         }
-        Console.WriteLine("No books found");
         return new List<Book>();
     }
 
     public Book Get(int id)
     {
-        Console.WriteLine($"Get({id}) called");
         Book? book = MyList.FirstOrDefault(b => b.Id == id);
 
-        if (currentUser.role == Role.Admin || (book != null && currentUser.Id == book.AuthorId))
+        if (role == Role.Admin || (book != null && authorId == book.AuthorId))
         {
-            Console.WriteLine($"Returning book with Id: {id}");
             return book;
         }
-        Console.WriteLine("Book not found or unauthorized access");
         return null;
     }
 
     public int Insert(Book newBook)
     {
-        Console.WriteLine("Insert() called");
         try
         {
             // בדיקת נתוני הספר
             if (newBook == null)
             {
-                Console.WriteLine("Insert failed: newBook is null");
                 return -1;
             }
             if (string.IsNullOrWhiteSpace(newBook.Name))
@@ -106,10 +96,10 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
             }
 
             var authorId = authorService.Id(newBook.Author);
-            Console.WriteLine($"Author ID: {authorId} | User ID: {currentUser.Id}");
+            Console.WriteLine($"Author ID: {authorId} | User ID: {authorId}");
 
             // בדיקת הרשאות
-            if (authorId != currentUser.Id && currentUser.role != Role.Admin)
+            if (authorId != authorId && role != Role.Admin)
             {
                 Console.WriteLine("Insert failed: Author not found or user is not authorized");
                 return -1;
@@ -151,7 +141,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         Console.WriteLine(book.ToString() + "service2");
         var authorId = authorService.Id(book.Author);
 
-        if (authorId == null || (authorId != currentUser.Id && currentUser.role != Role.Admin))
+        if (authorId == null || (authorId != authorId && role != Role.Admin))
         {
             Console.WriteLine("Insert failed: Author not found");
             return false;
@@ -179,7 +169,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
         var authorId = Get(id)?.AuthorId;
         if (authorId == null)
             return false;
-        if (authorId != currentUser.Id && currentUser.role != Role.Admin)
+        if (authorId != authorId && role != Role.Admin)
         {
             Console.WriteLine("Delete failed: Unauthorized access");
             return false;

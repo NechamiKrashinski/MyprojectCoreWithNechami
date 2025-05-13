@@ -1,101 +1,3 @@
-// using project.Interfaces;
-// using project.Models;
-
-// namespace project.Services;
-
-// public class AuthorServiceJson : ServiceJson<Author>
-// {
-//     public AuthorServiceJson(IHostEnvironment env)
-//         : base(env) { }
-
-//     public override int Insert(Author newUser)
-//     {
-//         if (newUser == null)
-//         {
-//             return -1;
-//         }
-
-//         if (string.IsNullOrWhiteSpace(newUser.Name))
-//         {
-//             return -1;
-//         }
-
-//         if (string.IsNullOrWhiteSpace(newUser.Address))
-//         {
-//             return -1;
-//         }
-
-//         if (newUser.BirthDate.ToDateTime(TimeOnly.MinValue) >= DateTime.Now)
-//         {
-//             return -1;
-//         }
-
-//         int maxId = MyList.Any() ? MyList.Max(u => u.Id) : 0;
-
-//         newUser.Id = maxId + 1;
-//         MyList.Add(newUser);
-//         saveToFile();
-
-//         return newUser.Id;
-//     }
-
-//     public override bool Update(int id, Author author)
-//     {
-//         Console.WriteLine($"Update called with id: {id}");
-//         Console.WriteLine($"Author provided: {author}");
-
-//         if (author == null)
-//         {
-//             Console.WriteLine("Author is null.");
-//             return false;
-//         }
-
-//         if (author.Id != id)
-//         {
-//             Console.WriteLine("Author ID does not match.");
-//             return false;
-//         }
-
-//         if (string.IsNullOrWhiteSpace(author.Name))
-//         {
-//             Console.WriteLine("Author name is empty or whitespace.");
-//             return false;
-//         }
-
-//         if (string.IsNullOrWhiteSpace(author.Address))
-//         {
-//             Console.WriteLine("Author address is empty or whitespace.");
-//             return false;
-//         }
-
-//         // if (author.BirthDate.ToDateTime(TimeOnly.MinValue).Date <= DateTime.Today)
-//         // {
-//         //     Console.WriteLine("Author birth date is not valid.");
-//         //     return false;
-//         // }
-
-//         Console.WriteLine("Validation succeeded.");
-
-//         var currentUser = MyList.FirstOrDefault(u => u.Id == id);
-//         if (currentUser == null)
-//         {
-//             Console.WriteLine("Current user not found.");
-//             return false;
-//         }
-
-//         Console.WriteLine($"Updating user: {currentUser.Name}");
-//         currentUser.Name = author.Name;
-//         currentUser.Address = author.Address;
-//         currentUser.BirthDate = author.BirthDate;
-//         saveToFile();
-//         Console.WriteLine("Update successful.");
-//         return true;
-//     }
-// }using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
 using project.Interfaces;
 using project.Models;
 
@@ -103,26 +5,15 @@ namespace project.Services;
 
 public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 {
-   // private string _token;
+    private readonly int authorId;
+    private readonly Role role;
 
-    //private List<Author> MyList = new List<Author>(); // רשימה לםחסון מחברים
-    protected ILogin<CurrentUser> currentUser;
-
-    public AuthorServiceJson(IHostEnvironment env, ILogin<CurrentUser> user)
+    public AuthorServiceJson(IHostEnvironment env)
         : base(env)
     {
-        currentUser = user;
+        authorId = CurrentUser.Id;
+        role = CurrentUser.role;
     }
-
-    // public string Token
-    // {
-    //     get => _token;
-    //     set
-    //     {
-    //         _token = value;
-    //         currentUser = TokenService.GetCurrentUser(_token);
-    //     }
-    // }
 
     internal int Id(string name)
     {
@@ -131,16 +22,15 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 
     public override List<Author> Get()
     {
-        if (currentUser.role == Role.Author)
+        Console.WriteLine("Get method called " + role.ToString() + " " + authorId.ToString());
+        if (role == Role.Author)
         {
-            System.Console.WriteLine("Get() called for Author role");
-            return new List<Author> { Get(currentUser.Id) }
+            return new List<Author> { Get(authorId) }
                 .Where(a => a != null)
                 .ToList();
         }
-        else if (currentUser.role == Role.Admin)
+        else if (role == Role.Admin)
         {
-            System.Console.WriteLine("Get() called for Admin role");
             return MyList;
         }
         return new List<Author>();
@@ -182,35 +72,25 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 
     public bool Update(int id, Author author)
     {
-        if (
-            currentUser.role == Role.Admin
-            || currentUser.role == Role.Author && currentUser.Id == id
-        )
+        if (role == Role.Admin || role == Role.Author && authorId == id)
         {
-            Console.WriteLine($"Update called with id: {id}");
-            Console.WriteLine($"Author provided: {author}");
-
             if (author == null)
             {
-                Console.WriteLine("Author is null.");
                 return false;
             }
 
             if (author.Id != id)
             {
-                Console.WriteLine("Author ID does not match.");
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(author.Name))
             {
-                Console.WriteLine("Author name is empty or whitespace.");
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(author.Address))
             {
-                Console.WriteLine("Author address is empty or whitespace.");
                 return false;
             }
 

@@ -36,6 +36,13 @@ async function getBooks() {
                 <button onclick="deleteBook(${book.id})">Delete</button>
             `;
             booksContainer.appendChild(card);
+            const userLinkContainer = document.getElementById('userLinkContainer');
+
+            if (userRole === 'Admin') {
+                userLinkContainer.innerHTML = '<a href="author.html">Go to Authors</a>';
+            } else if (userRole === 'Author') {
+                userLinkContainer.innerHTML = '<a href="author.html">Go to your details</a>'; // החלף את הקישור המתאים
+            }
         });
     } catch (error) {
         console.error("Error fetching books:", error);

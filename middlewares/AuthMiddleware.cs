@@ -7,7 +7,7 @@ using project.Services;
 namespace project.middleware;
 
 public class AuthMiddleware<T>
-    where T : ILogin<T>, new()
+    where T : IUser
 {
     private readonly RequestDelegate _next;
 
@@ -19,7 +19,6 @@ public class AuthMiddleware<T>
     public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
     {
         var token = context.Request.Cookies["AuthToken"];
-
         // בדוק אם הטוקן קיים ואם הוא תקף
         if (string.IsNullOrEmpty(token) || !TokenService.IsTokenValid(token))
         {
@@ -45,24 +44,45 @@ public class AuthMiddleware<T>
                 context.Response.Redirect("/login");
                 return;
             }
+            int userIdClaim = -1;
+            Role roleClaim = Role.Reader;
+            // גישה ל-claims דרך המאפיין Claims
+            // foreach (var claim in claims.Claims)
+            // {
+            //     if (claim.Type == "Id")
+            //     {
+            //         userIdClaim = int.Parse(claim.Value);
+            //     }
+            //     else if (claim.Type == "Role")
+            //     {
+            //         roleClaim = (Role)Enum.Parse(typeof(Role), claim.Value);
+            //     }
+            // }
+            userIdClaim = int.Parse(claims.FindFirst("Id")?.Value);
+            roleClaim = (Role)Enum.Parse(typeof(Role), claims.FindFirst("Role")?.Value);
 
-            var currentUser = new T
+            try
             {
-                Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value),
-                role = (Role)Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value),
-            };
-
-            var loginService = serviceProvider.GetRequiredService<ILogin<T>>();
-            loginService.SetCurrentUser(currentUser);
+                CurrentUser.SetCurrentUser(userIdClaim, roleClaim);
+            }
+            catch (Exception ex)
+            {
+                // טיפול בשגיאה במקרה של ערך לא תקין
+                System.Console.WriteLine($"Error parsing claims: {ex.Message}");
+                context.Response.Redirect("/login");
+                return;
+            }
         }
-        // המשך לעבד את הבקשה
+
         await _next(context);
     }
+    // המשך לעבד את הבקשה
 }
 
 public static partial class MiddlewareExtensions
 {
-    public static IApplicationBuilder UseAuthMiddleware<T>(this IApplicationBuilder builder) where T: ILogin<T>, new()
+    public static IApplicationBuilder UseAuthMiddleware<T>(this IApplicationBuilder builder)
+        where T : IUser
     {
         return builder.UseMiddleware<AuthMiddleware<T>>();
     }

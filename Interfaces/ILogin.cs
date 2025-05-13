@@ -1,10 +1,11 @@
 using project.Models;
 
-namespace project.Interfaces;
+// namespace project.Interfaces;
 
-public interface ILogin<T> : IUser
-{
-    T GetCurrentUser();
-    void SetCurrentUser(T user);
+// public interface ILogin<T> : IUser
+// {
+//     T GetCurrentUser();
+//     void SetCurrentUser(T user);
 
-}
+    
+// }

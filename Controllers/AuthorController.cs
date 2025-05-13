@@ -14,7 +14,6 @@ public class AuthorController : ControllerBase
     public AuthorController(IService<Author> service)
     {
         this.service = service;
-        System.Console.WriteLine("AuthorController initialized");
         
     }
 
@@ -31,12 +30,9 @@ public class AuthorController : ControllerBase
     public ActionResult<IEnumerable<Author>> Get()
     {
         SetToken();
-        System.Console.WriteLine("Get() called");
         var list = service.Get();
-        System.Console.WriteLine("Get() called" + list.Count + "===" + list.ToString());
         if (list.Count <= 0)
             return BadRequest("Unauthorized access");
-        System.Console.WriteLine($"Returning {list.Count} authors");
         return Ok(list);
     }
 
@@ -55,7 +51,6 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult Post(Author newUser)
     {
-        System.Console.WriteLine(newUser.ToString()+"controller");
         SetToken();
         var newId = service.Insert(newUser);
         if (newId == -1)
