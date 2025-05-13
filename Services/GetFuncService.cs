@@ -1,4 +1,5 @@
 using System.Text.Json;
+using project.Models;
 
 namespace project.Services;
 
@@ -10,7 +11,10 @@ public abstract class GetFuncService<T>
 
     public GetFuncService(IHostEnvironment env)
     {
-        fileName = typeof(T).Name.ToLower() + ".json";
+        if (typeof(T) == typeof(CurrentUser))
+            fileName = "author.json";
+        else
+            fileName = typeof(T).Name.ToLower() + ".json";
         filePath = Path.Combine(env.ContentRootPath, "data", fileName);
         if (!File.Exists(filePath))
         {

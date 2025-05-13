@@ -12,18 +12,18 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
 {
     protected ILogin<CurrentUser> currentUser;
 
-    private string _token;
+  //  private string _token;
 
-    public string Token
-    {
-        get => _token;
-        set
-        {
-            _token = value;
-            currentUser = TokenService.GetCurrentUser(_token);
-            Console.WriteLine($"Token set: {_token}");
-        }
-    }
+    // public string Token
+    // {
+    //     get => _token;
+    //     set
+    //     {
+    //         _token = value;
+    //         currentUser = TokenService.GetCurrentUser(_token);
+    //         Console.WriteLine($"Token set: {_token}");
+    //     }
+    // }
 
     private readonly AuthorServiceJson authorService;
 

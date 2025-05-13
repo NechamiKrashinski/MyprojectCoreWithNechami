@@ -6,6 +6,7 @@ using project.Services;
 using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+LoggerSetup.ConfigureLogger();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

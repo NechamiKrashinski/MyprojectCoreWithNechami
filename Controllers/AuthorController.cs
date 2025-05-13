@@ -20,9 +20,9 @@ public class AuthorController : ControllerBase
 
     private void SetToken()
     {
-        token = HttpContext.Request.Cookies["AuthToken"]!;
-        if (!string.IsNullOrEmpty(token))
-            service.Token = token;
+        //token = HttpContext.Request.Cookies["AuthToken"]!;
+       // if (!string.IsNullOrEmpty(token))
+            //service.Token = token;
     }
 
 

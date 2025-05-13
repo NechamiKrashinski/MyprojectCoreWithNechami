@@ -3,7 +3,8 @@ function loginUser(event) {
     event.preventDefault(); // מונע את שליחת הטופס הרגילה
 
     const userId = document.getElementById('login-id').value;
-
+    console.log("=====");
+    
     axios.post('/Login', {
         id: userId
     })

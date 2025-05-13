@@ -11,6 +11,8 @@ public class AuthenticationService<T> : GetFuncService<T>, IAuthentication<T>
 
     public override List<T> Get()
     {
+            Console.WriteLine("Generic Type: " + typeof(T));
+
         System.Console.WriteLine("------------------Get-----------------");
         System.Console.WriteLine(MyList.Count+"==="+MyList.ToString());
         System.Console.WriteLine("------------------Get-----------------");

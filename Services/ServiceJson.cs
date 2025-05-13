@@ -73,8 +73,8 @@ public static class ServiceUtilities
 {
     public static void AddService(this IServiceCollection services)
     {
-        services.AddSingleton<IService<Book>, BookServiceJson>();
-        services.AddSingleton<IService<Author>, AuthorServiceJson>();
+        services.AddScoped<IService<Book>, BookServiceJson>();
+        services.AddScoped<IService<Author>, AuthorServiceJson>();
         services.AddScoped<IAuthentication<CurrentUser>, AuthenticationService<CurrentUser>>(); // ודא שזה קיים
         services.AddScoped<LoginService<CurrentUser>>(); // הוסף שורה זו
         services.AddScoped<ILogin<CurrentUser>, CurrentUser>();

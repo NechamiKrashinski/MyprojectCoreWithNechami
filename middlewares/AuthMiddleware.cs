@@ -11,15 +11,12 @@ public class AuthMiddleware<T>
 {
     private readonly RequestDelegate _next;
 
-    private ILogin<T> _currentUser;
-
-    public AuthMiddleware(RequestDelegate next, ILogin<T> currentUser)
+    public AuthMiddleware(RequestDelegate next)
     {
         _next = next;
-        _currentUser = currentUser;
     }
 
-    public async Task InvokeAsync(HttpContext context)
+    public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
     {
         var token = context.Request.Cookies["AuthToken"];
 
@@ -48,14 +45,15 @@ public class AuthMiddleware<T>
                 context.Response.Redirect("/login");
                 return;
             }
+
             var currentUser = new T
             {
                 Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value),
-                role = (Role)
-                    Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value),
+                role = (Role)Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value),
             };
 
-            _currentUser.SetCurrentUser(currentUser);
+            var loginService = serviceProvider.GetRequiredService<ILogin<T>>();
+            loginService.SetCurrentUser(currentUser);
         }
         // המשך לעבד את הבקשה
         await _next(context);

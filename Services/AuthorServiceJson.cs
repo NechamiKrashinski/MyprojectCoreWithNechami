@@ -103,7 +103,7 @@ namespace project.Services;
 
 public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 {
-    private string _token;
+   // private string _token;
 
     //private List<Author> MyList = new List<Author>(); // רשימה לםחסון מחברים
     protected ILogin<CurrentUser> currentUser;
@@ -114,15 +114,15 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         currentUser = user;
     }
 
-    public string Token
-    {
-        get => _token;
-        set
-        {
-            _token = value;
-            currentUser = TokenService.GetCurrentUser(_token);
-        }
-    }
+    // public string Token
+    // {
+    //     get => _token;
+    //     set
+    //     {
+    //         _token = value;
+    //         currentUser = TokenService.GetCurrentUser(_token);
+    //     }
+    // }
 
     internal int Id(string name)
     {

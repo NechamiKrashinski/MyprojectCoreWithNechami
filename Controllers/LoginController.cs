@@ -20,6 +20,7 @@ public class LoginController : ControllerBase
     [HttpPost]
     public ActionResult Login([FromBody] LoginRequest request)
     {
+        Console.WriteLine("5555555555555555555555555555555");
         string token = loginService.Login(request.Id);
         if (token == "User not found")
             return Unauthorized("Invalid credentials");

@@ -14,8 +14,9 @@ public class LoginService<T>
 
     public string Login(int id)
     {
+        System.Console.WriteLine("Login called with id: " + id.ToString());
         var userAthenticate = authenticationService.Get().FirstOrDefault(a => a.Id == id);
-
+        System.Console.WriteLine(userAthenticate!.ToString() + "===" + userAthenticate.Id.ToString() + "===" + id.ToString());
         if (userAthenticate == null)
             return "User not found";
 

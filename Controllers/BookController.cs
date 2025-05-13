@@ -26,15 +26,14 @@ public class BookController : ControllerBase
         token = HttpContext.Request.Cookies["AuthToken"]!;
         if (!string.IsNullOrEmpty(token))
         {
-            service.Token = token;
-            service2.Token = token;
+          //  service.Token = token;
+           // service2.Token = token;
         }
     }
 
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
-        SetToken();
         Console.WriteLine("Get() called");
         var list = service.Get();
         if (list.Count <= 0)
@@ -49,7 +48,6 @@ public class BookController : ControllerBase
     [HttpGet("{id}")]
     public ActionResult<Book> Get(int id)
     {
-        SetToken();
 
         Console.WriteLine($"Get({id}) called");
         var book = service.Get(id);
@@ -65,7 +63,6 @@ public class BookController : ControllerBase
     [HttpPost]
     public ActionResult Post(Book newBook)
     {
-        SetToken();
 
         Console.WriteLine("Post() called---------------");
         var newId = service.Insert(newBook);
@@ -81,7 +78,6 @@ public class BookController : ControllerBase
     [HttpPut("{id}")]
     public ActionResult Put(int id, Book book)
     {
-        SetToken();
 
         Console.WriteLine($"Put({id}) called");
         if (service.Update(id, book))
@@ -96,7 +92,6 @@ public class BookController : ControllerBase
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
-        SetToken();
 
         Console.WriteLine($"Delete({id}) called");
         if (service.Delete(id))
