@@ -32,31 +32,31 @@ public class ErrorMiddlware
         }
     }
 
-    public void Email(string error)
-    {
-        var fromAddress = new MailAddress("n0556734722@gmail.com", "נחמי קרשינסקי");
-        var toAddress = new MailAddress("n0556734722@gmail.com", "נחמי");
-        const string fromPassword = "N6734722!";
-        const string subject = "ERROR C#";
-        var body = error;
-        body += "\n\nThis is an automated message, please do not reply.";
-        var smtp = new SmtpClient
-        {
-            Host = "smtp.gmail.com", // כתובת ה-SMTP של הספק שלך
-            Port = 587, // או 465 אם אתה משתמש ב-SSL
-            EnableSsl = true,
-            DeliveryMethod = SmtpDeliveryMethod.Network,
-            UseDefaultCredentials = false,
-            Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
-        };
+    // public void Email(string error)
+    // {
+    //     var fromAddress = new MailAddress("n0556734722@gmail.com", "נחמי קרשינסקי");
+    //     var toAddress = new MailAddress("n0556734722@gmail.com", "נחמי");
+    //     const string fromPassword = "N6734722!";
+    //     const string subject = "ERROR C#";
+    //     var body = error;
+    //     body += "\n\nThis is an automated message, please do not reply.";
+    //     var smtp = new SmtpClient
+    //     {
+    //         Host = "smtp.gmail.com", // כתובת ה-SMTP של הספק שלך
+    //         Port = 587, // או 465 אם אתה משתמש ב-SSL
+    //         EnableSsl = true,
+    //         DeliveryMethod = SmtpDeliveryMethod.Network,
+    //         UseDefaultCredentials = false,
+    //         Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
+    //     };
 
-        using (
-            var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = body }
-        )
-        {
-            smtp.Send(message);
-        }
-    }
+    //     using (
+    //         var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = body }
+    //     )
+    //     {
+    //         smtp.Send(message);
+    //     }
+    // }
 }
 
 public static partial class MiddlewareExtensions

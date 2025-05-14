@@ -15,19 +15,28 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         role = CurrentUser.role;
     }
 
-    internal int Id(string name)
-    {
-        return MyList.FirstOrDefault(b => b.Name == name).Id;
-    }
+    // internal int Id(string name)
+    // {
+    //     return MyList.FirstOrDefault(b => b.Name == name).Id;
+    // }
 
     public override List<Author> Get()
     {
         Console.WriteLine("Get method called " + role.ToString() + " " + authorId.ToString());
         if (role == Role.Author)
         {
-            return new List<Author> { Get(authorId) }
-                .Where(a => a != null)
-                .ToList();
+            System.Console.WriteLine("Author role");
+            var authorList = new List<Author> { Get(authorId) };
+            Console.WriteLine("Author list created.");
+
+            var filteredAuthors = authorList.Where(a => a != null);
+            Console.WriteLine($"Number of authors after filtering: {filteredAuthors.Count()}");
+
+            var result = filteredAuthors.ToList();
+            Console.WriteLine("Result converted to list." + result[0].ToString());
+
+            return result;
+
         }
         else if (role == Role.Admin)
         {
@@ -140,8 +149,5 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         return true;
     }
 
-    // protected void saveToFile()
-    // {
-    //     File.WriteAllText("../data/author.json", JsonSerializer.Serialize(MyList));
-    // }
+
 }

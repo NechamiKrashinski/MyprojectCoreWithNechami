@@ -2,15 +2,18 @@
 function loginUser(event) {
     event.preventDefault(); // מונע את שליחת הטופס הרגילה
 
-    const userId = document.getElementById('login-id').value;
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
     console.log("=====");
     
     axios.post('/Login', {
-        id: userId
+        email: email,
+        password: password
     })
     .then(response => {
         document.getElementById('message').innerText = 'Login successful!';
         console.log(response.data);
+        token = getCookieValue('AuthToken');
         window.location.href = 'http://localhost:5172/author.html';
     })
     .catch(error => {
@@ -18,6 +21,7 @@ function loginUser(event) {
         console.error(error);
     });
 }
+
 
 // הוספת אירוע ה-submit
 document.addEventListener('DOMContentLoaded', function() {
@@ -43,3 +47,5 @@ function getCookieValue(cookieName) {
     }
     return null; // אם הקוקי לא נמצא
 }
+
+

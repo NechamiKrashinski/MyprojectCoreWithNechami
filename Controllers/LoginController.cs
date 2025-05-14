@@ -21,7 +21,7 @@ public class LoginController : ControllerBase
     public ActionResult Login([FromBody] LoginRequest request)
     {
         Console.WriteLine("5555555555555555555555555555555");
-        string token = loginService.Login(request.Id);
+        string token = loginService.Login(request.email, request.password);
         if (token == "User not found")
             return Unauthorized("Invalid credentials");
         HttpContext.Response.Cookies.Append(
@@ -40,6 +40,7 @@ public class LoginController : ControllerBase
 
     public class LoginRequest
     {
-        public int Id { get; set; }
+        public required string email { get; set; }
+        public required string password { get; set; }
     }
 }

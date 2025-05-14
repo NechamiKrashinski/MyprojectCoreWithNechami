@@ -11,7 +11,7 @@ namespace project.Services;
 public class BookServiceJson : GetFuncService<Book>, IService<Book>
 {
 
-  //  private string _token;
+    //  private string _token;
 
     // public string Token
     // {
@@ -38,9 +38,14 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
 
     public override List<Book> Get()
     {
+        System.Console.WriteLine("------Get method called " + role.ToString() + " " + authorId.ToString());
         if (role == Role.Author)
         {
-            var result = MyList.Where(a => authorId == a.AuthorId).ToList();
+            System.Console.WriteLine(MyList.Count + "===" + MyList.ToString());
+
+            var filteredItems = MyList.Where(a => authorId == a.AuthorId);
+            Console.WriteLine("Filtered items count: " + filteredItems.Count());
+            var result = filteredItems.ToList();
             return result;
         }
         else if (role == Role.Admin)
@@ -87,15 +92,19 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
             }
 
             Console.WriteLine(
-                $"New book details: Id: {newBook.Id}, Name: {newBook.Name}, Author: {newBook.Author}, AuthorId: {newBook.AuthorId}, Price: {newBook.Price}, Date: {newBook.Date}"
+                $"New book details: Id: {newBook.Id}, Name: {newBook.Name},  AuthorId: {newBook.AuthorId}, Price: {newBook.Price}, Date: {newBook.Date}"
             );
             if (authorService == null)
             {
                 Console.WriteLine("Insert failed: authorService is null");
                 return -1;
             }
+            int  currentAuthorId = authorId;//authorService.Id(newBook.Author);
 
-            var authorId = authorService.Id(newBook.Author);
+            if (role == Role.Admin)
+            {
+                currentAuthorId = newBook.AuthorId;
+            } 
             Console.WriteLine($"Author ID: {authorId} | User ID: {authorId}");
 
             // בדיקת הרשאות
@@ -106,7 +115,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
             }
 
             // הגדרת AuthorId לספר
-            newBook.AuthorId = authorId;
+            newBook.AuthorId = currentAuthorId;
             int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0;
             newBook.Id = maxId + 1;
 
@@ -139,7 +148,7 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
             return false;
         }
         Console.WriteLine(book.ToString() + "service2");
-        var authorId = authorService.Id(book.Author);
+        var authorId = 4;// authorService.Id(book.Author);
 
         if (authorId == null || (authorId != authorId && role != Role.Admin))
         {

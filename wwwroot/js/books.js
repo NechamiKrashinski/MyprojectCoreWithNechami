@@ -29,10 +29,10 @@ async function getBooks() {
             card.className = 'book-card';
             card.innerHTML = `
                 <h4>${book.name}</h4>
-                <p>Author: ${book.author}</p>
+                <p>Author: ${findNameAuthor(book.authorId)}</p>
                 <p>Price: ${book.price}</p>
                 <p>Publish Date: ${book.date}</p>
-                <button onclick="editBook(${book.id}, '${book.name}', '${book.author}', ${book.price}, '${book.date}')">Edit</button>
+                <button onclick="editBook(${book.id}, '${book.name}', ${book.price}, '${book.date}')">Edit</button>
                 <button onclick="deleteBook(${book.id})">Delete</button>
             `;
             booksContainer.appendChild(card);
@@ -48,7 +48,12 @@ async function getBooks() {
         console.error("Error fetching books:", error);
     }
 }
-
+const findNameAuthor = (id) => {
+    console.log(id+"findNameAuthor");
+    
+    const author = authorsList.find(author => author.id === id); // Change to find by ID
+    return author ? author.name : null; // Return the name of the author or null if not found
+}
 async function addBook() {
     const nameField = document.getElementById('add-name');
     const authorField = document.getElementById('add-author');
@@ -56,13 +61,22 @@ async function addBook() {
     const dateField = document.getElementById('add-date');
     
     const name = nameField.value;
-    const author = authorField.value;
+    //const author = authorField.value;
     const price = parseFloat(priceField.value);
     const date = dateField.value;
-    
+    let bookAuthorId;
+    if (userRole === 'Author') {
+        bookAuthorId = currentAuthorId; // השתמש ב-ID של הסופר הנוכחי
+    }
+    else if (userRole === 'Admin') {
+        bookAuthorId = authorsList.find(author => author.name === authorField.value).id; // מצא את ה-ID של הסופר לפי השם
+
+    }
     const newBook = {
+        id:0,
         name: name,
-        author: author,
+        authorId: bookAuthorId , // השתמש ב-ID של הסופר הנוכחי
+        // author: author,
         price: price,
         date: date
     };

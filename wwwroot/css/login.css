@@ -10,7 +10,7 @@
     display: flex;
     align-items: center; /* מיישר את התוכן במרכז */
     transition: background-color 0.3s, border-color 0.3s; /* אנימציה לצבע */
-    width: calc(100% ); /* רוחב פי 2 */
+    width: calc(100% - 20px); /* רוחב תואם לאינפוטים */
 }
 
 .google-signin-button:hover {
@@ -21,9 +21,60 @@
 .google-signin-button img {
     margin-right: 8px; /* מרווח בין התמונה לטקסט */
 }
+
 #loginForm {
     display: flex;
     flex-direction: column; /* מיישר את התוכן בעמודה */
     align-items: center; /* ממרכז את התוכן אופקית */
     margin: 0 auto; /* ממרכז את ה-form בתוך ה-container */
 }
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    width: calc(100% - 20px); /* תואם לרוחב של האינפוטים */
+}
+
+input[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+
+@keyframes colorChange {
+    0% { color: #DB4437; } /* אדום */
+    25% { color: #0F9D58; } /* ירוק */
+    50% { color: #F4B400; } /* צהוב */
+    75% { color: #4285F4; } /* כחול */
+    100% { color: #DB4437; } /* חזרה לאדום */
+}
+
+#tab {
+    /* font-size: 24px; גודל הפונט */
+    height: 1px; /* גובה האלמנט */
+    background: linear-gradient(to right, #DB4437, #0F9D58, #F4B400, #4285F4);
+    color: white; /* צבע הטקסט */
+    display: flex;
+    align-items: center; /* מרכז את הטקסט אנכית */
+    justify-content: center; }

@@ -1,79 +1,92 @@
 [
   {
     "Id": 1,
-    "Name": "Alice Smith",
-    "Address": "456 Elm St, Springfield, USA2",
-    "BirthDate": "1985-03-15",
-    "role": 0
+    "Name": "Yaakov Cohen",
+    "Address": "12 Chazon Ish St, Bnei Brak",
+    "BirthDate": "1980-03-15",
+    "role": 0,
+    "email": "yaakov.cohen@gmail.com",
+    "password": "Yc@1980Secure!"
   },
   {
     "Id": 2,
-    "Name": "Bob Johnson",
-    "Address": "789 Oak St, Metropolis, USA",
-    "BirthDate": "1992-07-22",
-    "role": 0
+    "Name": "Moshe Levi",
+    "Address": "45 Rabbi Akiva St, Jerusalem",
+    "BirthDate": "1975-07-22",
+    "role": 0,
+    "email": "moshe.levi@yahoo.com",
+    "password": "Ml@1975Strong!"
   },
   {
     "Id": 3,
-    "Name": "Charlie Brown",
-    "Address": "101 Pine St, Smalltown, USA",
+    "Name": "Avraham Friedman",
+    "Address": "10 Rashbam St, Modi'in Illit",
     "BirthDate": "1988-12-30",
-    "role": 1
+    "role": 1,
+    "email": "avraham.friedman@walla.co.il",
+    "password": "Af@1988Power!"
   },
   {
     "Id": 4,
-    "Name": "Diana Prince",
-    "Address": "202 Maple St, Gotham, USA",
+    "Name": "Itzhak Gross",
+    "Address": "22 Harav Shach St, Beit Shemesh",
     "BirthDate": "1990-04-05",
-    "role": 1
+    "role": 1,
+    "email": "itzhak.gross@hotmail.com",
+    "password": "Ig@1990Safe!"
   },
   {
     "Id": 5,
-    "Name": "Ethan Hunt",
-    "Address": "303 Birch St, Star City, USA22",
+    "Name": "Shmuel Rosenberg",
+    "Address": "18 Harav Kook St, Elad",
     "BirthDate": "1980-11-02",
-    "role": 1
+    "role": 1,
+    "email": "shmuel.rosenberg@gmail.com",
+    "password": "Sr@1980Secure!"
   },
   {
     "Id": 6,
-    "Name": "John Doe",
-    "Address": "123 Main St, Anytown, USA",
-    "BirthDate": "2025-02-24",
-    "role": 1
+    "Name": "David Bloch",
+    "Address": "5 Harav Mibrisk St, Safed",
+    "BirthDate": "1985-02-24",
+    "role": 1,
+    "email": "david.bloch@outlook.com",
+    "password": "Db@1985Strong!"
   },
   {
     "Id": 7,
-    "Name": "Jane Doe",
-    "Address": "456 Second St, Anytown, USA",
-    "BirthDate": "2025-02-25",
-    "role": 1
+    "Name": "Yosef Weiss",
+    "Address": "3 Harav Ovadia St, Tel Aviv",
+    "BirthDate": "1982-02-25",
+    "role": 1,
+    "email": "yosef.weiss@gmail.com",
+    "password": "Yw@1982Safe!"
   },
   {
     "Id": 8,
-    "Name": "David Smith",
-    "Address": "789 Third St, Anytown, USA",
-    "BirthDate": "2025-05-01",
-    "role": 1
+    "Name": "Chaim Barkovitz",
+    "Address": "7 Harav Elyashiv St, Haifa",
+    "BirthDate": "1983-05-01",
+    "role": 1,
+    "email": "chaim.barkovitz@gmail.com",
+    "password": "Cb@1983Secure!"
   },
   {
     "Id": 9,
-    "Name": "\u05E0\u05D7\u05DE\u05D9",
-    "Address": "\u05D4\u05E8\u05D9\u05D8\u05D1\u05D0",
-    "BirthDate": "2025-05-01",
-    "role": 1
+    "Name": "Shlomo Zalman",
+    "Address": "9 Harav Kanievsky St, Ashdod",
+    "BirthDate": "1984-05-01",
+    "role": 1,
+    "email": "shlomo.zalman@gmail.com",
+    "password": "Sz@1984Strong!"
   },
   {
     "Id": 10,
-    "Name": "\u05E0\u05D7\u05DE\u05D9",
-    "Address": "\u05DE\u05D5\u05D3\u05D9\u05E2\u05D9\u05DF",
-    "BirthDate": "2025-05-02",
-    "role": 1
-  },
-  {
-    "Id": 11,
-    "Name": "Alice Smith",
-    "Address": "\u05D4\u05E8\u05D9\u05D8\u05D1\u05D0",
-    "BirthDate": "2025-04-30",
-    "role": 1
+    "Name": "Meir Stern",
+    "Address": "11 Harav Yosef St, Netanya",
+    "BirthDate": "1986-05-02",
+    "role": 1,
+    "email": "meir.stern@gmail.com",
+    "password": "Ms@1986Safe!"
   }
 ]

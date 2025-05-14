@@ -1,138 +1,210 @@
 [
   {
     "Id": 1,
-    "Name": "Asterisk",
-    "Author": "Alice Smith",
+    "Name": "Journey to the Light",
+    "Author": null,
     "AuthorId": 1,
-    "Price": 70,
-    "Date": "2023-03-12"
+    "Price": 50,
+    "Date": "2020-01-01"
   },
   {
     "Id": 2,
-    "Name": "Alices Adventure",
-    "Author": "Alice Smith",
+    "Name": "Yossi\u0027s Adventures",
+    "Author": null,
     "AuthorId": 1,
-    "Price": 80,
-    "Date": "2024-02-10"
+    "Price": 60,
+    "Date": "2021-02-15"
   },
   {
     "Id": 3,
-    "Name": "Journey to the Unknown",
-    "Author": "Bob Johnson",
-    "AuthorId": 2,
-    "Price": 123,
-    "Date": "2025-03-05"
+    "Name": "Yaakov\u0027s Secret",
+    "Author": null,
+    "AuthorId": 1,
+    "Price": 70,
+    "Date": "2019-03-10"
   },
   {
     "Id": 4,
-    "Name": "Bobs Mystery",
-    "Author": "Bob Johnson",
-    "AuthorId": 2,
-    "Price": 95,
-    "Date": "2023-12-01"
+    "Name": "The Wonderful Journey",
+    "Author": null,
+    "AuthorId": 1,
+    "Price": 55,
+    "Date": "2022-04-20"
   },
   {
     "Id": 5,
-    "Name": "Adventures of Charlie",
-    "Author": "Charlie Brown",
-    "AuthorId": 3,
-    "Price": 4,
-    "Date": "2025-03-09"
+    "Name": "Light and Hope",
+    "Author": null,
+    "AuthorId": 1,
+    "Price": 65,
+    "Date": "2023-05-25"
   },
   {
     "Id": 6,
-    "Name": "Charlies Journey",
-    "Author": "Charlie Brown",
-    "AuthorId": 3,
-    "Price": 15,
-    "Date": "2024-05-15"
+    "Name": "Moshe\u0027s Tales",
+    "Author": null,
+    "AuthorId": 2,
+    "Price": 50,
+    "Date": "2020-06-30"
   },
   {
     "Id": 7,
-    "Name": "Dianas Quest",
-    "Author": "Diana Prince",
-    "AuthorId": 4,
-    "Price": 321,
-    "Date": "2025-02-27"
+    "Name": "Wisdom of the Heart",
+    "Author": null,
+    "AuthorId": 2,
+    "Price": 60,
+    "Date": "2021-07-15"
   },
   {
     "Id": 8,
-    "Name": "Dianas Legacy",
-    "Author": "Diana Prince",
-    "AuthorId": 4,
-    "Price": 150,
-    "Date": "2023-11-11"
+    "Name": "The Journey to Faith",
+    "Author": null,
+    "AuthorId": 2,
+    "Price": 70,
+    "Date": "2019-08-10"
   },
   {
     "Id": 9,
-    "Name": "Ethans Mission",
-    "Author": "Ethan Hunt",
-    "AuthorId": 5,
-    "Price": 150,
-    "Date": "2025-01-15"
+    "Name": "The Right Path",
+    "Author": null,
+    "AuthorId": 2,
+    "Price": 55,
+    "Date": "2022-09-20"
+  },
+  {
+    "Id": 10,
+    "Name": "Truth and Light",
+    "Author": null,
+    "AuthorId": 2,
+    "Price": 65,
+    "Date": "2023-10-25"
   },
   {
     "Id": 11,
-    "Name": "The Unknown",
-    "Author": "string",
-    "AuthorId": 6,
+    "Name": "Avraham\u0027s Stories",
+    "Author": null,
+    "AuthorId": 3,
     "Price": 50,
-    "Date": "2025-02-24"
+    "Date": "2020-01-01"
   },
   {
     "Id": 12,
-    "Name": "strings Journey",
-    "Author": "string",
-    "AuthorId": 6,
-    "Price": 75,
-    "Date": "2024-01-05"
+    "Name": "Itzhak\u0027s Journey",
+    "Author": null,
+    "AuthorId": 3,
+    "Price": 60,
+    "Date": "2021-02-15"
   },
   {
     "Id": 13,
-    "Name": "Mystery of the Ages",
-    "Author": "aaa",
-    "AuthorId": 7,
-    "Price": 200,
-    "Date": "2025-02-25"
+    "Name": "Shmuel\u0027s Secret",
+    "Author": null,
+    "AuthorId": 3,
+    "Price": 70,
+    "Date": "2019-03-10"
   },
   {
     "Id": 14,
-    "Name": "aaas Tale",
-    "Author": "aaa",
-    "AuthorId": 7,
-    "Price": 120,
-    "Date": "2023-10-10"
+    "Name": "The Amazing Journey",
+    "Author": null,
+    "AuthorId": 3,
+    "Price": 55,
+    "Date": "2022-04-20"
   },
   {
     "Id": 15,
-    "Name": "aaas Secrets",
-    "Author": "aaa",
-    "AuthorId": 7,
-    "Price": 90,
-    "Date": "2024-06-30"
+    "Name": "Hope and Light",
+    "Author": null,
+    "AuthorId": 3,
+    "Price": 65,
+    "Date": "2023-05-25"
   },
   {
     "Id": 16,
-    "Name": "\u05E0\u05D7\u05DE\u05D9",
-    "Author": "Ethan Hunt",
-    "AuthorId": 5,
-    "Price": 55,
-    "Date": "2025-05-14"
+    "Name": "New Life",
+    "Author": null,
+    "AuthorId": 4,
+    "Price": 50,
+    "Date": "2020-01-01"
   },
   {
     "Id": 17,
-    "Name": "\u05D1\u05D3\u05D9\u05E7\u05D4",
-    "Author": "Diana Prince",
+    "Name": "Haim\u0027s Journey",
+    "Author": null,
     "AuthorId": 4,
-    "Price": 55,
-    "Date": "2025-05-13"
+    "Price": 60,
+    "Date": "2021-02-15"
   },
   {
     "Id": 18,
-    "Name": "\u05E0\u05D7\u05DE\u05D9",
-    "Author": "Ethan Hunt",
+    "Name": "Itzhak\u0027s Secret",
+    "Author": null,
+    "AuthorId": 4,
+    "Price": 70,
+    "Date": "2019-03-10"
+  },
+  {
+    "Id": 19,
+    "Name": "The Amazing Journey",
+    "Author": null,
+    "AuthorId": 4,
+    "Price": 55,
+    "Date": "2022-04-20"
+  },
+  {
+    "Id": 20,
+    "Name": "Hope and Light",
+    "Author": null,
+    "AuthorId": 4,
+    "Price": 65,
+    "Date": "2023-05-25"
+  },
+  {
+    "Id": 21,
+    "Name": "Shmuel\u0027s Journey",
+    "Author": null,
     "AuthorId": 5,
-    "Price": 22,
-    "Date": "2222-02-12"
+    "Price": 50,
+    "Date": "2020-01-01"
+  },
+  {
+    "Id": 22,
+    "Name": "David\u0027s Secret",
+    "Author": null,
+    "AuthorId": 5,
+    "Price": 60,
+    "Date": "2021-02-15"
+  },
+  {
+    "Id": 23,
+    "Name": "The Amazing Journey",
+    "Author": null,
+    "AuthorId": 5,
+    "Price": 70,
+    "Date": "2019-03-10"
+  },
+  {
+    "Id": 24,
+    "Name": "Hope and Light",
+    "Author": null,
+    "AuthorId": 5,
+    "Price": 55,
+    "Date": "2022-04-20"
+  },
+  {
+    "Id": 25,
+    "Name": "New Life",
+    "Author": null,
+    "AuthorId": 5,
+    "Price": 65,
+    "Date": "2023-05-25"
+  },
+  {
+    "Id": 26,
+    "Name": "sod",
+    "Author": "Itzhak Gross",
+    "AuthorId": 4,
+    "Price": 50,
+    "Date": "2025-05-05"
   }
 ]

@@ -10,14 +10,17 @@
 <body>
     <h1>Login</h1>
     <form id="loginForm">
-        <input type="number" id="login-id" placeholder="User ID" required>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
         <input type="submit" value="Login">
+        <p id="tab">_____________________________________________________</p>
         <button class="google-signin-button" onclick="signIn()">
             <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" width="20" height="20">
-                           Sign in with Google
+            Sign in with Google
         </button>
     </form>
     <div id="message"></div>
+    
 
     <!-- כפתור הזדהות עם גוגל -->
     

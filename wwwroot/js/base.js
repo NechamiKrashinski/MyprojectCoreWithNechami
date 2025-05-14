@@ -2,6 +2,7 @@ let token = getCookieValue('AuthToken'); // משתנה גלובלי
 let userRole = getUserRoleFromToken(token); 
 let authorsList; // משתנה גלובלי לאחסון רשימת הסופרים
 let currentAuthor;
+let currentAuthorId;
 let booksList; // משתנה גלובלי לאחסון רשימת הספרים
 
 const getAuthorsAndBooksList = async () => {
@@ -24,6 +25,8 @@ const getAuthorsAndBooksList = async () => {
 
         if (authorsList.length > 0) {
             currentAuthor = authorsList[0].name;
+            currentAuthorId = authorsList[0].id;
+            console.log("Current Author ID:", currentAuthorId);
         }
 
         console.log("currentAuthor", currentAuthor);
@@ -49,3 +52,29 @@ function getUserRoleFromToken(token) {
 
     return decodedPayload.Role; // הנח שהשדה שמכיל את התפקיד נקרא "role"
 }
+function logoutUser() {
+    // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר
+
+    document.cookie = "authToken=null; path=/;";
+
+    // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר (אם זה הכרחי)
+    document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    // עדכון הממשק לאחר לוגאאוט
+    console.log("User logged out");
+
+    // אפס את כל המשתנים הגלובליים
+    token = null;
+    userRole = null;
+    authorsList = null;
+    currentAuthor = null;
+    currentAuthorId = null;
+    booksList = null;
+
+    // הפניה לדף הכניסה או לדף אחר
+    window.location.href = 'http://localhost:5172/login';
+}
+
+const logoutButton = document.createElement('button');
+logoutButton.innerText = 'Logout';
+logoutButton.onclick = logoutUser;
+document.body.appendChild(logoutButton);

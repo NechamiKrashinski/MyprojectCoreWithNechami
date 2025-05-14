@@ -14,14 +14,14 @@ public class AuthorController : ControllerBase
     public AuthorController(IService<Author> service)
     {
         this.service = service;
-        
+
     }
 
     private void SetToken()
     {
         //token = HttpContext.Request.Cookies["AuthToken"]!;
-       // if (!string.IsNullOrEmpty(token))
-            //service.Token = token;
+        // if (!string.IsNullOrEmpty(token))
+        //service.Token = token;
     }
 
 
@@ -31,8 +31,11 @@ public class AuthorController : ControllerBase
     {
         SetToken();
         var list = service.Get();
+        System.Console.WriteLine("Get method called " + list[0].ToString());
+
         if (list.Count <= 0)
             return BadRequest("Unauthorized access");
+        System.Console.WriteLine("Get method called " + list[0].ToString());
         return Ok(list);
     }
 
@@ -41,9 +44,11 @@ public class AuthorController : ControllerBase
     public ActionResult<Author> Get(int id)
     {
         SetToken();
+        System.Console.WriteLine("Get method called " + id.ToString());
         var author = service.Get(id);
         if (author == null)
             throw new ApplicationException("Author not found");
+        System.Console.WriteLine("Author  found" + author.ToString() + "1111");
         return author;
     }
 

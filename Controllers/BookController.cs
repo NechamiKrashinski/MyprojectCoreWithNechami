@@ -21,23 +21,20 @@ public class BookController : ControllerBase
         this.service2 = service2;
     }
 
-    private void SetToken()
-    {
-        token = HttpContext.Request.Cookies["AuthToken"]!;
-        if (!string.IsNullOrEmpty(token))
-        {
-          //  service.Token = token;
-           // service2.Token = token;
-        }
-    }
+
 
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
+        System.Console.WriteLine("Get method called ");
         var list = service.Get();
         if (list.Count <= 0)
         {
             return BadRequest("Unauthorized access");
+        }
+        foreach (var item in list)
+        {
+            System.Console.WriteLine(item.ToString());
         }
         return Ok(list);
     }
@@ -61,7 +58,7 @@ public class BookController : ControllerBase
     public ActionResult Post(Book newBook)
     {
 
-        Console.WriteLine("Post() called---------------");
+        Console.WriteLine("Post() called-------------1111--"+newBook.ToString());
         var newId = service.Insert(newBook);
         if (newId == -1)
         {

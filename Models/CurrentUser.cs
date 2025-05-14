@@ -18,7 +18,7 @@ public static class CurrentUser
     {
         Id = id;
         role = role2;
-        System.Console.WriteLine(id+"=======================================");
+        System.Console.WriteLine(id+"======================================="+role);
     }
 
     // שימוש במילת המפתח new

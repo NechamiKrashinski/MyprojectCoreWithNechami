@@ -7,17 +7,22 @@ public class LoginService<T>
     where T : IUser
 {
     private readonly IAuthentication<T> authenticationService;
+
     public LoginService(IAuthentication<T> authentication)
     {
         this.authenticationService = authentication;
     }
 
-    public string Login(int id)
+    public string Login(string email, string password)
     {
-        var userAthenticate = authenticationService.Get().FirstOrDefault(a => a.Id == id);
+        var userAthenticate = authenticationService
+            .Get()
+            .FirstOrDefault(a => a.email == email && a.password == password);
         if (userAthenticate == null)
             return "User not found";
-        Console.WriteLine("User found: " + userAthenticate.ToString()+userAthenticate.role.ToString());
+        Console.WriteLine(
+            "User found: " + userAthenticate.ToString() + userAthenticate.role.ToString()
+        );
         var claims = new List<Claim>
         {
             new("Id", userAthenticate.Id.ToString()),
