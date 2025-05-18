@@ -77,6 +77,14 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapGet(
+    "/",
+    async context =>
+    {
+        context.Response.Redirect("/login");
+    }
+);
+
+app.MapGet(
     "/login",
     async context =>
     {
@@ -86,4 +94,20 @@ app.MapGet(
         );
     }
 );
+app.MapGet("/{*page}", async context =>
+{
+    var page = context.Request.RouteValues["page"]?.ToString() ?? "index"; // ברירת מחדל לעמוד index
+    context.Response.ContentType = "text/html";
+    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", $"{page}.html");
+
+    if (File.Exists(filePath))
+    {
+        await context.Response.SendFileAsync(filePath);
+    }
+    else
+    {
+        context.Response.StatusCode = 404; // לא נמצא
+    }
+});
+
 app.Run();

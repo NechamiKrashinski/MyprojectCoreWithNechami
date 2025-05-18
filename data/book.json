@@ -9,7 +9,7 @@
   },
   {
     "Id": 2,
-    "Name": "Yossi\u0027s Adventures",
+    "Name": "Yossis Adventures",
     "Author": null,
     "AuthorId": 1,
     "Price": 60,
@@ -17,7 +17,7 @@
   },
   {
     "Id": 3,
-    "Name": "Yaakov\u0027s Secret",
+    "Name": "Yaakovs Secret",
     "Author": null,
     "AuthorId": 1,
     "Price": 70,
@@ -41,7 +41,7 @@
   },
   {
     "Id": 6,
-    "Name": "Moshe\u0027s Tales",
+    "Name": "Moshes Tales",
     "Author": null,
     "AuthorId": 2,
     "Price": 50,
@@ -81,7 +81,7 @@
   },
   {
     "Id": 11,
-    "Name": "Avraham\u0027s Stories",
+    "Name": "Avrahams Stories",
     "Author": null,
     "AuthorId": 3,
     "Price": 50,
@@ -89,7 +89,7 @@
   },
   {
     "Id": 12,
-    "Name": "Itzhak\u0027s Journey",
+    "Name": "Itzhaks Journey",
     "Author": null,
     "AuthorId": 3,
     "Price": 60,
@@ -97,7 +97,7 @@
   },
   {
     "Id": 13,
-    "Name": "Shmuel\u0027s Secret",
+    "Name": "Shmues Secret",
     "Author": null,
     "AuthorId": 3,
     "Price": 70,
@@ -129,7 +129,7 @@
   },
   {
     "Id": 17,
-    "Name": "Haim\u0027s Journey",
+    "Name": "Haims Journey",
     "Author": null,
     "AuthorId": 4,
     "Price": 60,
@@ -137,7 +137,7 @@
   },
   {
     "Id": 18,
-    "Name": "Itzhak\u0027s Secret",
+    "Name": "Itzhaks Secret",
     "Author": null,
     "AuthorId": 4,
     "Price": 70,
@@ -161,7 +161,7 @@
   },
   {
     "Id": 21,
-    "Name": "Shmuel\u0027s Journey",
+    "Name": "Shmuel0s Journey",
     "Author": null,
     "AuthorId": 5,
     "Price": 50,
@@ -169,7 +169,7 @@
   },
   {
     "Id": 22,
-    "Name": "David\u0027s Secret",
+    "Name": "Davids Secret",
     "Author": null,
     "AuthorId": 5,
     "Price": 60,
