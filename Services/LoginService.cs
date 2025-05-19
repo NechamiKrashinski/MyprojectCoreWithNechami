@@ -7,7 +7,7 @@ using project.Interfaces;
 namespace project.Services;
 
 
-public class LoginService<T> :ILogin<T> where T : IGeneric, IRole
+public class LoginService<T> :ILogin<T> where T : IGeneric ,IUser
 {
   private readonly IAuthentication<T> authentication;
 
@@ -17,12 +17,12 @@ public class LoginService<T> :ILogin<T> where T : IGeneric, IRole
     }
 
 
-    public string Login(int userId)
+    public string Login(string password,string userName)
 {
-    System.Console.WriteLine(userId + " id in login service");
+    System.Console.WriteLine("login service");
     List<T> users = authentication.Get();
-    T CurrentUser = users.FirstOrDefault(a => a.Id == userId) ;
-    if (users.FirstOrDefault(a => a.Id == userId) == null)
+    T CurrentUser = users.FirstOrDefault(a => a.Password == password && a.Name == userName) ;
+    if (CurrentUser == null)
     {
         return "Invalid credentials";
     }
@@ -31,13 +31,14 @@ public class LoginService<T> :ILogin<T> where T : IGeneric, IRole
         var claims = new List<Claim>
         {
             // new("Name", CurrentUser.Name),
-            new("Id", userId.ToString()),
+            new("Id", CurrentUser.Id.ToString()),
             new(ClaimTypes.Role, CurrentUser.role.ToString()),
              new(ClaimTypes.Name, CurrentUser.Name.ToString())
         };
         var token = TokenService.GetToken(claims);
         string tokenString = TokenService.WriteToken(token);
-            Console.WriteLine(tokenString);
+        
+        Console.WriteLine(tokenString);
         return tokenString;
     }
 }

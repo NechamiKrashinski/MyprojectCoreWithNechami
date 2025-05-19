@@ -2,6 +2,7 @@ using Microsoft.OpenApi.Models;
 using project.middleware;
 using project.middlewares;
 using project.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -35,7 +36,15 @@ builder.Services.AddSwaggerGen(c =>
         }
     );
 });
+Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            
+            .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
+            .CreateLogger();
 
+        Log.Information("Hello, world!");
+      await Log.CloseAndFlushAsync();
+        
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -52,36 +61,44 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
  app.UseHttpsRedirection();
 
+
+
+app.UseLogMiddleware();
+//app.UseErrorMiddleware();
+app.UseStaticFiles(); 
+app.UseRouting();
+//app.UseAuthMiddleware(); // מיקום זה חשוב כדי שיתבצע על כל בקשה
+app.UseAuthentication();
+app.UseAuthorization();
+//app.UseDefaultFiles();
+app.UseDefaultFiles(new DefaultFilesOptions
+{
+    DefaultFileNames = new List<string> { "login.html" }
+});
+
+app.UseUserMiddleware();
+app.MapControllers();
+
+app.Run();
+
 // app.UseLogMiddleware();
-// app.UseErrorMiddleware();
-// app.UseStaticFiles();    // ממוקם כאן
-//  
+// //app.UseErrorMiddleware();
+
+// app.UseStaticFiles(); 
+
 // app.UseRouting();
+//  app.UseAuthMiddleware();
 // app.UseDefaultFiles(new DefaultFilesOptions
 // {
 //     DefaultFileNames = new List<string> { "book.html" }
 // });
+
+//  app.UseUserMiddleware();
 // app.UseAuthentication();
 // app.UseAuthorization();
 // app.MapControllers();
 
-app.UseLogMiddleware();
-app.UseErrorMiddleware();
-
-app.UseStaticFiles(); 
-
-app.UseRouting();
-
-app.UseDefaultFiles(new DefaultFilesOptions
-{
-    DefaultFileNames = new List<string> { "book.html" }
-});
- app.UseAuthMiddleware();
- app.UseUserMiddleware();
-app.UseAuthentication();
-app.UseAuthorization();
-app.MapControllers();
-
-app.Run();
+// app.Run();

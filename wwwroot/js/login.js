@@ -1,8 +1,9 @@
 function loginUser() {
-    const loginIdTextbox = document.getElementById('login-id');
-
+    const loginPasswordTextbox = document.getElementById('login-password');
+    const loginNameTextbox = document.getElementById('login-name');
     const loginData = {
-        id: parseInt(loginIdTextbox.value.trim())
+        password: loginPasswordTextbox.value.trim(),
+        name: loginNameTextbox.value.trim()
     };
 
     fetch('/login', {
@@ -23,8 +24,27 @@ function loginUser() {
         return response.json();
     })
     .then(data => {
+       
         console.log('Login successful:', data); // הדפסת ההצלחה
         window.location.href = 'book.html'; // הפנה לעמוד הספרים
     })
     .catch(error => console.error('Unable to login.', error));
+}
+
+function logoutUser() {
+    fetch('/login', {
+        method: 'DELETE',
+        credentials: 'include' // לשלוח קוקיז עם הבקשה
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(text => {
+                console.error('Logout failed:', text);
+                throw new Error('Logout failed');
+            });
+        }
+        console.log('Logout successful'); // הדפסת ההצלחה
+        window.location.href = 'login.html'; // הפנה לעמוד הכניסה
+    })
+    .catch(error => console.error('Unable to logout.', error));
 }

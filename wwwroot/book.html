@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -9,7 +9,12 @@
 
 <body>
     <h1>Book CRUD</h1>
-    <h3>Add Book</h3>
+    <a href="author.html" id="author-link" style="display: none;">Authors</a>
+    <button onclick="logoutUser()">Logout</button>
+    
+    <button onclick="toggleAddBookForm()" id="add-book-button">Add Book</button>
+    <button onclick="editUserDetails()" id="edit-user-details"><a href="author.html">My details</a></button>
+    <div id="addBookForm" style="display: none;">
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="Book Name" required>
         <input type="text" id="add-author" placeholder="Author" required>
@@ -17,7 +22,80 @@
         <input type="date" id="add-date" placeholder="Publish Date" required>
         <input type="submit" value="Add Book">
     </form>
+</div>
+    <div id="editForm" style="display:none;">
+        <h3>Edit Book</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name" required>
+            <input type="text" id="edit-author" required>
+            <input type="number" id="edit-price" required>
+            <input type="date" id="edit-date" required>
+            <input type="submit" value="Save Changes">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
 
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Author</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Publish Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="books"></tbody>
+    </table>
+
+
+    <script src="js/books.js" asp-append-version="true"></script>
+    <script src="js/login.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            getItems();
+            if(getUserRoleFromToken() == "Admin"){
+                document.getElementById("author-link").style.display = "block";
+                document.getElementById("edit-user-details").style.display = "none";
+            }
+           
+        });
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book CRUD</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Book CRUD</h1>
+    <a href="author.html" id="author-link" style="display: none;">Authors</a>
+    <button onclick="logoutUser()">Logout</button>
+    <button onclick="toggleAddBookForm()" id="add-book-button">Add Book</button>
+    <button onclick="editUserDetails()" id="edit-user-details"><a href="author.html">My details</a></button>
+    
+    <br/>
+   
+    <button onclick="filterBooksByName()">סנן</button>
+    <button onclick="clearFilter()">נקה סינון</button> 
+    <input type="text" id="filter-input" placeholder="הכנס אותיות לסינון" />
+    
+    <div id="addBookForm" style="display: none;">
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <input type="text" id="add-name" placeholder="Book Name" required>
+            <input type="text" id="add-author" placeholder="Author" required>
+            <input type="number" id="add-price" placeholder="Price" required>
+            <input type="date" id="add-date" placeholder="Publish Date" required>
+            <input type="submit" value="Add Book">
+        </form>
+    </div>
+    
     <div id="editForm" style="display:none;">
         <h3>Edit Book</h3>
         <form action="javascript:void(0);" onsubmit="updateItem()">
@@ -46,11 +124,15 @@
     </table>
 
     <script src="js/books.js" asp-append-version="true"></script>
+    <script src="js/login.js" asp-append-version="true"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             getItems();
+            if(getUserRoleFromToken() == "Admin"){
+                document.getElementById("author-link").style.display = "block";
+                document.getElementById("edit-user-details").style.display = "none";
+            }
         });
     </script>
 </body>
-
 </html>

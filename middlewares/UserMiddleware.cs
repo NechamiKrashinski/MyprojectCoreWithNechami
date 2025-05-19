@@ -25,18 +25,18 @@ public class UserMiddleware
     {
         var isLoginRequest = context.Request.Path.Value.Equals("/login", StringComparison.OrdinalIgnoreCase);
         
-        System.Console.WriteLine("User middleware invoked");
+      
 
         if (!isLoginRequest)
         {
             var token = context.Request.Cookies["authToken"];
             //var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "").Trim();
-            System.Console.WriteLine(token + " token in user middleware");
 
             if (string.IsNullOrEmpty(token))
             {
-                System.Console.WriteLine("Token is missing or empty");
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized; // מחזיר שגיאה
+                // System.Console.WriteLine("Token is missing or empty");
+                //context.Response.Redirect("/login.html"); // הפנה לעמוד הלוגין
+                //context.Response.StatusCode = StatusCodes.Status401Unauthorized; // מחזיר שגיאה
                 return;
             }
 
@@ -47,7 +47,7 @@ public class UserMiddleware
             currentUser.Id = int.Parse(jwtToken.Claims.First(claim => claim.Type == "Id").Value);
             currentUser.Name = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Name).Value;
             currentUser.Role = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Role).Value;
-        System.Console.WriteLine(currentUser.Name + " user in user middleware");
+        // System.Console.WriteLine(currentUser.Name + " user in user middleware");
         }
 
         // קריאה ל-Middleware הבא

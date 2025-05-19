@@ -2,12 +2,14 @@ using System.Text.Json;
 using project.Interfaces;
 using project.Models;
 namespace project.Services;
-public abstract class GetFuncService<T> where T:IGeneric
-
+public abstract class GetFuncService<T> where T:IGeneric 
 {
     protected List<T> MyList { get; }
+    
     protected static string fileName;
+     
     protected string filePath;
+ 
 
     public GetFuncService(IHostEnvironment env)
     {
@@ -36,13 +38,10 @@ public abstract class GetFuncService<T> where T:IGeneric
             System.Console.WriteLine(MyList.ToString()+"--------------------------");
 
         }
+
+
+
+        
     }
-
-    
-
-
-
-    public abstract List<T> Get();
-
 
 }

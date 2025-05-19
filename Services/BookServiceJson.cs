@@ -1,35 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
+
+
 using project.Interfaces;
 using project.Models;
 
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System;
-using System.Text.Json;
-using project.Models;
+
 
 namespace project.Services;
 
 public class BookServiceJson : ServiceJson<Book>
 {
-    private readonly IService<Author> authorService;
-     private readonly CurrentUserService user;
-
-
+  
+    private readonly CurrentUserService user;
    
+     
 
-    public BookServiceJson(IHostEnvironment env, IService<Author> autherS ,CurrentUserService currentUserService) : base(env)
+
+
+    public BookServiceJson(IHostEnvironment env, CurrentUserService currentUserService) : base(env)
     {
-       
-        authorService = autherS; // Incorrect assignment
+
+        
+        
         this.user = currentUserService;
-        System.Console.WriteLine(user.Name + " user in book service");
     }
 
     public override List<Book> Get()
@@ -37,49 +29,25 @@ public class BookServiceJson : ServiceJson<Book>
         var role = user.Role;
         if (role == "Admin")
         {
-            System.Console.WriteLine("Admin role in BookController");
-            
-        return MyList;
+            System.Console.WriteLine("Admin role in Bookservice");
+
+            return MyList;
         }
         else if (role == "Author")
         {
-            
-            System.Console.WriteLine("Author role in BookController");
+
+            System.Console.WriteLine("Author role in Bookservice");
             string name = user.Name;
             return GetAuthorsBook(name) ?? new List<Book>();
         }
-        
+
         return MyList;
     }
-     public override Book Get(int id)
-    {
-        var book = MyList.FirstOrDefault(b => b.Id == id);
-        
-       var role = user.Role;
-        if (role == "Admin")
-        {
-
-            if (book == null)
-                throw new ApplicationException("Book not found");
-            return book;
-        }
-        else if (role == "Author")
-        {
-            string authorName = user.Name;
-            if (book == null)
-                throw new ApplicationException("Book not ");
-            if (book.Author != authorName.ToString())
-                throw new ApplicationException(" unauthorized access");
-            return book;
-        }
-       
-       
-        return book;
-    }
-    public List< Book>? GetAuthorsBook(String authorName)
+   
+    public List<Book>? GetAuthorsBook(String authorName)
     {
         System.Console.WriteLine(authorName + " authorName in book service");
-        List< Book> books = MyList.FindAll(b => b.Author == authorName);
+        List<Book> books = MyList.FindAll(b => b.Author == authorName);
         if (books != null)
         {
             foreach (var book in books)
@@ -87,7 +55,7 @@ public class BookServiceJson : ServiceJson<Book>
                 System.Console.WriteLine(book.Name + " book name in book service");
             }
             System.Console.WriteLine("Book found: ");
-            return  books ;
+            return books;
         }
         else
         {
@@ -95,108 +63,165 @@ public class BookServiceJson : ServiceJson<Book>
             return null;
         }
     }
-    
-    public override int Insert(Book newBook){
-        
-        var authorName = user.Name;
-        var role = user.Role;
-        System.Console.WriteLine(authorName + " authorName in book service");
 
-        // // אם המשתמש הוא מנהל, אפשר ליצור ספר עבור כל סופר
+
+
+
+    public IEnumerable<Book> GetBooksByRole()
+    {
+        var role = user.Role;
         if (role == "Admin")
         {
-            var newId = Insert2(newBook);
-            newBook.Id = newId;
-            return newId;
-            
-           
+            return MyList;
         }
-        // אם המשתמש הוא Author, בדוק אם השם של הסופר תואם לשם של המשתמש
         else if (role == "Author")
         {
-            if (newBook.Author != authorName)
-            {
-                return -2;
-            }
-
-            var newId = Insert2(newBook);
-            newBook.Id = newId;
-            return newId;
-           
-           
+            string name = user.Name;
+            return GetAuthorsBook(name) ?? new List<Book>();
         }
-        return -1;
+        return new List<Book>();
     }
-    public  int Insert2(Book newBook)
+
+    public override Book Get(int id)
     {
-      
-      
+        var book = MyList.FirstOrDefault(b => b.Id == id);
+        var role = user.Role;
+
+        if (role == "Admin")
+        {
+            return book ?? throw new ApplicationException("Book not found");
+        }
+        else if (role == "Author")
+        {
+            string authorName = user.Name;
+            if (book == null || book.Author != authorName)
+            {
+                throw new ApplicationException("Unauthorized access");
+            }
+            return book;
+        }
+        return null;
+    }
+     
+
+       
+    
+
+    public override int Insert(Book newBook)
+    {
+        if (newBook == null)
+        {
+            System.Console.WriteLine("Error: Book is null.");
+            return -1;
+        }
         if (string.IsNullOrWhiteSpace(newBook.Name))
         {
             System.Console.WriteLine("Error: Name is required.");
             return -1;
         }
-    
+
         if (string.IsNullOrWhiteSpace(newBook.Author))
         {
             System.Console.WriteLine("Error: Author is required.");
             return -1;
         }
-       
+
         if (newBook.Date.ToDateTime(TimeOnly.MinValue) >= DateTime.Now)
         {
             System.Console.WriteLine("Error: Date must be in the past.");
             return -1;
         }
 
-        if (authorService.Get().FirstOrDefault(u => u.Name == newBook.Author) != null)
-        {
-            System.Console.WriteLine("Author exists in the list.");
-            int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
-            newBook.Id = maxId + 1;
-            MyList.Add(newBook);
-            saveToFile();
-            return newBook.Id;
-        }
-        else
-        {
-            System.Console.WriteLine("Error: Author does not exist in the list.");
-            return -1;
-        }
+        // if (authorService.Get().FirstOrDefault(u => u.Name == newBook.Author) == null)
+        // {
+
+        //     System.Console.WriteLine("Error: Author does not exist in the list.");
+        //     return -1;
+
+        // }
+        // else
+        
+
+            var authorName = user.Name;
+            var role = user.Role;
+
+            if (role == "Admin" || (role == "Author" && newBook.Author == authorName))
+            {
+                System.Console.WriteLine("Author exists in the list.");
+                int maxId = MyList.Any() ? MyList.Max(b => b.Id) : 0; // Ensure there are books
+                newBook.Id = maxId + 1;
+                MyList.Add(newBook);
+                saveToFile();
+                return newBook.Id;
+            }
+            else
+            {
+                return -2; // Unauthorized
+            }
+
+
+        
+
     }
 
     public override bool Update(int id, Book book)
     {
-        if (
-            book == null
-            || book.Id != id
+        var existingBook = MyList.FirstOrDefault(b => b.Id == id);
+        var role = user.Role;
+        var authorName = user.Name;
+
+        if (book == null || existingBook == null || role == "Author" && existingBook.Author != authorName)
+        {
+            return false; // Unauthorized
+        }
+        if (book.Id != id
             || string.IsNullOrWhiteSpace(book.Name)
             || book.Price <= 0
         )
             return false;
-        System.Console.WriteLine("Update book: " + book.Name);
-        var currentBook = MyList.FirstOrDefault(b => b.Id == id);
-        if (currentBook == null)
-        {
-            System.Console.WriteLine("Error: Book not found.");
-             return false;
-        }
-       
-        currentBook.Name = book.Name;
-        currentBook.Price = book.Price;
+
+
+
+        existingBook.Name = book.Name;
+        existingBook.Price = book.Price;
+         existingBook.Author = book.Author;
         //עדכון של השם רק אם הוא קיים ברשימה של הסופרים
-        if( authorService.Get().FirstOrDefault(u => u.Name == book.Author)!= null)
-        {
-             currentBook.Author = book.Author;
-        }
-        else
-        {
-            System.Console.WriteLine("Error: Author does not exist in the list.");
-            return false;
-        }
-        
-        currentBook.Date = book.Date;
+        // if (authorService.Get().FirstOrDefault(u => u.Name == book.Author) != null)
+        // {
+        //     existingBook.Author = book.Author;
+        // }
+        // else
+        // {
+        //     System.Console.WriteLine("Error: Author does not exist in the list.");
+        //     return false;
+        // }
+
+        existingBook.Date = book.Date;
         saveToFile();
         return true;
+
+
     }
+
+    public override bool Delete(int id)
+    {
+        var existingBook = MyList.FirstOrDefault(b => b.Id == id);
+        var role = user.Role;
+        var authorName = user.Name;
+
+        if (existingBook == null || role == "Author" && existingBook.Author != authorName)
+        {
+            return false; // Unauthorized
+        }
+
+
+
+        int index = MyList.IndexOf(existingBook);
+        MyList.RemoveAt(index);
+        saveToFile();
+        return true;
+
+    }
+
+
 }

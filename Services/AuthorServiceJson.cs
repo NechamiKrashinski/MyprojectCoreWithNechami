@@ -1,3 +1,5 @@
+
+using project.Interfaces;
 using project.Models;
 
 namespace project.Services;
@@ -5,21 +7,105 @@ namespace project.Services;
 public class AuthorServiceJson : ServiceJson<Author>
 {
 
+private readonly CurrentUserService user;
 
-    public AuthorServiceJson(IHostEnvironment env) : base(env)
+private readonly IService<Book> bookService;
+
+    public AuthorServiceJson(IHostEnvironment env ,IService<Book> bookService, CurrentUserService currentUserService) : base(env)
     {
-
+        user = currentUserService;
+        this.bookService = bookService;
+       
+        
     }
-    public override List<Author> Get()
+
+   public override List<Author> Get()
     {
-        System.Console.WriteLine("mylist is null?" + MyList == null);
-        return MyList;
+        var authorRole = user.Role;
+
+        if (authorRole == "Admin")
+        {
+            return MyList;
+        }
+        else if (authorRole == "Author")
+        {
+            var id = user.Id;
+            return new List<Author> { Get(id) };
+        }
+
+        return null; // Unauthorized
     }
 
     public override Author Get(int id)
     {
-        throw new NotImplementedException();
+        var authorRole = user.Role;
+
+        if (authorRole == "Admin")
+        {
+            return MyList.FirstOrDefault(u => u.Id == id);
+        }
+        else if (authorRole == "Author")
+        {
+            int userId = user.Id;
+            if (id == userId)
+            {
+                return MyList.FirstOrDefault(u => u.Id == id);
+            }
+        }
+
+        return null; // Unauthorized
     }
+
+    public override bool Update(int id, Author author)
+    {
+        var authorRole = user.Role;
+
+        if (authorRole == "Admin")
+        {
+            return UpdateAuthor(id, author);
+        }
+        else if (authorRole == "Author")
+        {
+            int userId = user.Id;
+            
+            if (id == userId)
+            {
+                return UpdateAuthor(id, author);
+            }
+        }
+
+        return false; // Unauthorized
+    }
+     public  bool UpdateAuthor(int id, Author author)
+    {
+        
+       
+        if (author == null || (author.role != Role.Admin && author.Id != id) ||
+               string.IsNullOrWhiteSpace(author.Name) ||
+               string.IsNullOrWhiteSpace(author.Address) ||
+             author.BirthDate.ToDateTime(TimeOnly.MinValue) > DateTime.Now.Date)
+        {
+            System.Console.WriteLine("אין אפשרות לעדכן נתונים שגויים");
+            return false;
+        }
+
+        System.Console.WriteLine("update function called 2");
+        var currentUser = MyList.FirstOrDefault(u => u.Id == id);
+        if (currentUser == null)
+            return false;
+
+        currentUser.Name = author.Name;
+        currentUser.Address = author.Address;
+        currentUser.role = author.role;
+        currentUser.BirthDate = author.BirthDate;
+        saveToFile();
+        return true;
+        
+    }
+
+   
+
+   
 
     public override int Insert(Author newUser)
     {
@@ -68,38 +154,26 @@ public class AuthorServiceJson : ServiceJson<Author>
         return newUser.Id;
     }
 
-
-
-
-    public override bool Update(int id, Author auther)
+    public override bool Delete(int id)
     {
-        System.Console.WriteLine(auther.role);
-        System.Console.WriteLine("update function called");
-        System.Console.WriteLine(auther.BirthDate.ToDateTime(TimeOnly.MinValue) > DateTime.Now.Date);
-        if (auther == null || (auther.role != Role.Admin && auther.Id != id) ||
-               string.IsNullOrWhiteSpace(auther.Name) ||
-               string.IsNullOrWhiteSpace(auther.Address) ||
-             auther.BirthDate.ToDateTime(TimeOnly.MinValue) > DateTime.Now.Date)
+        string authorRole = user.Role;
+        if(authorRole == "Admin")
         {
-            System.Console.WriteLine("אין אפשרות לעדכן נתונים שגויים");
-            return false;
+            var author = MyList.FirstOrDefault(u => u.Id == id);
+            if(author != null)
+            {
+                MyList.Remove(author);
+                deleteAuthorsItem(author.Name);
+                saveToFile();
+                return true;
+            }
         }
-
-        System.Console.WriteLine("update function called 2");
-        var currentUser = MyList.FirstOrDefault(u => u.Id == id);
-        if (currentUser == null)
-            return false;
-
-        currentUser.Name = auther.Name;
-        currentUser.Address = auther.Address;
-        currentUser.role = auther.role;
-        currentUser.BirthDate = auther.BirthDate;
-        saveToFile();
-        return true;
-
+        return false; // Unauthorized
     }
-
-
-
-
+    public void deleteAuthorsItem(string authorName){
+        System.Console.WriteLine("deleteAuthorsItem function called");
+        var authorsBooks = bookService.Get();
+        authorsBooks.RemoveAll(b => b.Author == authorName && bookService.Delete(b.Id));
+        
+    }
 }

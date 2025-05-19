@@ -9,28 +9,55 @@
 
 <body>
     <h1>Author CRUD</h1>
-    <h3>Add Author</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
-        <input type="text" id="add-name" placeholder="Author Name" required>
-       <label id="add-role" for="add-Role">
-        <select id="add-Role" required>
-            <option value="" disabled selected>Select User Role</option>
-            <option value="Admin">Admin</option>
-            <option value="User">User</option>
-        </select>
-       </label>
-        <input type="text" id="add-address" placeholder="Address" required>
-        <input type="date" id="add-birthdate" placeholder="Birth Date" required>
-        <input type="submit" value="Add Author">
-    </form>
+   
+    <a href="book.html">Books</a>
+    <br/>
+   
+    <button onclick="logoutUser()">Logout</button>
+
+    <button onclick="showAddUserForm()" style="display:none;" id="showAddUserFormBtn">Add Author</button>
+    
+    <div id="addForm" style="display:none;">
+        <h3>Add Author</h3>
+        <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
+            <input type="text" id="add-name" placeholder="Author Name" required>
+            <input type="text" id="add-password" placeholder="Author password" required>
+            <label id="add-role" for="add-Role">
+                <select id="add-Role" required>
+                    <option value="" disabled selected>Select User Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                </select>
+            </label>
+            <input type="text" id="add-address" placeholder="Address" required>
+            <input type="date" id="add-birthdate" placeholder="Birth Date" required>
+            <input type="submit" value="Add Author">
+            <button type="button" onclick="hideAddUserForm()">Cancel</button> 
+        </form>
+    </div>
+    <br/>
+   
+    <button onclick="filterAuthorsByName()">סנן</button>
+    <button onclick="clearFilter()">נקה סינון</button> 
+    <input type="text" id="filter-input" placeholder="הכנס אותיות לסינון" />
 
     <div id="editForm" style="display:none;">
         <h3>Edit Author</h3>
         <form action="javascript:void(0);" onsubmit="updateUser()">
             <input type="hidden" id="edit-id">
+            
+            <label for="edit-name">Name:</label>
             <input type="text" id="edit-name" required>
+            
+            <label for="edit-password">Password:</label>
+            <input type="text" id="edit-password" required>
+            
+            <label for="edit-address">Address:</label>
             <input type="text" id="edit-address" required>
+            
+            <label for="edit-birthdate">Birth Date:</label>
             <input type="date" id="edit-birthdate" required>
+            
             <input type="submit" value="Save Changes">
             <a onclick="closeInput()" aria-label="Close">&#10006;</a>
         </form>
@@ -39,6 +66,7 @@
     <table>
         <tr>
             <th>Name</th>
+            <th>Password</th>   
             <th>Address</th>
             <th>Birth Date</th>
             <th></th>
@@ -47,10 +75,15 @@
         <tbody id="authors"></tbody>
     </table>
 
-    <script src="js/authors.js" asp-append-version="true"></script>
+    <script src="js/login.js" asp-append-version="true"></script>
+    <script  src="js/authors.js" asp-append-version="true"> </script>
     <script type="text/javascript">
+        
         document.addEventListener('DOMContentLoaded', function() {
             getUsers();
+            if(getUserRoleFromToken() == "Admin"){
+                document.getElementById("showAddUserFormBtn").style.display = "block";
+            }
         });
     </script>
 </body>

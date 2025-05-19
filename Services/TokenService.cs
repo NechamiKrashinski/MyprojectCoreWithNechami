@@ -58,7 +58,24 @@ public static class TokenService
 } 
 
 
+ public static ClaimsPrincipal DecodeToken(string token)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
 
+        try
+        {
+            var principal = tokenHandler.ReadToken(token) as JwtSecurityToken;
+
+            if (principal == null)
+                throw new SecurityTokenException("Invalid token");
+
+            return new ClaimsPrincipal(new ClaimsIdentity(principal.Claims));
+        }
+        catch (Exception ex)
+        {
+            throw new SecurityTokenException("Token decoding failed", ex);
+        }
+    }
 
     public static void SaveToken(string token)
     {
@@ -92,4 +109,8 @@ public static class TokenService
         return string.Empty;
     }
 
+    internal static bool IsTokenValid(string token)
+    {
+        throw new NotImplementedException();
+    }
 }

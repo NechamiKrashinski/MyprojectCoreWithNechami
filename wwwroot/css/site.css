@@ -128,3 +128,7 @@ button {
 button:hover {
     background-color: #c0392b;
 }
+#filter-input {
+    width: 10vw;  
+    max-width: 200px; 
+}

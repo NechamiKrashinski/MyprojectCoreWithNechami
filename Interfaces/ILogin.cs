@@ -1,7 +1,8 @@
 namespace project.Interfaces;
 
-public interface ILogin<T> where T : IGeneric, IRole
+public interface ILogin<T> where T : IGeneric, IUser 
 {
-   public  string Login(int id);
+   public  string Login(string password,string name);
+    
 }
 
