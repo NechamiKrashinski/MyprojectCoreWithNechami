@@ -53,14 +53,14 @@ function getUserRoleFromToken(token) {
     return decodedPayload.Role; // הנח שהשדה שמכיל את התפקיד נקרא "role"
 }
 function logoutUser() {
-    // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר
+    // // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר
 
-    document.cookie = "authToken=null; path=/;";
+    // document.cookie = "authToken=null; path=/;";
 
-    // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר (אם זה הכרחי)
-    document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    // עדכון הממשק לאחר לוגאאוט
-    console.log("User logged out");
+    // // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר (אם זה הכרחי)
+    // document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    // // עדכון הממשק לאחר לוגאאוט
+    // console.log("User logged out");
 
     // אפס את כל המשתנים הגלובליים
     token = null;
@@ -71,6 +71,8 @@ function logoutUser() {
     booksList = null;
 
     // הפניה לדף הכניסה או לדף אחר
+document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; Secure; SameSite=Strict;";
+
     window.location.href = 'http://localhost:5172/login';
 }
 

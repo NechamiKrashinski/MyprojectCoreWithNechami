@@ -11,38 +11,39 @@ namespace project.Controllers;
 public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
-    private readonly IService<Author> service2;
+
+    //private readonly IService<Author> service2;
 
     private string? token;
 
     public BookController(IService<Book> service, IService<Author> service2)
     {
         this.service = service;
-        this.service2 = service2;
+        //  this.service2 = service2;
     }
-
-
 
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
-        System.Console.WriteLine("Get method called ");
+        System.Console.WriteLine("Get method called2 book-------------------- ");
         var list = service.Get();
         if (list.Count <= 0)
         {
             return BadRequest("Unauthorized access");
         }
+        System.Console.WriteLine("Get method called2 book-------------------- 2");
         foreach (var item in list)
         {
             System.Console.WriteLine(item.ToString());
         }
+        System.Console.WriteLine("Get method called2 book3-------------------- 2");
+
         return Ok(list);
     }
 
     [HttpGet("{id}")]
     public ActionResult<Book> Get(int id)
     {
-
         Console.WriteLine($"Get({id}) called");
         var book = service.Get(id);
         if (book == null)
@@ -57,8 +58,7 @@ public class BookController : ControllerBase
     [HttpPost]
     public ActionResult Post(Book newBook)
     {
-
-        Console.WriteLine("Post() called-------------1111--"+newBook.ToString());
+        Console.WriteLine("Post() called-------------1111--" + newBook.ToString());
         var newId = service.Insert(newBook);
         if (newId == -1)
         {
@@ -72,7 +72,6 @@ public class BookController : ControllerBase
     [HttpPut("{id}")]
     public ActionResult Put(int id, Book book)
     {
-
         Console.WriteLine($"Put({id}) called");
         if (service.Update(id, book))
         {
@@ -86,7 +85,6 @@ public class BookController : ControllerBase
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
-
         Console.WriteLine($"Delete({id}) called");
         if (service.Delete(id))
         {

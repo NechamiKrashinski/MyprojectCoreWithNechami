@@ -24,14 +24,14 @@ public class BookServiceJson : GetFuncService<Book>, IService<Book>
     //     }
     // }
 
-    private readonly AuthorServiceJson authorService;
+    private readonly IService<Author> authorService;
 
     private readonly int authorId;
     private readonly Role role;
     public BookServiceJson(IHostEnvironment env, IService<Author> authorService)
         : base(env)
     {
-        this.authorService = (AuthorServiceJson)authorService;
+        this.authorService = authorService;
         authorId = CurrentUser.Id;
         role = CurrentUser.role;
     }

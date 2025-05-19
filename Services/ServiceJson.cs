@@ -73,9 +73,9 @@ public static class ServiceUtilities
 {
     public static void AddService(this IServiceCollection services)
     {
-        services.AddScoped<IService<Book>, BookServiceJson>();
         services.AddScoped<IService<Author>, AuthorServiceJson>();
-        services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>(); // ודא שזה קיים
-        services.AddScoped<LoginService<Author>>(); // הוסף שורה זו
+services.AddScoped<IService<Book>, BookServiceJson>();
+            services.AddScoped<IAuthentication<Author>, AuthenticationService<Author>>();
+        services.AddScoped<LoginService<Author>>();
     }
 }

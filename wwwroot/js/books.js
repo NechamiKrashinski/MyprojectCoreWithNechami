@@ -99,24 +99,54 @@ async function addBook() {
     }
 }
 
-function editBook(id, name, author, price, date) {
-    document.getElementById('edit-id').value = id;
-    document.getElementById('edit-name').value = name;
-    document.getElementById('edit-author').value = author;
-    document.getElementById('edit-price').value = price;
-    document.getElementById('edit-date').value = date;
-    if (userRole === 'Author') {
-        document.getElementById('edit-author').disabled = true; // Disable the author field
-    } else {
-        document.getElementById('edit-author').disabled = false; // Enable the author field for admins
-    }
-    document.getElementById('editForm').style.display = 'block'; // הצג את טופס העריכה
-}
+// function editBook(id, name, price, date) {
+//    // document.getElementById('add-id').value = id; // אם יש לך שדה hidden או input אחר עבור ה-ID
+//     document.getElementById('add-name').value = name;
+//     document.getElementById('add-price').value = price;
+//     document.getElementById('add-date').value = date;
+
+//     // אם ה-userRole הוא Author, חסום את שדה הסופר
+//     if (userRole === 'Author') {
+//         document.getElementById('add-author').disabled = true; // Disable the author field
+//     } else {
+//         document.getElementById('add-author').disabled = false; // Enable the author field for admins
+//     }
+
+//     document.getElementById('addBookForm').style.display = 'block'; // הצג את טופס הוספת הספר
+// }
+
+// async function updateBook() {
+//     const id = document.getElementById('add-id').value; // קח את ה-ID מהשדה הקיים
+//     const name = document.getElementById('add-name').value;
+//     const author = document.getElementById('add-author').value;
+//     const price = parseFloat(document.getElementById('add-price').value);
+//     const date = document.getElementById('add-date').value;
+
+//     const updatedBook = {
+//         id: id,
+//         name: name,
+//         author: author,
+//         price: price,
+//         date: date
+//     };
+
+//     try {
+//         await axios.put(`/Book/${id}`, updatedBook, {
+//             headers: {
+//                 'Authorization': `Bearer ${token}`
+//             }
+//         });
+//         closeInput(); // סגור את טופס ההוספה
+//         getBooks(); // רענן את רשימת הספרים
+//     } catch (error) {
+//         console.error("Error updating book:", error);
+//     }
+// }
 
 async function updateBook() {
-    const id = document.getElementById('edit-id').value;
+    const id = document.getElementById('edit-id').value; // קח את ה-ID מהשדה hidden
     const name = document.getElementById('edit-name').value;
-    const author = document.getElementById('edit-author').value;
+    const author = document.getElementById('edit-author').value; // קח את הסופר מהשדה
     const price = parseFloat(document.getElementById('edit-price').value);
     const date = document.getElementById('edit-date').value;
 
@@ -139,6 +169,17 @@ async function updateBook() {
     } catch (error) {
         console.error("Error updating book:", error);
     }
+}
+function editBook(id, name, price, date) {
+    document.getElementById('edit-id').value = id; // שים את ה-ID בשדה hidden
+    document.getElementById('edit-name').value = name;
+    document.getElementById('edit-price').value = price;
+    document.getElementById('edit-date').value = date;
+
+    // מלא את רשימת הסופרים בטופס העריכה
+    fillAuthorsDropdown(); 
+
+    document.getElementById('editForm').style.display = 'block'; // הצג את טופס העריכה
 }
 
 async function deleteBook(id) {

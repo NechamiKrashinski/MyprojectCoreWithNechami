@@ -29,6 +29,7 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Author")]
     public ActionResult<IEnumerable<Author>> Get()
     {
+        System.Console.WriteLine("Get method called1----------------------");
         SetToken();
         var list = service.Get();
         System.Console.WriteLine("Get method called " + list[0].ToString());
@@ -36,6 +37,8 @@ public class AuthorController : ControllerBase
         if (list.Count <= 0)
             return BadRequest("Unauthorized access");
         System.Console.WriteLine("Get method called " + list[0].ToString());
+        System.Console.WriteLine("Get method called2----------------------");
+
         return Ok(list);
     }
 

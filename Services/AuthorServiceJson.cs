@@ -7,12 +7,14 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
 {
     private readonly int authorId;
     private readonly Role role;
+    private readonly IService<Book> bookService;
 
     public AuthorServiceJson(IHostEnvironment env)
         : base(env)
     {
         authorId = CurrentUser.Id;
         role = CurrentUser.role;
+       // this.bookService = bookService;
     }
 
     // internal int Id(string name)
@@ -36,7 +38,6 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
             Console.WriteLine("Result converted to list." + result[0].ToString());
 
             return result;
-
         }
         else if (role == Role.Admin)
         {
@@ -143,11 +144,12 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         var currentT = MyList.FirstOrDefault(b => b.Id == id);
         if (currentT == null)
             return false;
-
+        // bookService.Get()
+        //     .Where(b => b.AuthorId == id)
+        //     .ToList()
+        //     .ForEach(b => bookService.Delete(b.Id));
         MyList.Remove(currentT);
         saveToFile();
         return true;
     }
-
-
 }
