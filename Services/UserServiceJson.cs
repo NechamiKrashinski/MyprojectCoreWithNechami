@@ -9,6 +9,7 @@ public class UserServiceJson<T> : GetFuncService<T>, IUserService<T>
     private readonly int authorId;
     private readonly Role role;
     private readonly IService<Book> bookService;
+    public bool isAuth { get; set;} = false;
 
     public UserServiceJson(IHostEnvironment env)
         : base(env)
@@ -38,6 +39,12 @@ public class UserServiceJson<T> : GetFuncService<T>, IUserService<T>
         {
             return MyList;
         }
+        else if (isAuth)
+        {
+            isAuth = false;
+            return MyList;
+        }
+        isAuth = false;
         return new List<T>();
     }
 

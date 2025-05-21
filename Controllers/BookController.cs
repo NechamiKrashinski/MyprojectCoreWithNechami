@@ -23,18 +23,18 @@ public class BookController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Book>> Get()
     {
-        System.Console.WriteLine("Get method called2 book-------------------- ");
+        System.Console.WriteLine("Get method called2 book+++++++++++++++++++++ ");
         var list = service.Get();
         if (list.Count <= 0)
         {
             return BadRequest("Unauthorized access");
         }
-        System.Console.WriteLine("Get method called2 book-------------------- 2");
+        System.Console.WriteLine("Get method called2 book-******-------------------*********** 2");
         foreach (var item in list)
         {
             System.Console.WriteLine(item.ToString());
         }
-        System.Console.WriteLine("Get method called2 book3-------------------- 2");
+        System.Console.WriteLine("Get method called2 book3***********************************2");
 
         return Ok(list);
     }

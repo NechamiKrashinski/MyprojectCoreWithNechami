@@ -24,6 +24,7 @@ public class LoginController : ControllerBase
         string token = loginService.Login(request.email, request.password);
         if (token == "User not found")
             return Unauthorized("Invalid credentials");
+        System.Console.WriteLine("new Token//////////////////////////////////+++++++++++++");
         HttpContext.Response.Cookies.Append(
             "AuthToken",
             token,

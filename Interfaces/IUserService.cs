@@ -1,8 +1,9 @@
 namespace project.Interfaces;
 
-public interface IUserService<T> where T : IUser
+public interface IUserService<T>
+    where T : IUser
 {
-     //string Token { get; set; }
+    //string Token { get; set; }
     List<T> Get();
 
     T Get(int id);
@@ -10,4 +11,5 @@ public interface IUserService<T> where T : IUser
     int Insert(T newT);
     bool Update(int id, T t);
     bool Delete(int id);
+    bool isAuth { get; set; }
 }

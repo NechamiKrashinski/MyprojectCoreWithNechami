@@ -15,9 +15,15 @@ public class LoginService<T>
 
     public string Login(string email, string password)
     {
+        System.Console.WriteLine("in login service ---------------");
+        userService.isAuth = true;
         var userAthenticate = userService
             .Get()
             .FirstOrDefault(a => a.email == email && a.password == password);
+        userService.isAuth = false;
+
+        System.Console.WriteLine("in login service ---------------" + userAthenticate.ToString());
+
         if (userAthenticate == null)
             return "User not found";
         Console.WriteLine(

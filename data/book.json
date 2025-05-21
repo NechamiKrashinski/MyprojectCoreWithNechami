@@ -206,5 +206,13 @@
     "AuthorId": 4,
     "Price": 120,
     "Date": "2025-05-01"
+  },
+  {
+    "Id": 27,
+    "Name": "name book",
+    "Author": null,
+    "AuthorId": 9,
+    "Price": 10,
+    "Date": "2025-05-06"
   }
 ]
