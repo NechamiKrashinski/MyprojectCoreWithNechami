@@ -1,7 +1,7 @@
 namespace project.Interfaces;
 
-public interface IAuthentication<T>
-    where T : IUser
+public interface IAuthentication
 {
-    List<T> Get();
+    public string email { get; set; }
+    public string password { get; set; }
 }

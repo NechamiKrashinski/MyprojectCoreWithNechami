@@ -76,7 +76,6 @@ public static class TokenService
     {
         var claims = DecodeToken(token);
 
-      
         CurrentUser.Id = int.Parse(claims.FindFirst(c => c.Type == "Id").Value);
         CurrentUser.role = (Role)
             Enum.Parse(typeof(Role), claims.FindFirst(c => c.Type == "Role").Value);

@@ -1,0 +1,123 @@
+2025-05-21 20:45:17 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-21 20:45:17 [Information] Now listening on: "http://localhost:5172"
+2025-05-21 20:45:17 [Information] Application started. Press Ctrl+C to shut down.
+2025-05-21 20:45:17 [Information] Hosting environment: "Development"
+2025-05-21 20:45:17 [Information] Content root path: "C:\Users\user1\Documents\שעורי בית\שנה ב\Core\MyprojectCoreWithNechami"
+2025-05-21 20:45:44 [Information] Application is shutting down...
+2025-05-21 20:45:58 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-21 20:45:58 [Information] Now listening on: "http://localhost:5172"
+2025-05-21 20:45:58 [Information] Application started. Press Ctrl+C to shut down.
+2025-05-21 20:45:58 [Information] Hosting environment: "Development"
+2025-05-21 20:45:58 [Information] Content root path: "C:\Users\user1\Documents\שעורי בית\שנה ב\Core\MyprojectCoreWithNechami"
+2025-05-21 20:46:47 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - null null
+2025-05-21 20:46:47 [Warning] Failed to determine the https port for redirect.
+2025-05-21 20:46:47 [Information] Executing endpoint '"HTTP: GET /login"'
+2025-05-21 20:46:47 [Information] Executed endpoint '"HTTP: GET /login"'
+2025-05-21 20:46:47 [Information] Request "GET" "/login" executed by "Anonymous" in 165.7759 ms
+2025-05-21 20:46:47 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - 200 null "text/html" 316.2676ms
+2025-05-21 20:46:47 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - null null
+2025-05-21 20:46:47 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Request "GET" "/css/site.css" executed by "Anonymous" in 7.1827 ms
+2025-05-21 20:46:47 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - 404 0 "text/html" 17.8066ms
+2025-05-21 20:46:47 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - null null
+2025-05-21 20:46:47 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - null null
+2025-05-21 20:46:47 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Request "GET" "/css/login.css" executed by "Anonymous" in 3.564 ms
+2025-05-21 20:46:47 [Information] Request "GET" "/js/login.js" executed by "Anonymous" in 3.7715 ms
+2025-05-21 20:46:47 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - 404 0 "text/html" 13.6019ms
+2025-05-21 20:46:47 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - 404 0 "text/html" 11.7854ms
+2025-05-21 20:46:47 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+2025-05-21 20:46:47 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:47 [Information] Request "GET" "/.well-known/appspecific/com.chrome.devtools.json" executed by "Anonymous" in 1.0799 ms
+2025-05-21 20:46:47 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 "text/html" 1.7046ms
+2025-05-21 20:46:49 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/favicon.ico""" - null null
+2025-05-21 20:46:49 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:49 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:49 [Information] Request "GET" "/favicon.ico" executed by "Anonymous" in 1.6157 ms
+2025-05-21 20:46:49 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/favicon.ico""" - 404 0 "text/html" 2.7232ms
+2025-05-21 20:46:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - null null
+2025-05-21 20:46:50 [Information] Executing endpoint '"HTTP: GET /login"'
+2025-05-21 20:46:50 [Information] Executed endpoint '"HTTP: GET /login"'
+2025-05-21 20:46:50 [Information] Request "GET" "/login" executed by "Anonymous" in 7.7484 ms
+2025-05-21 20:46:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - 200 null "text/html" 12.8467ms
+2025-05-21 20:46:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - null null
+2025-05-21 20:46:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - null null
+2025-05-21 20:46:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - null null
+2025-05-21 20:46:50 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Request "GET" "/css/site.css" executed by "Anonymous" in 2.3096 ms
+2025-05-21 20:46:50 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Request "GET" "/js/login.js" executed by "Anonymous" in 2.5696 ms
+2025-05-21 20:46:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - 404 0 "text/html" 3.7775ms
+2025-05-21 20:46:50 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - 404 0 "text/html" 3.8201ms
+2025-05-21 20:46:50 [Information] Request "GET" "/css/login.css" executed by "Anonymous" in 3.2388 ms
+2025-05-21 20:46:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - 404 0 "text/html" 4.3439ms
+2025-05-21 20:46:50 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+2025-05-21 20:46:50 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:46:50 [Information] Request "GET" "/.well-known/appspecific/com.chrome.devtools.json" executed by "Anonymous" in 1.0262 ms
+2025-05-21 20:46:50 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 "text/html" 1.5179ms
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - null null
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /login"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /login"'
+2025-05-21 20:55:27 [Information] Request "GET" "/login" executed by "Anonymous" in 3.1303 ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""" - 200 null "text/html" 4.0045ms
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - null null
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - null null
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - null null
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Request "GET" "/css/login.css" executed by "Anonymous" in 1.2885 ms
+2025-05-21 20:55:27 [Information] Request "GET" "/js/login.js" executed by "Anonymous" in 1.0516 ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - 404 0 "text/html" 1.5216ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - 404 0 "text/html" 1.7844ms
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Request "GET" "/css/site.css" executed by "Anonymous" in 1.757 ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - 404 0 "text/html" 2.1303ms
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Request "GET" "/.well-known/appspecific/com.chrome.devtools.json" executed by "Anonymous" in 0.88 ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 "text/html" 1.3623ms
+2025-05-21 20:55:27 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/favicon.ico""" - null null
+2025-05-21 20:55:27 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:27 [Information] Request "GET" "/favicon.ico" executed by "Anonymous" in 0.9499 ms
+2025-05-21 20:55:27 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/favicon.ico""" - 404 0 "text/html" 1.3895ms
+2025-05-21 20:55:32 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""?" - null null
+2025-05-21 20:55:32 [Information] Executing endpoint '"HTTP: GET /login"'
+2025-05-21 20:55:32 [Information] Executed endpoint '"HTTP: GET /login"'
+2025-05-21 20:55:32 [Information] Request "GET" "/login" executed by "Anonymous" in 2.3977 ms
+2025-05-21 20:55:32 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/login""?" - 200 null "text/html" 3.0436ms
+2025-05-21 20:55:33 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - null null
+2025-05-21 20:55:33 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Request "GET" "/css/site.css" executed by "Anonymous" in 1.2404 ms
+2025-05-21 20:55:33 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/site.css""" - 404 0 "text/html" 1.8ms
+2025-05-21 20:55:33 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - null null
+2025-05-21 20:55:33 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - null null
+2025-05-21 20:55:33 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Request "GET" "/js/login.js" executed by "Anonymous" in 1.7437 ms
+2025-05-21 20:55:33 [Information] Request "GET" "/css/login.css" executed by "Anonymous" in 2.0429 ms
+2025-05-21 20:55:33 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/js/login.js""" - 404 0 "text/html" 2.6363ms
+2025-05-21 20:55:33 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/css/login.css""" - 404 0 "text/html" 2.6513ms
+2025-05-21 20:55:33 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+2025-05-21 20:55:33 [Information] Executing endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Executed endpoint '"HTTP: GET /{*page}"'
+2025-05-21 20:55:33 [Information] Request "GET" "/.well-known/appspecific/com.chrome.devtools.json" executed by "Anonymous" in 1.9305 ms
+2025-05-21 20:55:33 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5172""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 "text/html" 2.458ms
+2025-05-21 20:55:54 [Information] Application is shutting down...

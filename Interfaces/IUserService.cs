@@ -1,6 +1,6 @@
 namespace project.Interfaces;
 
-public interface IService<T> 
+public interface IUserService<T> where T : IUser
 {
      //string Token { get; set; }
     List<T> Get();

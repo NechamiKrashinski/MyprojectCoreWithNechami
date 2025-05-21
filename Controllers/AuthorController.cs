@@ -9,9 +9,9 @@ namespace project.Controllers;
 [Route("[controller]")]
 public class AuthorController : ControllerBase
 {
-    private readonly IService<Author> service;
+    private readonly IUserService<Author> service;
     private string? token;
-    public AuthorController(IService<Author> service)
+    public AuthorController(IUserService<Author> service)
     {
         this.service = service;
 
@@ -46,13 +46,20 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult<Author> Get(int id)
     {
-        SetToken();
-        System.Console.WriteLine("Get method called " + id.ToString());
-        var author = service.Get(id);
-        if (author == null)
+        try
+        {
+            SetToken();
+            System.Console.WriteLine("Get method called " + id.ToString());
+            var author = service.Get(id);
+            if (author == null)
+                throw new ApplicationException("Author not found");
+            System.Console.WriteLine("Author  found" + author.ToString() + "1111");
+            return author;
+        }
+        catch
+        {
             throw new ApplicationException("Author not found");
-        System.Console.WriteLine("Author  found" + author.ToString() + "1111");
-        return author;
+        }
     }
 
     [HttpPost]

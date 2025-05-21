@@ -46,3 +46,4 @@ public class Author : IUser
         return $"Id: {Id}, Name: {Name}, Address: {Address}, BirthDate: {BirthDate}";
     }
 }
+

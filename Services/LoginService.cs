@@ -6,16 +6,16 @@ namespace project.Services;
 public class LoginService<T>
     where T : IUser
 {
-    private readonly IAuthentication<T> authenticationService;
+    private readonly IUserService<T> userService;
 
-    public LoginService(IAuthentication<T> authentication)
+    public LoginService(IUserService<T> userService)
     {
-        this.authenticationService = authentication;
+        this.userService = userService;
     }
 
     public string Login(string email, string password)
     {
-        var userAthenticate = authenticationService
+        var userAthenticate = userService
             .Get()
             .FirstOrDefault(a => a.email == email && a.password == password);
         if (userAthenticate == null)

@@ -38,7 +38,7 @@ public class LoginController : ControllerBase
         return Ok(token); // החזר תגובה פשוטה של הצלחה
     }
 
-    public class LoginRequest
+    public class LoginRequest : IAuthentication
     {
         public required string email { get; set; }
         public required string password { get; set; }

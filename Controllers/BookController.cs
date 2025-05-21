@@ -12,14 +12,12 @@ public class BookController : ControllerBase
 {
     private readonly IService<Book> service;
 
-    //private readonly IService<Author> service2;
 
     private string? token;
 
-    public BookController(IService<Book> service, IService<Author> service2)
+    public BookController(IService<Book> service)
     {
         this.service = service;
-        //  this.service2 = service2;
     }
 
     [HttpGet]

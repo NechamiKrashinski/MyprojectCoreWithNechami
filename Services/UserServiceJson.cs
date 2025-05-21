@@ -3,38 +3,33 @@ using project.Models;
 
 namespace project.Services;
 
-public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
+public class UserServiceJson<T> : GetFuncService<T>, IUserService<T>
+    where T : IUser
 {
     private readonly int authorId;
     private readonly Role role;
     private readonly IService<Book> bookService;
 
-    public AuthorServiceJson(IHostEnvironment env)
+    public UserServiceJson(IHostEnvironment env)
         : base(env)
     {
         authorId = CurrentUser.Id;
         role = CurrentUser.role;
-       // this.bookService = bookService;
     }
 
-    // internal int Id(string name)
-    // {
-    //     return MyList.FirstOrDefault(b => b.Name == name).Id;
-    // }
-
-    public override List<Author> Get()
+    public override List<T> Get()
     {
         Console.WriteLine("Get method called " + role.ToString() + " " + authorId.ToString());
         if (role == Role.Author)
         {
             System.Console.WriteLine("Author role");
-            var authorList = new List<Author> { Get(authorId) };
+            var authorList = new List<T> { Get(authorId) };
             Console.WriteLine("Author list created.");
 
-            var filteredAuthors = authorList.Where(a => a != null);
-            Console.WriteLine($"Number of authors after filtering: {filteredAuthors.Count()}");
+            var filteredUsers = authorList.Where(a => a != null);
+            Console.WriteLine($"Number of authors after filtering: {filteredUsers.Count()}");
 
-            var result = filteredAuthors.ToList();
+            var result = filteredUsers.ToList();
             Console.WriteLine("Result converted to list." + result[0].ToString());
 
             return result;
@@ -43,20 +38,20 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         {
             return MyList;
         }
-        return new List<Author>();
+        return new List<T>();
     }
 
-    public Author Get(int id)
+    public T Get(int id)
     {
         var author = MyList.FirstOrDefault(b => b.Id == id);
         if (author == null)
         {
-            return null;
+            throw new Exception("Author not found");
         }
         return author;
     }
 
-    public int Insert(Author newUser)
+    public int Insert(T newUser)
     {
         if (
             newUser == null
@@ -80,7 +75,7 @@ public class AuthorServiceJson : GetFuncService<Author>, IService<Author>
         return newUser.Id;
     }
 
-    public bool Update(int id, Author author)
+    public bool Update(int id, T author)
     {
         if (role == Role.Admin || role == Role.Author && authorId == id)
         {

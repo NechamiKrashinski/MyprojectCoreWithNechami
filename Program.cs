@@ -3,10 +3,25 @@ using project.Interfaces;
 using project.middleware;
 using project.Models;
 using project.Services;
+using Serilog;
 using Services;
 
 var builder = WebApplication.CreateBuilder(args);
-LoggerSetup.ConfigureLogger();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(
+        path: "Logs/{Year}/{Month}/{Day}/log-.txt",
+        rollingInterval: RollingInterval.Day,
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}"
+    )
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // הוספת Serilog
+
+// הוסף את השירותים שלך כאן
+//var app = builder.Build();
+
+// LoggerSetup.ConfigureLogger();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -50,6 +65,7 @@ builder.Services.AddCors(options =>
         }
     );
 });
+
 // הוספת שירותים לקונטיינר.
 
 // Add services to the container.
@@ -68,7 +84,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseLogMiddleware();
+
+app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseErrorMiddleware();
 app.UseAuthMiddleware<Author>();
 app.UseHttpsRedirection();
@@ -94,20 +111,23 @@ app.MapGet(
         );
     }
 );
-app.MapGet("/{*page}", async context =>
-{
-    var page = context.Request.RouteValues["page"]?.ToString() ?? "index"; // ברירת מחדל לעמוד index
-    context.Response.ContentType = "text/html";
-    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", $"{page}.html");
+app.MapGet(
+    "/{*page}",
+    async context =>
+    {
+        var page = context.Request.RouteValues["page"]?.ToString() ?? "index"; // ברירת מחדל לעמוד index
+        context.Response.ContentType = "text/html";
+        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", $"{page}.html");
 
-    if (File.Exists(filePath))
-    {
-        await context.Response.SendFileAsync(filePath);
+        if (File.Exists(filePath))
+        {
+            await context.Response.SendFileAsync(filePath);
+        }
+        else
+        {
+            context.Response.StatusCode = 404; // לא נמצא
+        }
     }
-    else
-    {
-        context.Response.StatusCode = 404; // לא נמצא
-    }
-});
+);
 
 app.Run();
