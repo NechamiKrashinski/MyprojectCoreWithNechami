@@ -3,216 +3,189 @@
     "Id": 1,
     "Name": "Journey to the Light",
     "Author": null,
-    "AuthorId": 1,
-    "Price": 50,
+    "UserId": 1,
     "Date": "2020-01-01"
   },
   {
     "Id": 2,
     "Name": "Yossis Adventures",
     "Author": null,
-    "AuthorId": 1,
-    "Price": 60,
+    "UserId": 1,
     "Date": "2021-02-15"
   },
   {
     "Id": 3,
     "Name": "Yaakovs Secret",
     "Author": null,
-    "AuthorId": 1,
-    "Price": 70,
+    "UserId": 1,
     "Date": "2019-03-10"
   },
   {
     "Id": 4,
     "Name": "The Wonderful Journey",
     "Author": null,
-    "AuthorId": 1,
-    "Price": 55,
+    "UserId": 1,
     "Date": "2022-04-20"
   },
   {
     "Id": 5,
     "Name": "Light and Hope",
     "Author": null,
-    "AuthorId": 1,
-    "Price": 65,
+    "UserId": 1,
     "Date": "2023-05-25"
   },
   {
     "Id": 6,
     "Name": "Moshes Tales",
     "Author": null,
-    "AuthorId": 2,
-    "Price": 50,
+    "UserId": 2,
     "Date": "2020-06-30"
   },
   {
     "Id": 7,
     "Name": "Wisdom of the Heart",
     "Author": null,
-    "AuthorId": 2,
-    "Price": 60,
+    "UserId": 2,
     "Date": "2021-07-15"
   },
   {
     "Id": 8,
     "Name": "The Journey to Faith",
     "Author": null,
-    "AuthorId": 2,
-    "Price": 70,
+    "UserId": 2,
     "Date": "2019-08-10"
   },
   {
     "Id": 9,
     "Name": "The Right Path",
     "Author": null,
-    "AuthorId": 2,
-    "Price": 55,
+    "UserId": 2,
     "Date": "2022-09-20"
   },
   {
     "Id": 10,
     "Name": "Truth and Light",
     "Author": null,
-    "AuthorId": 2,
-    "Price": 65,
+    "UserId": 2,
     "Date": "2023-10-25"
   },
   {
     "Id": 11,
     "Name": "Avrahams Stories",
     "Author": null,
-    "AuthorId": 3,
-    "Price": 50,
+    "UserId": 3,
     "Date": "2020-01-01"
   },
   {
     "Id": 12,
     "Name": "Itzhaks Journey",
     "Author": null,
-    "AuthorId": 3,
-    "Price": 60,
+    "UserId": 3,
     "Date": "2021-02-15"
   },
   {
     "Id": 13,
     "Name": "Shmuels Secret",
     "Author": null,
-    "AuthorId": 3,
-    "Price": 70,
+    "UserId": 3,
     "Date": "2019-03-10"
   },
   {
     "Id": 14,
     "Name": "The Amazing Journey",
     "Author": null,
-    "AuthorId": 3,
-    "Price": 55,
+    "UserId": 3,
     "Date": "2022-04-20"
   },
   {
     "Id": 15,
     "Name": "Hope and Light",
     "Author": null,
-    "AuthorId": 3,
-    "Price": 65,
+    "UserId": 3,
     "Date": "2023-05-25"
   },
   {
     "Id": 16,
     "Name": "New Life",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 50,
+    "UserId": 4,
     "Date": "2020-01-01"
   },
   {
     "Id": 17,
     "Name": "Haims Journey",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 60,
+    "UserId": 4,
     "Date": "2021-02-15"
   },
   {
     "Id": 18,
     "Name": "Itzhaks Secret",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 70,
+    "UserId": 4,
     "Date": "2019-03-10"
   },
   {
     "Id": 19,
     "Name": "The Amazing Journey",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 55,
+    "UserId": 4,
     "Date": "2022-04-20"
   },
   {
     "Id": 20,
     "Name": "Hope and Light",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 65,
+    "UserId": 4,
     "Date": "2023-05-25"
   },
   {
     "Id": 21,
     "Name": "Shmuels Journey",
     "Author": null,
-    "AuthorId": 5,
-    "Price": 50,
+    "UserId": 5,
     "Date": "2020-01-01"
   },
   {
     "Id": 22,
     "Name": "Davids Secret",
     "Author": null,
-    "AuthorId": 5,
-    "Price": 60,
+    "UserId": 5,
     "Date": "2021-02-15"
   },
   {
     "Id": 23,
     "Name": "The Amazing Journey",
     "Author": null,
-    "AuthorId": 5,
-    "Price": 70,
+    "UserId": 5,
     "Date": "2019-03-10"
   },
   {
     "Id": 24,
     "Name": "Hope and Light",
     "Author": null,
-    "AuthorId": 5,
-    "Price": 55,
+    "UserId": 5,
     "Date": "2022-04-20"
   },
   {
     "Id": 25,
     "Name": "New Life",
     "Author": null,
-    "AuthorId": 5,
-    "Price": 65,
+    "UserId": 5,
     "Date": "2023-05-25"
   },
   {
     "Id": 26,
     "Name": "\u05D3\u05D5\u05D3",
     "Author": null,
-    "AuthorId": 4,
-    "Price": 120,
+    "UserId": 4,
     "Date": "2025-05-01"
   },
   {
     "Id": 27,
     "Name": "name book",
     "Author": null,
-    "AuthorId": 9,
-    "Price": 10,
+    "UserId": 9,
     "Date": "2025-05-06"
   }
 ]

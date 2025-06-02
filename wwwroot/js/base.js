@@ -73,7 +73,7 @@ function logoutUser() {
     // הפניה לדף הכניסה או לדף אחר
 document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; Secure; SameSite=Strict;";
 
-    window.location.href = 'http://localhost:5172/login';
+    window.location.href = 'http://localhost:5172/login.html';
 }
 
 const logoutButton = document.createElement('button');

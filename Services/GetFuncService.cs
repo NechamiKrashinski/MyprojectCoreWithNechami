@@ -6,7 +6,7 @@ namespace project.Services;
 public abstract class GetFuncService<T>
 {
     protected List<T> MyList { get; }
-    protected static string fileName;
+    protected static string fileName="";
     protected string filePath;
 
     public GetFuncService(IHostEnvironment env)
@@ -19,7 +19,7 @@ public abstract class GetFuncService<T>
         if (!File.Exists(filePath))
         {
             MyList = new List<T>();
-            return;
+            throw new Exception("File not found");
         }
 
         using (var jsonFile = File.OpenText(filePath))

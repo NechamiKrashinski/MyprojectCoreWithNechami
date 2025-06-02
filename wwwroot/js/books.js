@@ -29,10 +29,9 @@ async function getBooks() {
             card.className = 'book-card';
             card.innerHTML = `
                 <h4>${book.name}</h4>
-                <p>Author: ${findNameAuthor(book.authorId)}</p>
-                <p>Price: ${book.price}</p>
+                <p>Author: ${findNameAuthor(book.userId)}</p>
                 <p>Publish Date: ${book.date}</p>
-                <button onclick="editBook(${book.id}, '${book.name}', ${book.price}, '${book.date}')">Edit</button>
+                <button onclick="editBook(${book.id}, '${book.name}', '${book.date}')">Edit</button>
                 <button onclick="deleteBook(${book.id})">Delete</button>
             `;
             booksContainer.appendChild(card);
@@ -57,12 +56,10 @@ const findNameAuthor = (id) => {
 async function addBook() {
     const nameField = document.getElementById('add-name');
     const authorField = document.getElementById('add-author');
-    const priceField = document.getElementById('add-price');
     const dateField = document.getElementById('add-date');
     
     const name = nameField.value;
     //const author = authorField.value;
-    const price = parseFloat(priceField.value);
     const date = dateField.value;
     let bookAuthorId;
     if (userRole === 'Author') {
@@ -75,9 +72,8 @@ async function addBook() {
     const newBook = {
         id:0,
         name: name,
-        authorId: bookAuthorId , // השתמש ב-ID של הסופר הנוכחי
+        userId: bookAuthorId , // השתמש ב-ID של הסופר הנוכחי
         // author: author,
-        price: price,
         date: date
     };
 
@@ -89,7 +85,6 @@ async function addBook() {
         });
         nameField.value = '';
         authorField.value = '';
-        priceField.value = '';
         dateField.value = '';
         document.getElementById('addBookForm').style.display = 'none'; // הצג את טופס הוספת הספר
 
@@ -99,62 +94,17 @@ async function addBook() {
     }
 }
 
-// function editBook(id, name, price, date) {
-//    // document.getElementById('add-id').value = id; // אם יש לך שדה hidden או input אחר עבור ה-ID
-//     document.getElementById('add-name').value = name;
-//     document.getElementById('add-price').value = price;
-//     document.getElementById('add-date').value = date;
-
-//     // אם ה-userRole הוא Author, חסום את שדה הסופר
-//     if (userRole === 'Author') {
-//         document.getElementById('add-author').disabled = true; // Disable the author field
-//     } else {
-//         document.getElementById('add-author').disabled = false; // Enable the author field for admins
-//     }
-
-//     document.getElementById('addBookForm').style.display = 'block'; // הצג את טופס הוספת הספר
-// }
-
-// async function updateBook() {
-//     const id = document.getElementById('add-id').value; // קח את ה-ID מהשדה הקיים
-//     const name = document.getElementById('add-name').value;
-//     const author = document.getElementById('add-author').value;
-//     const price = parseFloat(document.getElementById('add-price').value);
-//     const date = document.getElementById('add-date').value;
-
-//     const updatedBook = {
-//         id: id,
-//         name: name,
-//         author: author,
-//         price: price,
-//         date: date
-//     };
-
-//     try {
-//         await axios.put(`/Book/${id}`, updatedBook, {
-//             headers: {
-//                 'Authorization': `Bearer ${token}`
-//             }
-//         });
-//         closeInput(); // סגור את טופס ההוספה
-//         getBooks(); // רענן את רשימת הספרים
-//     } catch (error) {
-//         console.error("Error updating book:", error);
-//     }
-// }
 
 async function updateBook() {
     const id = document.getElementById('edit-id').value; // קח את ה-ID מהשדה hidden
     const name = document.getElementById('edit-name').value;
     const author = document.getElementById('edit-author').value; // קח את הסופר מהשדה
-    const price = parseFloat(document.getElementById('edit-price').value);
     const date = document.getElementById('edit-date').value;
 
     const updatedBook = {
         id: id,
         name: name,
         author: author,
-        price: price,
         date: date
     };
 
@@ -170,10 +120,9 @@ async function updateBook() {
         console.error("Error updating book:", error);
     }
 }
-function editBook(id, name, price, date) {
+function editBook(id, name, date) {
     document.getElementById('edit-id').value = id; // שים את ה-ID בשדה hidden
     document.getElementById('edit-name').value = name;
-    document.getElementById('edit-price').value = price;
     document.getElementById('edit-date').value = date;
 
     // מלא את רשימת הסופרים בטופס העריכה

@@ -22,7 +22,6 @@ public class LoginService<T>
             .FirstOrDefault(a => a.email == email && a.password == password);
         userService.isAuth = false;
 
-        System.Console.WriteLine("in login service ---------------" + userAthenticate.ToString());
 
         if (userAthenticate == null)
             return "User not found";

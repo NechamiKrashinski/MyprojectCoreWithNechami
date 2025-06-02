@@ -20,16 +20,20 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Author")]
     public ActionResult<IEnumerable<Author>> Get()
     {
-        System.Console.WriteLine("Get method called1----------------------");
-        var list = service.Get();
-        System.Console.WriteLine("Get method called " + list[0].ToString());
+        try
+        {
+            var list = service.Get();
+            if (list.Count <= 0)
+                return BadRequest("Unauthorized access");
 
-        if (list.Count <= 0)
-            return BadRequest("Unauthorized access");
-        System.Console.WriteLine("Get method called " + list[0].ToString());
-        System.Console.WriteLine("Get method called2-******************************");
 
-        return Ok(list);
+            return Ok(list);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in Get: {ex.Message}");
+            return StatusCode(500, "An error occurred while getting the authors.");
+        }
     }
 
     [HttpGet("{id}")]
@@ -38,16 +42,20 @@ public class AuthorController : ControllerBase
     {
         try
         {
-            System.Console.WriteLine("Get method called " + id.ToString());
+            System.Console.WriteLine("Get method called author: " + id);
             var author = service.Get(id);
             if (author == null)
-                throw new ApplicationException("Author not found");
-            System.Console.WriteLine("Author  found" + author.ToString() + "1111");
-            return author;
+            {
+                Console.WriteLine("Author not found");
+                return NotFound("Author not found");
+            }
+            System.Console.WriteLine("Author found " + author.ToString() + "1111");
+            return Ok(author);
         }
-        catch
+        catch (Exception ex)
         {
-            throw new ApplicationException("Author not found");
+            Console.WriteLine($"Error in Get(id): {ex.Message}");
+            return StatusCode(500, "An error occurred while getting the author.");
         }
     }
 
@@ -55,28 +63,55 @@ public class AuthorController : ControllerBase
     [Authorize(policy: "Admin")]
     public ActionResult Post(Author newUser)
     {
-        var newId = service.Insert(newUser);
-        if (newId == -1)
-            return BadRequest();
-        return CreatedAtAction(nameof(Post), new { Id = newId });
+        try
+        {
+            var newId = service.Insert(newUser);
+            if (newId == -1)
+            {
+                Console.WriteLine("Insert failed");
+                return BadRequest("Failed to insert author.");
+            }
+            return CreatedAtAction(nameof(Post), new { Id = newId });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in Post: {ex.Message}");
+            return StatusCode(500, "An error occurred while creating the author.");
+        }
     }
 
     [HttpPut("{id}")]
     [Authorize(policy: "Author")]
     public ActionResult Put(int id, Author author)
     {
-        if (service.Update(id, author))
-            return NoContent();
+        try
+        {
+            if (service.Update(id, author))
+                return NoContent();
 
-        return BadRequest();
+            return BadRequest("Failed to update author.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in Put: {ex.Message}");
+            return StatusCode(500, "An error occurred while updating the author.");
+        }
     }
 
     [HttpDelete("{id}")]
     [Authorize(policy: "Admin")]
     public ActionResult Delete(int id)
     {
-        if (service.Delete(id))
-            return Ok();
-        return NotFound();
+        try
+        {
+            if (service.Delete(id))
+                return Ok();
+            return NotFound("Author not found for deletion.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in Delete: {ex.Message}");
+            return StatusCode(500, "An error occurred while deleting the author.");
+        }
     }
 }

@@ -11,13 +11,11 @@ function getItems() {
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
     const addAuthorTextbox = document.getElementById('add-author');
-    const addPriceTextbox = document.getElementById('add-price');
     const addDateTextbox = document.getElementById('add-date');
 
     const item = {
         name: addNameTextbox.value.trim(),
         author: addAuthorTextbox.value.trim(),
-        price: parseFloat(addPriceTextbox.value),
         date: addDateTextbox.value
     };
 
@@ -53,7 +51,6 @@ function displayEditForm(id) {
 
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-author').value = item.author;
-    document.getElementById('edit-price').value = item.price;
     document.getElementById('edit-date').value = item.date;
     document.getElementById('edit-id').value = item.id;
     document.getElementById('editForm').style.display = 'block';
@@ -65,7 +62,6 @@ function updateItem() {
         id: parseInt(itemId, 10),
         name: document.getElementById('edit-name').value.trim(),
         author: document.getElementById('edit-author').value.trim(),
-        price: parseFloat(document.getElementById('edit-price').value),
         date: document.getElementById('edit-date').value
     };
 
@@ -109,7 +105,6 @@ function _displayItems(data) {
         td2.appendChild(document.createTextNode(item.name));
 
         let td3 = tr.insertCell(2);
-        td3.appendChild(document.createTextNode(item.price));
 
         let td4 = tr.insertCell(3);
         td4.appendChild(document.createTextNode(item.date));

@@ -88,36 +88,15 @@ app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
 app.MapControllers();
 
-// app.MapGet(
-//     "/login",
-//     async context =>
-//     {
-//         await context.Response.SendFileAsync("wwwroot/login.html");
-//     }
-// );
+
 app.MapGet(
     "/",
     context =>
     {
-        context.Response.Redirect("wwwroot/author.html");
+        context.Response.Redirect("author.html");
         return Task.CompletedTask;
     }
 );
-// app.MapGet(
-//     "/author",
-//     async context =>
-//     {
-//         await context.Response.SendFileAsync("wwwroot/author.html");
-//     }
-// );
-// app.MapGet(
-//     "/book",
-//     async context =>
-//     {
-//         await context.Response.SendFileAsync("wwwroot/book.html");
-//     }
-// );
-
 
 app.MapFallback(context =>
 {
