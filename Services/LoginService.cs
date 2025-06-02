@@ -15,19 +15,14 @@ public class LoginService<T>
 
     public string Login(string email, string password)
     {
-        System.Console.WriteLine("in login service ---------------");
         userService.isAuth = true;
         var userAthenticate = userService
             .Get()
             .FirstOrDefault(a => a.email == email && a.password == password);
         userService.isAuth = false;
 
-
         if (userAthenticate == null)
             return "User not found";
-        Console.WriteLine(
-            "User found: " + userAthenticate.ToString() + userAthenticate.role.ToString()
-        );
         var claims = new List<Claim>
         {
             new("Id", userAthenticate.Id.ToString()),

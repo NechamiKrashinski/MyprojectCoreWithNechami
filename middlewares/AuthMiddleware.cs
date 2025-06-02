@@ -18,12 +18,12 @@ public class AuthMiddleware<T>
 
     public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
     {
+        System.Console.WriteLine("auth middlware 1");
         var token = context.Request.Cookies["AuthToken"];
 
         // בדוק אם הטוקן קיים ואם הוא תקף
         if (string.IsNullOrEmpty(token) || !TokenService.IsTokenValid(token))
         {
-
             // בדוק אם הבקשה היא לדף הכניסה
             if (context.Request.Path.Equals("/login", StringComparison.OrdinalIgnoreCase))
             {
@@ -37,13 +37,21 @@ public class AuthMiddleware<T>
         }
         else
         {
-
             // קריאה לפונקציה SaveToken
             var claims = TokenService.DecodeToken(token);
             if (claims == null)
             {
                 context.Response.Redirect("/login.html");
                 return;
+            }
+
+            var expClaim = claims.FindFirst("exp");
+            if (expClaim != null && long.TryParse(expClaim.Value, out long exp))
+            {
+                bool isValid = exp > DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                Console.WriteLine(
+                    $"Token is valid: {isValid}, Expiration: {DateTimeOffset.FromUnixTimeSeconds(exp).UtcDateTime}"
+                );
             }
 
             int userIdClaim = -1;

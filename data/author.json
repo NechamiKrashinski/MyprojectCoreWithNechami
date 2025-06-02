@@ -20,7 +20,7 @@
   {
     "Id": 3,
     "Name": "Avraham Friedman",
-    "Address": "10 Rashbam St, Modi'in Illit",
+    "Address": "10 Rashbam St, Modi\u0027in Illit",
     "BirthDate": "1988-12-30",
     "role": 1,
     "email": "avraham.friedman@walla.co.il",

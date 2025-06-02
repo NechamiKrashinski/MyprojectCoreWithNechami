@@ -3,22 +3,26 @@ using project.Models;
 
 namespace project.Services;
 
-public class UserServiceJson<T> : GetFuncService<T>, IUserService<T>
+public class UserServiceJson<T, I> : ReadJson<T>, IUserService<T>
     where T : IUser
+    where I : IItem
 {
     private readonly int authorId;
     private readonly Role role;
     public bool isAuth { get; set; } = false;
 
-    public UserServiceJson(IHostEnvironment env)
+     private readonly Lazy<IItemService<Book>> itemService;
+
+    public UserServiceJson(IHostEnvironment env, Lazy<IItemService<Book>> itemService)
         : base(env)
     {
+        this.itemService = itemService;
         authorId = CurrentUser.Id;
         role = CurrentUser.role;
     }
-
     public override List<T> Get()
     {
+        System.Console.WriteLine("Role!@#$%^&*()    "+role.ToString());
         if (role == Role.Author)
         {
             var authorList = new List<T> { Get(authorId) };
@@ -103,16 +107,34 @@ public class UserServiceJson<T> : GetFuncService<T>, IUserService<T>
         return true;
     }
 
+    // public bool Delete(int id)
+    // {
+    //     var currentT = MyList.FirstOrDefault(b => b.Id == id);
+    //     if (currentT == null)
+    //         throw new Exception("Delete failed: Book not found");
+    //     // bookService.Get()
+    //     //     .Where(b => b.AuthorId == id)
+    //     //     .ToList()
+    //     //     .ForEach(b => bookService.Delete(b.Id));
+    //     MyList.Remove(currentT);
+    //     saveToFile();
+    //     return true;
+    // }
+
     public bool Delete(int id)
     {
-        var currentT = MyList.FirstOrDefault(b => b.Id == id);
-        if (currentT == null)
-            throw new Exception("Delete failed: Book not found");
-        // bookService.Get()
-        //     .Where(b => b.AuthorId == id)
-        //     .ToList()
-        //     .ForEach(b => bookService.Delete(b.Id));
-        MyList.Remove(currentT);
+        var currentUser = MyList.FirstOrDefault(b => b.Id == id);
+        if (currentUser == null)
+            throw new Exception("Delete failed: User not found");
+
+        // מחיקת כל הפריטים של המשתמש
+        var userItems = itemService.Value.Get().Where(i => i.UserId == id).ToList();
+        foreach (var item in userItems)
+        {
+            itemService.Value.Delete(item.Id);
+        }
+
+        MyList.Remove(currentUser);
         saveToFile();
         return true;
     }

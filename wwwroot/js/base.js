@@ -53,17 +53,6 @@ function getUserRoleFromToken(token) {
     return decodedPayload.Role; // הנח שהשדה שמכיל את התפקיד נקרא "role"
 }
 function logoutUser() {
-    // // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר
-
-    // document.cookie = "authToken=null; path=/;";
-
-    // // מחיקת הקוקי על ידי הגדרת תאריך תפוגה בעבר (אם זה הכרחי)
-    // document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    // // עדכון הממשק לאחר לוגאאוט
-    // console.log("User logged out");
-
-    // אפס את כל המשתנים הגלובליים
-    token = null;
     userRole = null;
     authorsList = null;
     currentAuthor = null;
@@ -71,10 +60,27 @@ function logoutUser() {
     booksList = null;
 
     // הפניה לדף הכניסה או לדף אחר
-document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; Secure; SameSite=Strict;";
+document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    token = getCookieValue('AuthToken'); 
+
+    // בדיקה אם ה-token לא null לפני קריאה ל-isTokenValid
+    if (token) {
+        isTokenValid(token);
+    } else {
+        console.log("Token is null after logout.");
+    }
 
     window.location.href = 'http://localhost:5172/login.html';
 }
+
+
+function isTokenValid(token) {
+    const payload = JSON.parse(atob(token.split('.')[1])); // פענוח הטוקן
+    const isValid = payload.exp > Date.now() / 1000; // השוואת תאריך התפוגה עם הזמן הנוכחי
+    console.log(`Token is valid: ${isValid}, Expiration: ${new Date(payload.exp * 1000)}`);
+    return isValid;
+}
+
 
 const logoutButton = document.createElement('button');
 logoutButton.innerText = 'Logout';

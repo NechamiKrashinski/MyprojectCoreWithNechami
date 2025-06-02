@@ -1,5 +1,0 @@
-2025-05-27 00:07:02 [Information] User profile is available. Using '"C:\Users\user1\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
-2025-05-27 00:07:02 [Information] Now listening on: "http://localhost:5172"
-2025-05-27 00:07:02 [Information] Application started. Press Ctrl+C to shut down.
-2025-05-27 00:07:02 [Information] Hosting environment: "Development"
-2025-05-27 00:07:02 [Information] Content root path: "C:\Users\user1\Documents\שעורי בית\שנה ב\Core\MyprojectCoreWithNechami"

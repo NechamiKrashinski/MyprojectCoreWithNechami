@@ -22,6 +22,7 @@ public class AuthorController : ControllerBase
     {
         try
         {
+            System.Console.WriteLine("get author 1");
             var list = service.Get();
             if (list.Count <= 0)
                 return BadRequest("Unauthorized access");
@@ -65,6 +66,7 @@ public class AuthorController : ControllerBase
     {
         try
         {
+            System.Console.WriteLine("post author 1 "+newUser.ToString());
             var newId = service.Insert(newUser);
             if (newId == -1)
             {

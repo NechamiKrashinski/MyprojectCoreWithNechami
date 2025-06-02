@@ -8,15 +8,18 @@ using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.File(
-        path: "Logs/{Year}/{Month}/{Day}/log-.txt",
-        rollingInterval: RollingInterval.Day,
-        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}"
-    )
-    .CreateLogger();
+// Log.Logger = new LoggerConfiguration()
+//     .MinimumLevel.Debug()
+//     .WriteTo.Console()
+//     .WriteTo.File(
+//         "logs/.log",
+//         rollingInterval: RollingInterval.Day,
+//         fileSizeLimitBytes: 100_000_000,
+//         retainedFileCountLimit: 30
+//     )
+//     .CreateLogger();
 
-builder.Host.UseSerilog();
+// builder.Host.UseSerilog();
 
 // Swagger & Authentication setup
 builder.Services.AddEndpointsApiExplorer();
@@ -87,7 +90,6 @@ app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
 app.MapControllers();
-
 
 app.MapGet(
     "/",

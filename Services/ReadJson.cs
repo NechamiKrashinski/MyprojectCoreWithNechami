@@ -3,13 +3,13 @@ using project.Models;
 
 namespace project.Services;
 
-public abstract class GetFuncService<T>
+public abstract class ReadJson<T>
 {
     protected List<T> MyList { get; }
-    protected static string fileName="";
+    protected static string fileName = "";
     protected string filePath;
 
-    public GetFuncService(IHostEnvironment env)
+    public ReadJson(IHostEnvironment env)
     {
         if (typeof(T) == typeof(CurrentUser))
             fileName = "author.json";

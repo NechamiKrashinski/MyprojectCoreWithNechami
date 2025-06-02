@@ -8,7 +8,7 @@ using project.Models;
 
 namespace project.Services;
 
-public class ItemServiceJson<T> : GetFuncService<T>, IItemService<T>
+public class ItemServiceJson<T> : ReadJson<T>, IItemService<T>
     where T : IItem
 {
     private readonly IUserService<Author> authorService;
@@ -64,16 +64,28 @@ public class ItemServiceJson<T> : GetFuncService<T>, IItemService<T>
     {
         try
         {
-            if (
-                newItem == null
-                || string.IsNullOrWhiteSpace(newItem.Name)
-                || newItem.Date == default
-                || authorService == null
-                || (role != Role.Admin && newItem.UserId != userId)
-            )
+            if (newItem == null)
             {
-                Console.WriteLine("Insert failed: invalid input or permissions");
-                throw new Exception("Insert failed: invalid input or permissions");
+                Console.WriteLine("Insert failed: newItem is null");
+                throw new Exception("Insert failed: newItem is null");
+            }
+
+            if (string.IsNullOrWhiteSpace(newItem.Name))
+            {
+                Console.WriteLine("Insert failed: Name is null or whitespace");
+                throw new Exception("Insert failed: Name is null or whitespace");
+            }
+
+            if (authorService == null)
+            {
+                Console.WriteLine("Insert failed: authorService is null");
+                throw new Exception("Insert failed: authorService is null");
+            }
+
+            if (role != Role.Admin && newItem.UserId != userId)
+            {
+                Console.WriteLine("Insert failed: insufficient permissions");
+                throw new Exception("Insert failed: insufficient permissions");
             }
 
             newItem.UserId = role == Role.Admin ? newItem.UserId : userId;

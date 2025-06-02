@@ -1,4 +1,4 @@
-using project.Interfaces;
+namespace project.Interfaces;
 
 public interface IItem
 {

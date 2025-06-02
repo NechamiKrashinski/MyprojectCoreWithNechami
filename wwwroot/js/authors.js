@@ -45,11 +45,15 @@ function closeAddForm() {
 // פונקציה להוספת מחבר חדש
 async function addUser() {
     const name = document.getElementById('add-name').value;
+    const email = document.getElementById('add-email').value;
+    const password = document.getElementById('add-password').value;
     const address = document.getElementById('add-address').value;
     const birthDate = document.getElementById('add-birthdate').value;
 
     const newAuthor = {
         name: name,
+        email: email,
+        password: password, // שים לב, בדרך כלל לא נשלח סיסמה ב-API, אלא אם כן יש צורך מיוחד
         address: address,
         birthDate: birthDate
     };
